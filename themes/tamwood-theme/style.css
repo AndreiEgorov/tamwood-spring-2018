@@ -603,10 +603,10 @@ a {
   display: block; }
 
 .home .entry-title a {
-  color: red; }
+  color: coral; }
 
 .home {
-  background-color: green; }
+  background-color: lightgrey; }
 
 /*--------------------------------------------------------------
 # Media
