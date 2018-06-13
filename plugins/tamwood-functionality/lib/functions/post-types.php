@@ -128,7 +128,6 @@ if ( ! function_exists('tamwood_register_campus') ) {
                 'description'           => 'Education program of Tamwood',
                 'labels'                => $labels,
                 'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes' ),
-                'taxonomies'            => array( 'category', 'post_tag' ),
                 'hierarchical'          => false,
                 'public'                => true,
                 'show_ui'               => true,
