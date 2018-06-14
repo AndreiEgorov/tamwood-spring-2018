@@ -25,6 +25,9 @@ function tamwood_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html( 'Primary Menu' ),
 	) );
+	register_nav_menus( array(
+		'footer' => esc_html( 'Footer Menu' ),
+	) );
 
 	// Switch search form, comment form, and comments to output valid HTML5.
 	add_theme_support( 'html5', array(
