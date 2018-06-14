@@ -2,7 +2,7 @@
 /**
  * The template for displaying the front page.
  *
- * @package RED_Starter_Theme
+ * @package tamwood
  */
 
 get_header(); ?>
@@ -25,18 +25,7 @@ get_header(); ?>
 				}?>
 			</section>
 			<section class="accreditations">
-				<h2>
-					<?php    
-						$accreditations_props = CFS()->get_field_info( 'accreditations' );
-						echo $accreditations_props['label'];
-					?>
-				</h2> 
-				<?php $loop = CFS()->get( 'accreditations' );
-				foreach ( $loop as $row ) {
-					?> 
-					<img src="<?php echo $row['accreditation_image']; ?>">
-					<?php
-				}?>
+
 			</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

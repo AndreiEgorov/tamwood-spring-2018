@@ -1,4 +1,4 @@
-# RED Starter
+# tamwood
 
 A WordPress starter theme for RED Academy students, forked from Underscores.
 
@@ -8,7 +8,7 @@ A WordPress starter theme for RED Academy students, forked from Underscores.
 
 Then add me to your `wp-content` directory.
 
-### 2. Rename the `redstarter-master` directory
+### 2. Rename the `tamwood-master` directory
 
 Make sure that the theme directory name is project appropriate!
 
