@@ -15,16 +15,16 @@
 				</div><!-- .site-info -->
 				<ul class="social-media">
 					<li>
-						<a><i class="fa fa-facebook"></i></a>
+						<a href="https://www.facebook.com/tamwoodcareers/"><i class="fa fa-facebook"></i></a>
 					</li>
 					<li>
-						<a><i class="fa fa-instagram"></i></a>
+						<a href="https://www.instagram.com/tamwoodcareers/"><i class="fa fa-instagram"></i></a>
 					</li>
 					<li>
-						<a><i class="fa fa-twitter"></i></a>
+						<a href="https://twitter.com/tamwoodschools "><i class="fa fa-twitter"></i></a>
 					</li>
 					<li>
-						<a><i class="fa fa-linkedin"></i></a>
+						<a href="https://www.linkedin.com/company/tamwood-careers-ltd/"><i class="fa fa-linkedin"></i></a>
 					</li>
 				</ul>
 			</footer><!-- #colophon -->
