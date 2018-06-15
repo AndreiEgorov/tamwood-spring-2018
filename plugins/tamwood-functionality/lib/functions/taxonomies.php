@@ -34,7 +34,7 @@ if ( ! function_exists( 'tamwood_register_program_type' ) ) {
             'items_list_navigation'      => 'Program Types list navigation',
         );
         $rewrite = array(
-            'slug'                       => 'program-type',
+            'slug'                       => 'program_type',
             'with_front'                 => true,
             'hierarchical'               => true,
         );
