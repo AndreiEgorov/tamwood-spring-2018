@@ -30,6 +30,7 @@
 	color: $color_brand-tertiary;
 	border: 3px solid $color_brand-tertiary;
 	background-color: #FFFFFF;
+	@content;
 	&:hover{
 		background-color: $color_brand-tertiary;
 		color: #FFFFFF;
@@ -41,7 +42,8 @@
 	text-transform: uppercase;
 	color: #FFFFFF;
 	border: 3px solid $color_brand-tertiary;
-	background-color: $color_brand-tertiary
+	background-color: $color_brand-tertiary;
+	@content;
 
 }
 
@@ -50,6 +52,7 @@
 	color: $color_brand-secondary;
 	border: 3px solid $color_brand-secondary;
 	background-color: #FFFFFF;
+	@content;
 	&:hover{
 		background-color: $color_brand-secondary;
 		color: #FFFFFF;
@@ -61,7 +64,8 @@
 	text-transform: uppercase;
 	color: #FFFFFF;
 	border: 3px solid $color_brand-secondary;
-	background-color: $color_brand-secondary
+	background-color: $color_brand-secondary;
+	@content;
 
 }
 
@@ -72,5 +76,7 @@
 }
 .primary-main{
 	@include primary-green;
+	margin: 50px;
+
 	
 }

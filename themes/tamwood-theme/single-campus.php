@@ -9,26 +9,34 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-        <?php get_template_part( 'template-parts/content-banner' )?>
+        <?php get_template_part( 'template-parts/content','banner' )?>
+
+        <?php echo CFS()->get( 'article_intro' )?>
+        <?php echo CFS()->get( 'main_text' )?>
+        
+        <a class="primary-main" href="#">Apply Now</a>
+
+        <img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
+        <p>Centrally located in downtown Vancover</p>
+        <img src="<?php echo get_template_directory_uri()?>/assets/icons/nightlife.png" alt="nightlive image">
+        <p>Walking distance to shopping and nightlife</p>
+        <img src="<?php echo get_template_directory_uri()?>/assets/icons/Wifi.png" alt="Wifi image">
+        <p>25 student computers and free wifi</p>
+       
+        <div>
+            <?php echo CFS()->get( 'campus_location' )?>
+            <p><?php echo CFS()->get('contact_info_title')?></p>
+            <div><?php echo CFS()->get('contact_info')?></div>
+        </div>
         
 
-		<?php while ( have_posts() ) : the_post(); ?>
+     
+     
 
-<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-<?php the_post_navigation(); ?>
-
-<?php
-    // If comments are open or we have at least one comment, load up the comment template.
-    if ( comments_open() || get_comments_number() ) :
-        comments_template();
-    endif;
-?>
-
-<?php endwhile; // End of the loop. ?>
+		
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
