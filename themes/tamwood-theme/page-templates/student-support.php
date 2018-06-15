@@ -2,7 +2,7 @@
 /** Template Name: Student Support */
 
 get_header(); ?>
-<?php get_template_part( 'template-parts/content-banner' ); ?>
+<?php get_template_part( 'template-parts/content', 'banner' ); ?>
 <?php $loop = CFS()->get( 'subsection' );
     foreach ( $loop as $row ) {
         echo $row['subsection_title'];
