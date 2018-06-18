@@ -5,5 +5,119 @@
 /* Links */
 
 /* Menus */
+  
+.main-navigation {
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    background: white;
+    z-index: 99;
+    top: 50px;
+    border: 2px solid $color_brand-main;
+    font-size: 1.85rem;
+    font-weight: bold;
 
-/* Small menu. */
+    .menu-main-nav-container {
+        height: 100%;
+    }
+    .menu {
+        list-style: none;
+        margin: 20px;
+        height: auto;
+
+
+        li {
+            padding-bottom: 30px;
+        }
+  
+        // Animate
+        opacity: 1;
+  
+        .sub-menu {
+            display: none;
+
+            // &.show {
+            //     display: flex;
+            //     flex-direction: column;
+            //     background: $color_brand-secondary;
+            // }
+        }
+        .selected + .show{
+                display: flex;
+                flex-direction: column;
+                background: $color_brand-secondary;
+        }
+    }
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+}
+  
+.menu-toggle {
+    position: relative;
+    z-index: 100;
+}
+  
+  /* Menu Toggled */
+.main-navigation.toggled ul {
+    // Animate
+    opacity: 1;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+        position: static;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+    }
+}
+  
+@media screen and (min-width: 768px) {
+    // Hamburger Menu Container
+    .menu-toggle {
+        // display: none;
+    }
+    // Primary Navigation
+    .main-navigation ul {
+        // Animate
+        opacity: 1;
+        height: auto;
+        overflow: auto;
+  
+        position: static;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+  
+    .comment-navigation,
+    .posts-navigation,
+    .post-navigation {
+    .site-main & {
+        margin: 0 0 $base__space-unit;
+        overflow: hidden;
+    }
+  
+    .nav-previous {
+        width: 50%;
+    }
+  
+    .nav-next {
+        text-align: right;
+        width: 50%;
+    }
+}
+  
