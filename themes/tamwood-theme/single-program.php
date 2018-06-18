@@ -10,6 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<?php get_template_part( 'template-parts/content','banner' )?>
+
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<section class='program-overview'>
@@ -79,6 +80,23 @@ get_header(); ?>
 
 				 <a class="primary-main" href="#">Apply Now</a>
 
+			</section>
+
+			<section class='certificates-and-hiring-partners'>
+				<?php echo CFS()->get( 'certificates_box_title' ) ?>
+				<?php 
+				$c_logos = CFS()->get( 'certificates_logos' );
+				foreach ( $c_logos as $c_logo ) {
+					echo '<img src=" ' . $c_logo['logo'] . '" alt="" />';
+					
+		
+					
+
+				} 
+
+				?>
+
+				
 			</section>
 
 			<section class="courses">
