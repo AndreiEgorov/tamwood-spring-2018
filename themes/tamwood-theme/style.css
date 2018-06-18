@@ -232,7 +232,8 @@ textarea {
   font-size: 14px;
   font-weight: lighter;
   height: auto;
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  width: 100%; }
   @media (min-width: 600px) {
     .site-footer {
       width: 90%;
@@ -267,7 +268,7 @@ textarea {
           -ms-flex-pack: justify;
               justify-content: space-between;
       line-height: 3;
-      width: 60%;
+      width: 62%;
       font-size: 18px;
       padding: 1rem;
       padding-left: 3rem; } }
@@ -291,7 +292,7 @@ textarea {
     .site-footer .social-media .fa {
       background-color: #ffffff;
       margin: 1rem;
-      padding: 23%;
+      padding: 15%;
       border-radius: 50%;
       font-size: 16px; }
       @media (min-width: 600px) {
@@ -300,8 +301,8 @@ textarea {
           margin: 0.2rem;
           font-size: 40px; } }
     .site-footer .social-media .fa-facebook {
-      padding-right: 14%;
-      padding-left: 14%; }
+      padding-right: 18%;
+      padding-left: 18%; }
       @media (min-width: 600px) {
         .site-footer .social-media .fa-facebook {
           padding-left: 28%;
