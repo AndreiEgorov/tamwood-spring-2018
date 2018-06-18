@@ -2,7 +2,7 @@
 /** Template Name: Our Instructors */
 
 get_header(); ?>
-<?php get_template_part( 'template-parts/content-banner' ); ?>
+<?php get_template_part( 'template-parts/content', 'banner' ); ?>
 <section>
     <?php $loop = CFS()->get( 'instructors' );
         foreach ( $loop as $row ) {?>

@@ -227,6 +227,88 @@ textarea {
 /* Posts and pages */
 /* Asides */
 /* Comments */
+.site-footer {
+  background-color: #003DA6;
+  font-size: 14px;
+  font-weight: lighter;
+  height: auto;
+  padding-top: 1rem; }
+  @media (min-width: 600px) {
+    .site-footer {
+      width: 90%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+  .site-footer a {
+    color: #ffffff;
+    font-family: "Fira Sans", sans-serif;
+    text-decoration: none; }
+  .site-footer .menu-footer-menu-container {
+    text-align: center;
+    line-height: 2; }
+  @media (min-width: 600px) {
+    .site-footer .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      line-height: 3;
+      width: 60%;
+      font-size: 18px;
+      padding: 1rem;
+      padding-left: 3rem; } }
+  @media (min-width: 600px) {
+    .site-footer .site-info {
+      width: 100%; } }
+  .site-footer .social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (min-width: 600px) {
+      .site-footer .social-media {
+        margin-right: 2rem; } }
+    .site-footer .social-media .fa {
+      background-color: #ffffff;
+      margin: 1rem;
+      padding: 23%;
+      border-radius: 50%;
+      font-size: 16px; }
+      @media (min-width: 600px) {
+        .site-footer .social-media .fa {
+          padding: 18%;
+          margin: 0.2rem;
+          font-size: 40px; } }
+    .site-footer .social-media .fa-facebook {
+      padding-right: 14%;
+      padding-left: 14%; }
+      @media (min-width: 600px) {
+        .site-footer .social-media .fa-facebook {
+          padding-left: 28%;
+          padding-right: 28%; } }
+    .site-footer .social-media a {
+      color: #003DA6; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

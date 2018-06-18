@@ -20,6 +20,7 @@ get_header(); ?>
     <?php $loop = CFS()->get( 'airport_transfer_service' );
         foreach ( $loop as $row ) { ?>
             <h4> <?php echo $row['location']; ?> </h4>
+            <img src="<?php echo $row['location_icon']; ?>">
             <p> <?php echo $row['transfer_option']; ?> </p>
             <h5> <?php echo $row['price']; ?> </h5> <?php
         }?>
