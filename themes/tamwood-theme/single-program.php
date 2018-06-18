@@ -109,15 +109,15 @@ get_header(); ?>
 				</ul>
 				
 				<?php
-				$text_block = CFS()->get( 'text_block' );
+				$courses_text_block = CFS()->get( 'text_block' );
 				?>
 				<ul>
 					<?php 
-						foreach ( $text_block as $element ) {?>
+						foreach ( $courses_text_block as $courses_element ) {?>
 					<li>
 						<div>
-						<?php echo $element['text_block_title']; ?>
-						<?php echo $element['text']; ?>	
+						<?php echo $courses_element['text_block_title']; ?>
+						<?php echo $courses_element['text']; ?>	
 						</div>
 					</li>
 					<?php }?>
@@ -179,39 +179,35 @@ get_header(); ?>
 				</h1>
 
 				<?php
-				$fees_box = CFS()->get( 'program_fees_box' );
+				$program_fees_box1 = CFS()->get( 'program_fees_box' );
 				?>
 				<ul>
 					<?php 
-						foreach ( $fees_box as $element ) {?>
+						foreach ( $program_fees_box1 as $element ) {?>
+						
 					<li>
 						<div>
 							<h2> 
 								<?php echo $element['box_title']; ?>
 							</h2>
-								<?php echo $element['blurb']; ?>	
+								<?php echo $element['blurb']; ?>
+					<?php 
+					$inner_loop = $element['fees_box'];	
 
-								
-					<p>insert an inner loop here</p>
+						foreach($inner_loop as $value){
+							?>
+							<li> <?php echo $value['type_of_fee']; ?></li>
+							<li> <?php echo $value['fee_amount']; ?></li>
+
+							 <?php 	}
 							
-						
-
+						?>
 						</div>
 					</li>
 					<?php }?>
 				</ul>
 
-
-
-
-
-
-
-
-
-
-
-
+			<a class="primary-main" href="#">Apply Now</a>
 
 			</section>
 
