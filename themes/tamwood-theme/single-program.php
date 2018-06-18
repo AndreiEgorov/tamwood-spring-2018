@@ -9,20 +9,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+		<?php get_template_part( 'template-parts/content','banner' )?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<section class='program-overview'>
-				<div>
-					<!-- If Content-banner is used an error occures i suggest using the_title method instead, Andrei -->
-					<p>____________________________________________________________</p>
-					<!-- //a line to see clearly where the banner ends to be removed @ sass stage, Andrei-->
-				</div>
-				<div class='hero-image'>
-				<img src="<?php echo CFS()->get( 'hero_image' ) ?>" alt="">
 				
-			
-				</div>
 
 				<h1>
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

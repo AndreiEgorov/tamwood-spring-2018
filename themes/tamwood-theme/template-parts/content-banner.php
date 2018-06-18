@@ -1,7 +1,7 @@
 <section>
-    <div class='hero-image'>
-        
+    <div class='hero-image'>    
     </div>
+    
     <h2><?php echo CFS()->get( 'page_title' ); ?></h2>
     
     <p><?php echo CFS()->get( 'page_copy' ); ?></p>
