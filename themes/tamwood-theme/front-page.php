@@ -9,6 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<?php get_template_part( 'template-parts/content','banner' )?>
 			<h1><?php echo CFS()->get( 'hero_title' ); ?></h1>
 			<h2><?php echo CFS()->get( 'page_title' ); ?></h2>
 			<h3><?php echo CFS()->get( 'blurb' ); ?></h3>

@@ -19,8 +19,11 @@ get_header(); ?>
         <?php 
         
         $fields = CFS()->get( 'feature_logo_and_text' );
-        foreach ( $fields as $field ) {
-            echo $field['feature_icon'];
+        foreach ( $fields as $field ) {?>
+           
+            
+            <?php
+            echo '<img src="' . $field['feature_icon'] . '"/>';
             echo $field['feature_description'];
         }
         

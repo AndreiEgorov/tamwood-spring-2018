@@ -9,15 +9,12 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+		<?php get_template_part( 'template-parts/content','banner' )?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<section class='program-overview'>
-				<div>
-					<!-- If Content-banner is used an error occures i suggest using the_title method instead, Andrei -->
-					<p>____________________________________________________________</p>
-					<!-- //a line to see clearly where the banner ends to be removed @ sass stage, Andrei-->
-				</div>
+				
+
 				<h1>
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				</h1>
@@ -211,17 +208,20 @@ get_header(); ?>
 
 			</section>
 
-			
-
-
-
-
-
-
-
-
-
 		<?php endwhile; // End of the loop. ?>
+
+		<div class='side-menu'>
+			<div class='program-overview-option'></div>
+			<div class='courses-option'></div>
+			<div class='requirements-option'></div>
+			<div class='start-dates-option'></div>
+			<div class='tuition-option'></div>
+
+
+		</div>					
+
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
