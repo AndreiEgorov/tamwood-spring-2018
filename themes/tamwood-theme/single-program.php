@@ -18,6 +18,12 @@ get_header(); ?>
 					<p>____________________________________________________________</p>
 					<!-- //a line to see clearly where the banner ends to be removed @ sass stage, Andrei-->
 				</div>
+				<div class='hero-image'>
+				<img src="<?php echo CFS()->get( 'hero_image' ) ?>" alt="">
+				
+			
+				</div>
+
 				<h1>
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				</h1>
@@ -211,17 +217,20 @@ get_header(); ?>
 
 			</section>
 
-			
-
-
-
-
-
-
-
-
-
 		<?php endwhile; // End of the loop. ?>
+
+		<div class='side-menu'>
+			<div class='program-overview-option'></div>
+			<div class='courses-option'></div>
+			<div class='requirements-option'></div>
+			<div class='start-dates-option'></div>
+			<div class='tuition-option'></div>
+
+
+		</div>					
+
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
