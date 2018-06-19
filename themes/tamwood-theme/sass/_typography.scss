@@ -9,26 +9,52 @@ select,
 textarea {
 	color: $color_text-main;
 	font-family: $font_text-main;
-	@include font-size(1);
+	// @include font-size(1);
 	line-height: $font__line-height-body;
 }
 
+html{
+	font-size: 14px;
+	@include desktop{
+		font-size: 18px;
+	}
+}
+
+
+
 /* Headings */
 
-h1 {
-	font-size: 4.28rem;
+h1{
+	font-size: 2.28rem;
 	font-weight: bold;
 	text-transform: uppercase;
+	@include desktop{
+		font-size: 4.28rem
+	}
 }
-h2 {
-	font-size: 2.57rem;
+h2{
+	font-size: 1.85rem;
 	font-weight: 500;
 	text-transform: capitalize;
+	@include desktop{
+		font-size: 2.57rem
+	}
 }
-h3 {
-	font-size: 2rem;
+h3{
+	font-size: 1.57rem;
 	font-weight: 300;
 	text-transform: capitalize;
+	@include desktop{
+		font-size: 1.55rem
+	}
+}
+h4{ 
+	font-size: 1.28rem;
+	font-weight: 300;
+	text-transform: capitalize;
+	@include desktop{
+		font-size: 1rem
+	}
 }
 
 /* Copy */

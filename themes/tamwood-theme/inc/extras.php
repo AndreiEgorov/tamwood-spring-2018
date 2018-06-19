@@ -39,7 +39,9 @@ function tamwood_dynamic_css(){
 		background: 
 		url({$image}) no-repeat center bottom;
 		background-size: cover;
-		height: 100vh;
+		height: 190px;
+		min-width: 100%;
+
 	}";
 
 	
