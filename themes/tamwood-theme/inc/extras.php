@@ -48,3 +48,26 @@ function tamwood_dynamic_css(){
 }
 
 add_action( 'wp_enqueue_scripts', 'tamwood_dynamic_css' );
+
+function tamwood_mobile_option_background(){
+
+	$image = CFS()->get('option_background');
+	//3 if there is no image in the field, get out of there
+	if(!$image){
+		return;
+	}
+	//4 add our custom css
+	$section_navigation_option = ".section-navigation-option{
+		background: 
+		url({$image}) no-repeat center bottom;
+		background-size: cover;
+		height: 50px;
+	}";
+
+	
+
+	wp_add_inline_style('tamwood-style', $section_navigation_option);
+}
+
+add_action( 'wp_enqueue_scripts', 'tamwood_mobile_option_background' );
+
