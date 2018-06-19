@@ -11,8 +11,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		<?php get_template_part( 'template-parts/content','banner' )?>
 			<h1><?php echo CFS()->get( 'hero_title' ); ?></h1>
-			<h1><?php echo CFS()->get( 'page_title' ); ?></h2>
-			<h2><?php echo CFS()->get( 'blurb' ); ?></h3>
+			<h1><?php echo CFS()->get( 'page_title' ); ?></h1>
+			<h2><?php echo CFS()->get( 'blurb' ); ?></h2>
 			<p><?php echo CFS()->get( 'page_copy' ); ?></p>
 
 			<section class="testimonials home-carousel">

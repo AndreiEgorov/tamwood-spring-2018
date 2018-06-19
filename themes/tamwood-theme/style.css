@@ -291,7 +291,7 @@ h3 {
   text-transform: capitalize; }
   @media (min-width: 768px) {
     h3 {
-      font-size: 1.55rem; } }
+      font-size: 2rem; } }
 
 h4 {
   font-size: 1.28rem;
@@ -299,9 +299,16 @@ h4 {
   text-transform: capitalize; }
   @media (min-width: 768px) {
     h4 {
-      font-size: 1rem; } }
+      font-size: 1.28rem; } }
 
 /* Copy */
+p {
+  font-size: 1rem;
+  font-family: "Merriweather", serif; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.28rem; } }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
