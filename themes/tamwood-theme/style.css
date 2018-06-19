@@ -260,25 +260,46 @@ select,
 textarea {
   color: #3D3D3D;
   font-family: "Fira Sans", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
   line-height: 1.5; }
+
+html {
+  font-size: 14px; }
+  @media (min-width: 768px) {
+    html {
+      font-size: 18px; } }
 
 /* Headings */
 h1 {
-  font-size: 4.28rem;
+  font-size: 2.28rem;
   font-weight: bold;
   text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 4.28rem; } }
 
 h2 {
-  font-size: 2.57rem;
+  font-size: 1.85rem;
   font-weight: 500;
   text-transform: capitalize; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.57rem; } }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.57rem;
   font-weight: 300;
   text-transform: capitalize; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.55rem; } }
+
+h4 {
+  font-size: 1.28rem;
+  font-weight: 300;
+  text-transform: capitalize; }
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 1rem; } }
 
 /* Copy */
 /*--------------------------------------------------------------
@@ -581,8 +602,6 @@ h3 {
     clip: auto !important;
     color: #3D3D3D;
     display: block;
-    font-size: 14px;
-    font-size: 0.875rem;
     font-weight: bold;
     height: auto;
     left: 5px;
@@ -717,6 +736,17 @@ h3 {
     .site-footer .social-media a {
       color: #003DA6; }
 
+.hero-image {
+  height: 190px; }
+
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+  width: 85%; }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 1440px; } }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -752,3 +782,7 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.single-program {
+  min-width: 375px; }
+  .single-program .site-header {
+    position: initial; }

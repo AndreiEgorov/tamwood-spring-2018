@@ -37,9 +37,11 @@ function tamwood_dynamic_css(){
 	//4 add our custom css
 	$hero_css = ".hero-image{
 		background: 
-		url({$image}) no-repeat center bottom;
+		url({$image}) no-repeat center;
 		background-size: cover;
-		height: 100vh;
+		height: 190px;
+		min-width: 100%;
+
 	}";
 
 	

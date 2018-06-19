@@ -93,3 +93,18 @@
         }
     }
 }
+
+// hero image
+.hero-image{
+    height: 190px;
+}
+.container{
+    margin: 0 auto;
+    max-width: 700px;
+    width: 85%;
+    
+    @include desktop{
+        max-width: 1440px;
+        
+    }
+}

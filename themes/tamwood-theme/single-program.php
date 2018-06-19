@@ -11,134 +11,99 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		<?php get_template_part( 'template-parts/content','banner' )?>
 
+		<div class='container'>
 
-<h1>--------------------------------------------</h1>
-<ul class='section-navigation-mobile'>
-
-
-	<li class='section-navigation-option'>
-	<?php	echo CFS()->get( 'certificates_and_hiring_partners_option' );?>
-	</li>
-	
-	<li class='section-navigation-option'>
-	<?php echo CFS()->get( 'courses_option' ); ?>
-	</li>
-
-	<li class='section-navigation-option'>
-	<?php echo CFS()->get( 'requirements_option' ); ?>
-	</li>
-
-	<li class='section-navigation-option'>
-	<?php echo CFS()->get( 'start_dates_option' ); ?>
-	</li>
-
-	<li class='section-navigation-option'>
-	<?php echo CFS()->get( 'tuition_and_fees_option' ); ?>
-	</li>
-
-	
-	<?php ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
 
-</ul>
-	
+				<section class='program-overview'>
+					
 
-<h1>--------------------------------------------</h1>
+					<h1>
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					</h1>
+					<?php echo CFS()->get( 'blurb' )?>
+					
+					<?php echo CFS()->get( 'program_overview' )?>
 
-			<ul class="program-section-navigation-mobile">
-					<?php
-					$terms = get_terms(array(
-						'taxonomy' => "product_type",
-						'hide_empty' => 0,
-					));
-					//d($terms);
-					if(!empty($terms) && ! is_wp_error( $terms )) :
+					<?php 
+					$fields = CFS()->get( 'program_highlights_table' );
 					?>
-					<?php foreach ( $terms as $term ) : ?>
+					<ol type="1">
+						<?php 
+							foreach ( $fields as $field ) {?>
+						<li>
+							<?php echo $field['highlight']; ?>	
+						</li>
+						<?php }?>
+					</ol>
 
-							<li>
-								<a href="<?php echo get_term_link( $term ); ?>" class="kind-of-category"> <?php echo $term->name; ?> </a>
-							</li>
+					<?php 
+					$fields = CFS()->get( 'program_type_section' );
+					?>
+					<ul>
+						<?php 
+							foreach ( $fields as $field ) {?>
+						<li>
+							<div>
+							<?php echo $field['program_type']; ?>
+							<?php echo $field['box_1']; ?>
+							<?php echo $field['box_2']; ?>	
+							</div>
+						</li>
+						<?php }?>
+					</ul>
 
-						<?php endforeach; ?>	
-						
-					<?php endif; ?>	
-			</ul>
-
-
-
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-
-			<section class='program-overview'>
+					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
+					<h3>Program Length (REPLACE IMAGE)</h3>
+					<?php echo CFS()->get( 'program_length' )?>
 				
+					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
+					<h3>Location (REPLACE IMAGE)</h3>
+					<?php echo CFS()->get( 'location' )?>
 
-				<h1>
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				</h1>
-				<?php echo CFS()->get( 'blurb' )?>
-				
-				<?php echo CFS()->get( 'program_overview' )?>
+					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
+					<h3>Schedule (REPLACE IMAGE)</h3>
 
-				<?php 
-				$fields = CFS()->get( 'program_highlights_table' );
-				?>
-				<ol type="1">
-					<?php 
-						foreach ( $fields as $field ) {?>
-					<li>
-						<?php echo $field['highlight']; ?>	
-					</li>
-					<?php }?>
-				</ol>
+					<?php			
+					$schedule = CFS()->get( 'schedule' );
+					?>
+					<ul>
+						<?php 
+							foreach ( $schedule as $row ) {?>
+						<li>
+							<div>
+							<?php echo $row['column_1']; ?>
+							<?php echo $row['column_2']; ?>
+							<?php echo $row['column_3']; ?>	
+							</div>
+						</li>
+						<?php }?>
+					</ul>
 
-				<?php 
-				$fields = CFS()->get( 'program_type_section' );
-				?>
-				<ul>
-					<?php 
-						foreach ( $fields as $field ) {?>
-					<li>
-						<div>
-						<?php echo $field['program_type']; ?>
-						<?php echo $field['box_1']; ?>
-						<?php echo $field['box_2']; ?>	
-						</div>
-					</li>
-					<?php }?>
-				</ul>
+					<a class="primary-main" href="#">Apply Now</a>
 
-				<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
-				<h3>Program Length (REPLACE IMAGE)</h3>
-				<?php echo CFS()->get( 'program_length' )?>
-			
-				<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
-				<h3>Location (REPLACE IMAGE)</h3>
-				<?php echo CFS()->get( 'location' )?>
+				</section>
 
-				<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
-				<h3>Schedule (REPLACE IMAGE)</h3>
+		</div>		
 
-				<?php			
-				$schedule = CFS()->get( 'schedule' );
-				?>
-				<ul>
-					<?php 
-						foreach ( $schedule as $row ) {?>
-					<li>
-						<div>
-						<?php echo $row['column_1']; ?>
-						<?php echo $row['column_2']; ?>
-						<?php echo $row['column_3']; ?>	
-						</div>
-					</li>
-					<?php }?>
-				</ul>
+			<h1>--------------------------------------------</h1>
+		<ul class='section-navigation-mobile'>
 
-				 <a class="primary-main" href="#">Apply Now</a>
+			<?php
+				$section_option = CFS()->get( 'section_option' );
+				foreach ( $section_option as $option ) {?>
+				<li class='section-navigation-option'>
+				<?php echo $option['option']; ?>
+				</li>
+					
+			<?php } ?>
 
-			</section>
+		</ul>
+	
+			<h1>--------------------------------------------</h1>
+
+		<div class='container'>
 
 			<section class='certificates-and-hiring-partners'>
 				<?php echo CFS()->get( 'certificates_box_title' ) ?>
@@ -146,15 +111,11 @@ get_header(); ?>
 				$c_logos = CFS()->get( 'certificates_logos' );
 				foreach ( $c_logos as $c_logo ) {
 					echo '<img src=" ' . $c_logo['logo'] . '" alt="" />';
-					
-		
-					
 
 				} 
 
 				?>
-
-				
+			
 			</section>
 
 			<section class="courses">
@@ -284,17 +245,11 @@ get_header(); ?>
 
 			</section>
 
-		<?php endwhile; // End of the loop. ?>
+			<?php endwhile; // End of the loop. ?>
 
-		<div class='side-menu'>
-			<div class='program-overview-option'></div>
-			<div class='courses-option'></div>
-			<div class='requirements-option'></div>
-			<div class='start-dates-option'></div>
-			<div class='tuition-option'></div>
+		</div>
 
-
-		</div>					
+				
 
 
 
