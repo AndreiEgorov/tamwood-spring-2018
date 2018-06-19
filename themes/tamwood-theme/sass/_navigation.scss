@@ -7,15 +7,19 @@
 /* Menus */
   
 .main-navigation {
-    width: 50%;
+    width: 262px;
     height: 100vh;
     position: fixed;
     background: white;
     z-index: 99;
     top: 50px;
-    border: 2px solid $color_brand-main;
+    // border: 2px solid $color_brand-main;
     font-size: 1.85rem;
     font-weight: bold;
+    // Animate
+    transition: 0.5s ease;
+    overflow: hidden;
+    white-space: nowrap;
 
     .menu-main-nav-container {
         height: 100%;
@@ -29,30 +33,44 @@
         li {
             padding-bottom: 30px;
         }
-  
-        // Animate
-        opacity: 1;
-  
-        .sub-menu {
-            display: none;
 
-            // &.show {
-            //     display: flex;
-            //     flex-direction: column;
-            //     background: $color_brand-secondary;
-            // }
-        }
+
         .selected + .show{
+                height: auto;
                 display: flex;
                 flex-direction: column;
-                background: $color_brand-secondary;
+                transition: 0.5s;
+                // border: 1px solid $color_brand-secondary;
         }
     }
     a {
-        display: block;
+        color: $color_text-main;
         text-decoration: none;
+        overflow: hidden;
     }
+    .sub-menu {
+        height: 0;
+        overflow: hidden;
+        background-image: linear-gradient(to right, $color_brand-main 33%, rgba(255,255,255,0) 0%);
+        // background-position: top;
+        background-size: 222px 9px;
+        background-repeat: repeat-x;
+        transition: 0.5s;
+        white-space: normal;
 
+
+        a {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: $color_brand-main;
+        }
+        .sub-menu a{
+            color: grey;
+            font-size: 1.14rem;
+            margin-left: 10px;
+            font-weight: 300;
+        }
+    }
 }
   
 .menu-toggle {
@@ -63,24 +81,14 @@
   /* Menu Toggled */
 .main-navigation.toggled {
     // Animate
-    // opacity: 1;
-    // height: 100vh;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
-    // z-index: 99;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    display: none;
+    width: 0;
+    transition: 0.5s ease;
 }
   
 @media screen and (min-width: 768px) {
     // Hamburger Menu Container
     .menu-toggle {
-        // display: none;
+        display: none;
     }
     // Primary Navigation
     .main-navigation ul {
@@ -104,13 +112,5 @@
         overflow: hidden;
     }
   
-    .nav-previous {
-        width: 50%;
-    }
-  
-    .nav-next {
-        text-align: right;
-        width: 50%;
-    }
 }
   

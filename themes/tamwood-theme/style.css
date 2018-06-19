@@ -175,27 +175,28 @@ textarea {
 /* Links */
 /* Menus */
 .main-navigation {
-  width: 50%;
+  width: 262px;
   height: 100vh;
   position: fixed;
   background: white;
   z-index: 99;
   top: 50px;
-  border: 2px solid #003DA6;
   font-size: 1.85rem;
-  font-weight: bold; }
+  font-weight: bold;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  overflow: hidden;
+  white-space: nowrap; }
   .main-navigation .menu-main-nav-container {
     height: 100%; }
   .main-navigation .menu {
     list-style: none;
     margin: 20px;
-    height: auto;
-    opacity: 1; }
+    height: auto; }
     .main-navigation .menu li {
       padding-bottom: 30px; }
-    .main-navigation .menu .sub-menu {
-      display: none; }
     .main-navigation .menu .selected + .show {
+      height: auto;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -203,10 +204,31 @@ textarea {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      background: #B52371; }
+      -webkit-transition: 0.5s;
+      transition: 0.5s; }
   .main-navigation a {
-    display: block;
-    text-decoration: none; }
+    color: #3D3D3D;
+    text-decoration: none;
+    overflow: hidden; }
+  .main-navigation .sub-menu {
+    height: 0;
+    overflow: hidden;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #003DA6), color-stop(0%, rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to right, #003DA6 33%, rgba(255, 255, 255, 0) 0%);
+    background-size: 222px 9px;
+    background-repeat: repeat-x;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    white-space: normal; }
+    .main-navigation .sub-menu a {
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: #003DA6; }
+    .main-navigation .sub-menu .sub-menu a {
+      color: grey;
+      font-size: 1.14rem;
+      margin-left: 10px;
+      font-weight: 300; }
 
 .menu-toggle {
   position: relative;
@@ -214,9 +236,13 @@ textarea {
 
 /* Menu Toggled */
 .main-navigation.toggled {
-  display: none; }
+  width: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease; }
 
 @media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none; }
   .main-navigation ul {
     opacity: 1;
     height: auto;
@@ -238,17 +264,6 @@ textarea {
 .post-navigation {
   margin: 0 0 1.5rem;
   overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  text-align: right;
-  width: 50%; }
 
 /*--------------------------------------------------------------
 # Accessibility
