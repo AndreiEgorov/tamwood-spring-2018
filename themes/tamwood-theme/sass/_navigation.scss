@@ -61,27 +61,20 @@
 }
   
   /* Menu Toggled */
-.main-navigation.toggled ul {
+.main-navigation.toggled {
     // Animate
-    opacity: 1;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media screen and (min-width: 768px) {
-        position: static;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        height: auto;
-    }
+    // opacity: 1;
+    // height: 100vh;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // z-index: 99;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    display: none;
 }
   
 @media screen and (min-width: 768px) {
