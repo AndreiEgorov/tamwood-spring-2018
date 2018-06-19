@@ -16,10 +16,10 @@ get_header(); ?>
     <div>
             <div>
                 <h2><?php the_title(); ?></h2>
-                <img src="<?php echo $row['banner']; ?>">
+                <img src="<?php echo CFS()->get( 'hero_image' ); ?>">
             </div>
             <div>
-                <h3><?php echo CFS()->get( 'contact_info' ); ?></h3>
+                <p><?php echo CFS()->get( 'contact_info' ); ?></p>
             </div>
         </div>
             <?php endforeach; wp_reset_postdata(); ?>
