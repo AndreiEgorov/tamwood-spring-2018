@@ -12,6 +12,12 @@
     width: 0;
     opacity: 0;
     transition: 0.5s ease;
+
+    @include desktop {
+        opacity: 1;
+        width: auto;
+        transition: 0s;
+    }
 }
   
 .main-navigation {
@@ -29,13 +35,35 @@
     overflow: hidden;
     white-space: nowrap;
 
+    @include desktop {
+        background: none;
+        font-size: 1rem;
+        text-transform: uppercase; 
+        font-weight: normal;
+        transition: 0s;
+        height: 50px;
+        right: 0;
+        position: static;
+        order: 4;
+        width: 300px;
+    }
     .menu {
         list-style: none;
         margin: 20px;
         height: auto;
 
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
+
         li {
             padding-bottom: 30px;
+            @include desktop {
+                width: 150px;
+                padding: 0;
+                text-align: center;
+            }
         }
 
         .selected + .show{
@@ -48,6 +76,10 @@
     a {
         color: $color_text-main;
         text-decoration: none;
+        @include desktop {
+            text-align: center;
+        }
+        
     }
     .sub-menu {
         height: 0;
@@ -85,19 +117,10 @@
             justify-content: flex-start;
             align-items: flex-start;
         }
-        .primary-menu {
-            display: flex;
-            flex-direction: row;
-        }
     }
 }
   
 .menu-toggle {
     position: relative;
     z-index: 100;
-}
-@include desktop {
-    .menu-toggle {
-        display: none;
-    }
 }

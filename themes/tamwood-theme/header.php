@@ -25,14 +25,15 @@
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div><!-- .site-branding -->
 				<div class="header-container container">
-					<button class="hamburger menu-toggle" type="button"></button>
-					<img class="desktop" src="<?php echo get_template_directory_uri() ?>/assets/logos/tamwood-logo.svg">
+					<a class="hamburger menu-toggle mobile" type="button"></a>
+					<img class="desktop logo-desktop" src="<?php echo get_template_directory_uri() ?>/assets/logos/tamwood-logo.svg">
 					<nav id="site-navigation" class="main-navigation toggled" role="navigation">
-						
+						<button class="mobile">Apply Now</button>	
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</nav><!-- #site-navigation -->
-					<img class="mobile" src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">
+					<img class="mobile logo-mobile" src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">
 					<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85">
+					<a class="desktop apply-now">Apply Now</a>
 				</div>
 			</header><!-- #masthead -->
 
