@@ -31,7 +31,7 @@
 						
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</nav><!-- #site-navigation -->
-					<img src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">
+					<img class="mobile" src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">
 					<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85">
 				</div>
 			</header><!-- #masthead -->

@@ -173,9 +173,7 @@ textarea {
   display: none; }
   @media (min-width: 768px) {
     .desktop {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
+      display: inherit; } }
 
 .hamburger {
   background: center/30px url("../../assets/icons/hamburger@3x.png") no-repeat;
@@ -208,6 +206,10 @@ textarea {
 .search-icon {
   padding: 30px; }
 
+@media (min-width: 768px) {
+  .mobile {
+    display: none; } }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -234,8 +236,6 @@ textarea {
   transition: 0.5s ease;
   overflow: hidden;
   white-space: nowrap; }
-  .main-navigation .menu-main-nav-container {
-    height: 100%; }
   .main-navigation .menu {
     list-style: none;
     margin: 20px;
@@ -255,8 +255,7 @@ textarea {
       transition: 0.5s; }
   .main-navigation a {
     color: #3D3D3D;
-    text-decoration: none;
-    overflow: hidden; }
+    text-decoration: none; }
   .main-navigation .sub-menu {
     height: 0;
     overflow: hidden;
@@ -276,35 +275,32 @@ textarea {
       font-size: 1.14rem;
       margin-left: 10px;
       font-weight: 300; }
+  @media (min-width: 768px) {
+    .main-navigation {
+      width: auto; }
+      .main-navigation ul {
+        opacity: 1;
+        height: auto;
+        overflow: auto;
+        position: static;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; } }
 
 .menu-toggle {
   position: relative;
   z-index: 100; }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    opacity: 1;
-    height: auto;
-    overflow: auto;
-    position: static;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5rem;
-  overflow: hidden; }
+    display: none; } }
 
 /*--------------------------------------------------------------
 # Accessibility

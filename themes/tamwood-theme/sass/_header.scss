@@ -2,7 +2,7 @@
     display: none;
 
     @include desktop {
-        display: flex;
+        display: inherit;
     }
 }
 .hamburger {
@@ -26,4 +26,9 @@
 }
 .search-icon {
     padding: 30px;
+}
+.mobile {
+    @include desktop {
+        display: none;
+    }
 }
