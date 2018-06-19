@@ -13,6 +13,8 @@
     outline: none;
 }
 .site-header {
+    position: fixed;
+    width: 100%;
     height: 85px;
     background-color: white;
     border-bottom: 3px solid $color_brand-main;
