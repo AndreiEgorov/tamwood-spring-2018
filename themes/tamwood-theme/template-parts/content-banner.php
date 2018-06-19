@@ -2,7 +2,7 @@
     <div class='hero-image'>    
     </div>
     
-    <h2><?php echo CFS()->get( 'page_title' ); ?></h2>
+    <h1><?php echo CFS()->get( 'page_title' ); ?></h1>
     
     <p><?php echo CFS()->get( 'page_copy' ); ?></p>
     <p>____________________________________________________________</p>
