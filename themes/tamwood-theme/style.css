@@ -432,9 +432,7 @@ h3 {
       padding-bottom: 30px; }
       @media (min-width: 768px) {
         .main-navigation .menu li {
-          width: 150px;
-          padding: 0;
-          text-align: center; } }
+          padding: 0; } }
     .main-navigation .menu .selected + .show {
       height: auto;
       display: -webkit-box;
@@ -493,6 +491,10 @@ h3 {
 .menu-toggle {
   position: relative;
   z-index: 100; }
+
+.menu-item-type-taxonomy:after {
+  font-family: FontAwesome;
+  content: '\f107'; }
 
 /*--------------------------------------------------------------
 # Accessibility

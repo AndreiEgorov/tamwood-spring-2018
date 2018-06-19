@@ -60,9 +60,9 @@
         li {
             padding-bottom: 30px;
             @include desktop {
-                width: 150px;
+                // width: 150px;
                 padding: 0;
-                text-align: center;
+                // text-align: center;
             }
         }
 
@@ -123,4 +123,8 @@
 .menu-toggle {
     position: relative;
     z-index: 100;
+}
+.menu-item-type-taxonomy:after {
+    font-family: FontAwesome;
+    content: '\f107';
 }

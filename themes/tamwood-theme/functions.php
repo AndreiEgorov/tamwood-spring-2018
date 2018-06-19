@@ -86,10 +86,10 @@ add_filter( 'stylesheet_uri', 'tamwood_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function tamwood_scripts() {
+	wp_enqueue_style( 'font-awesome-cdn', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0' );
 	wp_enqueue_style( 'tamwood-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'tamwood-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
-	wp_enqueue_style( 'font-awesome-cdn', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0' );
 
 	wp_enqueue_script( 'tamwood-script', get_template_directory_uri() . 
 	'/build/js/script.min.js', array('jquery'), '', true );
