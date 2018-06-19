@@ -24,12 +24,16 @@
 				<div class="site-branding">
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div><!-- .site-branding -->
-				<button class="hamburger menu-toggle" type="button">Hamburger</button>
-				<nav id="site-navigation" class="main-navigation toggled" role="navigation">
-					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button> -->
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
-				<img src="<?php ?>">
+				<div class="header-container container">
+					<button class="hamburger menu-toggle" type="button"></button>
+					<img class="desktop" src="<?php echo get_template_directory_uri() ?>/assets/logos/tamwood-logo.svg">
+					<nav id="site-navigation" class="main-navigation toggled" role="navigation">
+						
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav><!-- #site-navigation -->
+					<img src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">
+					<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85">
+				</div>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

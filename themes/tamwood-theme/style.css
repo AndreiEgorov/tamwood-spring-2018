@@ -169,6 +169,45 @@ textarea {
 --------------------------------------------------------------*/
 /* Buttons */
 /* Fields */
+.desktop {
+  display: none; }
+  @media (min-width: 768px) {
+    .desktop {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.hamburger {
+  background: center/30px url("../../assets/icons/hamburger@3x.png") no-repeat;
+  width: 85px;
+  height: 100%;
+  border: none;
+  outline: none; }
+
+.site-header {
+  height: 85px;
+  background-color: white;
+  border-bottom: 3px solid #003DA6; }
+
+.header-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.search-icon {
+  padding: 30px; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -187,7 +226,7 @@ textarea {
   position: fixed;
   background: white;
   z-index: 99;
-  top: 50px;
+  top: 85px;
   font-size: 1.85rem;
   font-weight: bold;
   opacity: 1;
