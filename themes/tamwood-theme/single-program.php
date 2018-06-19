@@ -11,78 +11,81 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		<?php get_template_part( 'template-parts/content','banner' )?>
 
+		<div class='container'>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
 
-			<section class='program-overview'>
+				<section class='program-overview'>
+					
+
+					<h1>
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					</h1>
+					<?php echo CFS()->get( 'blurb' )?>
+					
+					<?php echo CFS()->get( 'program_overview' )?>
+
+					<?php 
+					$fields = CFS()->get( 'program_highlights_table' );
+					?>
+					<ol type="1">
+						<?php 
+							foreach ( $fields as $field ) {?>
+						<li>
+							<?php echo $field['highlight']; ?>	
+						</li>
+						<?php }?>
+					</ol>
+
+					<?php 
+					$fields = CFS()->get( 'program_type_section' );
+					?>
+					<ul>
+						<?php 
+							foreach ( $fields as $field ) {?>
+						<li>
+							<div>
+							<?php echo $field['program_type']; ?>
+							<?php echo $field['box_1']; ?>
+							<?php echo $field['box_2']; ?>	
+							</div>
+						</li>
+						<?php }?>
+					</ul>
+
+					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
+					<h3>Program Length (REPLACE IMAGE)</h3>
+					<?php echo CFS()->get( 'program_length' )?>
 				
+					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
+					<h3>Location (REPLACE IMAGE)</h3>
+					<?php echo CFS()->get( 'location' )?>
 
-				<h1>
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				</h1>
-				<?php echo CFS()->get( 'blurb' )?>
-				
-				<?php echo CFS()->get( 'program_overview' )?>
+					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
+					<h3>Schedule (REPLACE IMAGE)</h3>
 
-				<?php 
-				$fields = CFS()->get( 'program_highlights_table' );
-				?>
-				<ol type="1">
-					<?php 
-						foreach ( $fields as $field ) {?>
-					<li>
-						<?php echo $field['highlight']; ?>	
-					</li>
-					<?php }?>
-				</ol>
+					<?php			
+					$schedule = CFS()->get( 'schedule' );
+					?>
+					<ul>
+						<?php 
+							foreach ( $schedule as $row ) {?>
+						<li>
+							<div>
+							<?php echo $row['column_1']; ?>
+							<?php echo $row['column_2']; ?>
+							<?php echo $row['column_3']; ?>	
+							</div>
+						</li>
+						<?php }?>
+					</ul>
 
-				<?php 
-				$fields = CFS()->get( 'program_type_section' );
-				?>
-				<ul>
-					<?php 
-						foreach ( $fields as $field ) {?>
-					<li>
-						<div>
-						<?php echo $field['program_type']; ?>
-						<?php echo $field['box_1']; ?>
-						<?php echo $field['box_2']; ?>	
-						</div>
-					</li>
-					<?php }?>
-				</ul>
+					<a class="primary-main" href="#">Apply Now</a>
 
-				<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
-				<h3>Program Length (REPLACE IMAGE)</h3>
-				<?php echo CFS()->get( 'program_length' )?>
-			
-				<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
-				<h3>Location (REPLACE IMAGE)</h3>
-				<?php echo CFS()->get( 'location' )?>
+				</section>
 
-				<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
-				<h3>Schedule (REPLACE IMAGE)</h3>
-
-				<?php			
-				$schedule = CFS()->get( 'schedule' );
-				?>
-				<ul>
-					<?php 
-						foreach ( $schedule as $row ) {?>
-					<li>
-						<div>
-						<?php echo $row['column_1']; ?>
-						<?php echo $row['column_2']; ?>
-						<?php echo $row['column_3']; ?>	
-						</div>
-					</li>
-					<?php }?>
-				</ul>
-
-				 <a class="primary-main" href="#">Apply Now</a>
-
-			</section>
+		</div>		
 
 			<h1>--------------------------------------------</h1>
 		<ul class='section-navigation-mobile'>
@@ -98,8 +101,9 @@ get_header(); ?>
 
 		</ul>
 	
+			<h1>--------------------------------------------</h1>
 
-<h1>--------------------------------------------</h1>
+		<div class='container'>
 
 			<section class='certificates-and-hiring-partners'>
 				<?php echo CFS()->get( 'certificates_box_title' ) ?>
@@ -107,15 +111,11 @@ get_header(); ?>
 				$c_logos = CFS()->get( 'certificates_logos' );
 				foreach ( $c_logos as $c_logo ) {
 					echo '<img src=" ' . $c_logo['logo'] . '" alt="" />';
-					
-		
-					
 
 				} 
 
 				?>
-
-				
+			
 			</section>
 
 			<section class="courses">
@@ -245,17 +245,11 @@ get_header(); ?>
 
 			</section>
 
-		<?php endwhile; // End of the loop. ?>
+			<?php endwhile; // End of the loop. ?>
 
-		<div class='side-menu'>
-			<div class='program-overview-option'></div>
-			<div class='courses-option'></div>
-			<div class='requirements-option'></div>
-			<div class='start-dates-option'></div>
-			<div class='tuition-option'></div>
+		</div>
 
-
-		</div>					
+				
 
 
 

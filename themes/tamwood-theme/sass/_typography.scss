@@ -14,9 +14,9 @@ textarea {
 }
 
 html{
-	font-size: 14px;
+	font-size: $font_size-main-mobile;
 	@include desktop{
-		font-size: 18px;
+		font-size: $font_size-main-desktop;
 	}
 }
 
