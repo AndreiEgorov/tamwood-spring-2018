@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/* Links */
+
+/* Menus */
+
+/* Menu Toggled */
+.main-navigation.toggled {
+    // Animate
+    width: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+  
+.main-navigation {
+    width: 262px;
+    height: 100vh;
+    position: fixed;
+    background: white;
+    z-index: 99;
+    top: 50px;
+    // border: 2px solid $color_brand-main;
+    font-size: 1.85rem;
+    font-weight: bold;
+    // Animate
+    opacity: 1;
+    transition: 0.5s ease;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .menu-main-nav-container {
+        height: 100%;
+    }
+    .menu {
+        list-style: none;
+        margin: 20px;
+        height: auto;
+
+
+        li {
+            padding-bottom: 30px;
+        }
+
+
+        .selected + .show{
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                transition: 0.5s;
+        }
+    }
+    a {
+        color: $color_text-main;
+        text-decoration: none;
+        overflow: hidden;
+    }
+    .sub-menu {
+        height: 0;
+        overflow: hidden;
+        background-image: linear-gradient(to right, $color_brand-main 33%, rgba(255,255,255,0) 0%);
+        background-size: 222px 9px;
+        background-repeat: repeat-x;
+        transition: 0.5s;
+        white-space: normal;
+
+
+        a {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: $color_brand-main;
+        }
+        .sub-menu a{
+            color: grey;
+            font-size: 1.14rem;
+            margin-left: 10px;
+            font-weight: 300;
+        }
+    }
+}
+  
+.menu-toggle {
+    position: relative;
+    z-index: 100;
+}
+  
+@media screen and (min-width: 768px) {
+    // Hamburger Menu Container
+    .menu-toggle {
+        display: none;
+    }
+    // Primary Navigation
+    .main-navigation ul {
+        // Animate
+        opacity: 1;
+        height: auto;
+        overflow: auto;
+  
+        position: static;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+  
+    .comment-navigation,
+    .posts-navigation,
+    .post-navigation {
+    .site-main & {
+        margin: 0 0 $base__space-unit;
+        overflow: hidden;
+    }
+  
+}
+  
