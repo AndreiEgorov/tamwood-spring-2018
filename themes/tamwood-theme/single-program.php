@@ -12,62 +12,6 @@ get_header(); ?>
 		<?php get_template_part( 'template-parts/content','banner' )?>
 
 
-<h1>--------------------------------------------</h1>
-<ul class='section-navigation-mobile'>
-
-
-	<li class='section-navigation-option'>
-	<?php	echo CFS()->get( 'certificates_and_hiring_partners_option' );?>
-	</li>
-	
-	<li class='section-navigation-option'>
-	<?php echo CFS()->get( 'courses_option' ); ?>
-	</li>
-
-	<li class='section-navigation-option'>
-	<?php echo CFS()->get( 'requirements_option' ); ?>
-	</li>
-
-	<li class='section-navigation-option'>
-	<?php echo CFS()->get( 'start_dates_option' ); ?>
-	</li>
-
-	<li class='section-navigation-option'>
-	<?php echo CFS()->get( 'tuition_and_fees_option' ); ?>
-	</li>
-
-	
-	<?php ?>
-
-
-</ul>
-	
-
-<h1>--------------------------------------------</h1>
-
-			<ul class="program-section-navigation-mobile">
-					<?php
-					$terms = get_terms(array(
-						'taxonomy' => "product_type",
-						'hide_empty' => 0,
-					));
-					//d($terms);
-					if(!empty($terms) && ! is_wp_error( $terms )) :
-					?>
-					<?php foreach ( $terms as $term ) : ?>
-
-							<li>
-								<a href="<?php echo get_term_link( $term ); ?>" class="kind-of-category"> <?php echo $term->name; ?> </a>
-							</li>
-
-						<?php endforeach; ?>	
-						
-					<?php endif; ?>	
-			</ul>
-
-
-
-
 		<?php while ( have_posts() ) : the_post(); ?>
 
 
@@ -139,6 +83,23 @@ get_header(); ?>
 				 <a class="primary-main" href="#">Apply Now</a>
 
 			</section>
+
+			<h1>--------------------------------------------</h1>
+		<ul class='section-navigation-mobile'>
+
+			<?php
+				$section_option = CFS()->get( 'section_option' );
+				foreach ( $section_option as $option ) {?>
+				<li class='section-navigation-option'>
+				<?php echo $option['option']; ?>
+				</li>
+					
+			<?php } ?>
+
+		</ul>
+	
+
+<h1>--------------------------------------------</h1>
 
 			<section class='certificates-and-hiring-partners'>
 				<?php echo CFS()->get( 'certificates_box_title' ) ?>
