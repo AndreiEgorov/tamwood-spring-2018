@@ -5,6 +5,14 @@
 /* Links */
 
 /* Menus */
+
+/* Menu Toggled */
+.main-navigation.toggled {
+    // Animate
+    width: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+}
   
 .main-navigation {
     width: 262px;
@@ -17,6 +25,7 @@
     font-size: 1.85rem;
     font-weight: bold;
     // Animate
+    opacity: 1;
     transition: 0.5s ease;
     overflow: hidden;
     white-space: nowrap;
@@ -40,7 +49,6 @@
                 display: flex;
                 flex-direction: column;
                 transition: 0.5s;
-                // border: 1px solid $color_brand-secondary;
         }
     }
     a {
@@ -52,7 +60,6 @@
         height: 0;
         overflow: hidden;
         background-image: linear-gradient(to right, $color_brand-main 33%, rgba(255,255,255,0) 0%);
-        // background-position: top;
         background-size: 222px 9px;
         background-repeat: repeat-x;
         transition: 0.5s;
@@ -76,13 +83,6 @@
 .menu-toggle {
     position: relative;
     z-index: 100;
-}
-  
-  /* Menu Toggled */
-.main-navigation.toggled {
-    // Animate
-    width: 0;
-    transition: 0.5s ease;
 }
   
 @media screen and (min-width: 768px) {
