@@ -18,12 +18,15 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<h1><?php echo esc_html( 'Error' ); ?></h1>
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/flyaroundtheworld.png">
-					<h2><?php echo esc_html( '404 not found' ); ?></h2>
-					<p><?php echo esc_html( 'The page that you&rsquo;re looking for doesn&rsquo;t exist or another error has occured.' ); ?></p>
-					<p><?php echo esc_html( 'Sorry for the inconvenience.' ); ?></p>
-
+					<section class="error-page-container">
+						<h1><?php echo esc_html( 'Error' ); ?></h1>
+						<div class="error-page-contents">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/flyaroundtheworld.png">
+							<h2><?php echo esc_html( '404 not found' ); ?></h2>
+							<p><?php echo esc_html( 'The page that you&rsquo;re looking for doesn&rsquo;t exist or another error has occured.' ); ?></p>
+							<p><?php echo esc_html( 'Sorry for the inconvenience.' ); ?></p>
+						</div> <!-- error-page-contents -->
+					</section>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
