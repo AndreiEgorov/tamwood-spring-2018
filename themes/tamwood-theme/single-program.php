@@ -25,11 +25,12 @@ get_header(); ?>
 
 					<h4 class='blurb'>
 					<?php echo CFS()->get( 'blurb' )?>
-</h4>
+					</h4>
 					
-					
+					<div class='overview-text'>
 					<?php echo CFS()->get( 'program_overview' )?>
-
+					</div>
+					
 					<?php 
 					$fields = CFS()->get( 'program_highlights_table' );
 					?>
@@ -43,21 +44,51 @@ get_header(); ?>
 					</ol>
 
 					<?php 
-					$fields = esc_html( CFS()->get( 'program_type_section' ) );
+					$fields =  CFS()->get( 'program_type_section' ) ;
 					?>
 					<ul>
 						<?php 
 							foreach ( $fields as $field ) {?>
-						<li>
-							<div class="box">
-							
-							<?php echo $field['program_type']; ?>
-							<?php echo $field['box_1']; ?>
-							<?php echo $field['box_2']; ?>	
+						<li class='program-type'>
+							<div class='box-section'>
+								<h3 class='box-title'>
+									<?php echo $field['program_type']; ?>
+								</h3>
+								<div class='box-set'>
+									<div class='box'>
+										<?php echo $field['box_1']; ?>
+									</div>
+									<div class='box'>
+										<?php echo $field['box_2']; ?>
+									</div>
+								</div>
+								
+									
 							</div>
 						</li>
 						<?php }?>
 					</ul>
+
+		</div>			
+
+				<h1>--------------------------</h1>
+			<ul class='section-navigation-mobile'>
+
+				<?php
+					$section_option = CFS()->get( 'section_option' );
+					foreach ( $section_option as $option ) {?>
+					<li class='section-navigation-option'>
+					<p><?php echo $option['option']; ?></p>
+					</li> 
+						
+				<?php } ?>
+
+			</ul>
+		
+				<h1>--------------------------</h1>
+
+
+		<div class='container'>
 
 					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/placeholder (1)@2x.png" alt="downtown building">
 					<h3>Program Length (REPLACE IMAGE)</h3>
@@ -90,25 +121,11 @@ get_header(); ?>
 
 				</section>
 
-		</div>		
+			
 
-			<h1>--------------------------------------------</h1>
-		<ul class='section-navigation-mobile'>
+		
 
-			<?php
-				$section_option = CFS()->get( 'section_option' );
-				foreach ( $section_option as $option ) {?>
-				<li class='section-navigation-option'>
-				<?php echo $option['option']; ?>
-				</li>
-					
-			<?php } ?>
-
-		</ul>
-	
-			<h1>--------------------------------------------</h1>
-
-		<div class='container'>
+		
 
 			<section class='certificates-and-hiring-partners'>
 				<?php echo CFS()->get( 'certificates_box_title' ) ?>

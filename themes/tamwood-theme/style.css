@@ -782,7 +782,51 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.single-program {
-  min-width: 375px; }
-  .single-program .site-header {
-    position: initial; }
+.single-program .site-header {
+  position: initial; }
+
+.single-program .blurb {
+  display: none; }
+
+.single-program .overview-text {
+  margin: 3.14rem 0; }
+
+.single-program .program-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .single-program .program-type .box-section {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center; }
+    .single-program .program-type .box-section .box-title {
+      margin-bottom: 1rem; }
+    .single-program .program-type .box-section .box-set {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .single-program .program-type .box-section .box-set .box {
+        -ms-flex-preferred-size: 48%;
+            flex-basis: 48%; }
+        .single-program .program-type .box-section .box-set .box h4 {
+          border: 3px solid #B52371;
+          height: 115px;
+          padding: 1.3rem 2rem; }
+
+.single-program .section-navigation-mobile {
+  width: 100%; }
+  .single-program .section-navigation-mobile .section-navigation-option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 5px 0;
+    height: 50px;
+    font-size: 1.28rem;
+    color: #fff;
+    padding-left: 7.5%; }

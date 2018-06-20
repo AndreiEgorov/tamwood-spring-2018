@@ -61,7 +61,7 @@ function tamwood_mobile_option_background(){
 	//4 add our custom css
 	$section_navigation_option = ".section-navigation-option{
 		background: 
-		url({$image}) no-repeat center bottom;
+		url({$image}) no-repeat right bottom;
 		background-size: cover;
 		height: 50px;
 	}";

@@ -1,8 +1,63 @@
 .single-program{
-    min-width: 375px;
+    // min-width: 375px;
     .site-header{
         position: initial;
     }
+
+    //program overview section
+    .blurb{
+        display: none;
+    }
+    .overview-text{
+        margin: 3.14rem 0;
+    }
+
+    .program-type{
+        display: flex;
+        .box-section{
+            margin-bottom:1rem;
+            width: 100%;
+            text-align: center;
+            .box-title{
+                margin-bottom: 1rem;
+            }
+            .box-set{
+                display: flex;
+                justify-content: space-between;
+                .box{ 
+                    flex-basis: 48%;
+                    
+                    h4{
+                        border:3px solid $color_brand-secondary;
+                        height: 115px; 
+                        padding: 1.3rem 2rem;
+                    } 
+                   
+                }
+                
+            }
+        }
+
+    }
+
+    .section-navigation-mobile{
+        
+        
+        width: 100%;
+        .section-navigation-option{
+            display: flex;
+            align-items: center;
+            margin:5px 0;
+            height: 50px;
+            font-size: 1.28rem;
+            color: $color__background-body;
+            padding-left: 7.5%;
+        }
+
+    }
+
+   
+
     
     
     
