@@ -22,7 +22,11 @@ get_header(); ?>
 					<h1>
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 					</h1>
+
+					<h4 class='blurb'>
 					<?php echo CFS()->get( 'blurb' )?>
+</h4>
+					
 					
 					<?php echo CFS()->get( 'program_overview' )?>
 
@@ -39,13 +43,14 @@ get_header(); ?>
 					</ol>
 
 					<?php 
-					$fields = CFS()->get( 'program_type_section' );
+					$fields = esc_html( CFS()->get( 'program_type_section' ) );
 					?>
 					<ul>
 						<?php 
 							foreach ( $fields as $field ) {?>
 						<li>
-							<div>
+							<div class="box">
+							
 							<?php echo $field['program_type']; ?>
 							<?php echo $field['box_1']; ?>
 							<?php echo $field['box_2']; ?>	
@@ -54,11 +59,11 @@ get_header(); ?>
 						<?php }?>
 					</ul>
 
-					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/placeholder (1)@2x.png" alt="downtown building">
 					<h3>Program Length (REPLACE IMAGE)</h3>
 					<?php echo CFS()->get( 'program_length' )?>
 				
-					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/icons/clock-150x150@2x.png" alt="downtown building">
 					<h3>Location (REPLACE IMAGE)</h3>
 					<?php echo CFS()->get( 'location' )?>
 
