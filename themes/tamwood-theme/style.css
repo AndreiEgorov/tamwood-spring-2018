@@ -887,10 +887,5 @@ object {
         height: 100%; }
         .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell {
           width: 100%; }
-          .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell .image-container {
-            height: 250px; }
-            .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell .image-container .fp-carousel {
-              max-width: 100%;
-              height: auto; }
 
 /* external css: flickity.css */
