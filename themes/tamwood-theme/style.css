@@ -321,17 +321,29 @@ h4 {
   width: 85px;
   height: 100%;
   border: none;
-  outline: none; }
+  outline: none;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
 
 .site-header {
-  position: fixed;
   width: 100%;
   height: 85px;
   background-color: white;
   border-bottom: 3px solid #003DA6; }
+  .home .site-header {
+    position: fixed; }
+  @media (min-width: 768px) {
+    .site-header {
+      height: 185px; } }
+
+.desktop-header {
+  height: 100%;
+  position: relative; }
 
 .header-container {
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,9 +357,84 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media (min-width: 768px) {
+    .header-container {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      flex-wrap: wrap; }
+      .header-container .apply-now.desktop {
+        text-decoration: none;
+        font-family: "Fira Sans";
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 21px;
+        text-align: center;
+        height: 62px;
+        width: 190px;
+        padding: 10px 27px;
+        margin: 50px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: 3px solid #B52371;
+        background-color: #B52371;
+        margin: 32px 15px 0 0;
+        font-weight: 500;
+        white-space: nowrap;
+        padding-top: 18px;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2; } }
+
+.apply-now.mobile {
+  text-decoration: none;
+  font-family: "Fira Sans";
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: center;
+  height: 62px;
+  width: 190px;
+  padding: 10px 27px;
+  margin: 50px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: 3px solid #B52371;
+  background-color: #B52371;
+  font-size: 1.14rem;
+  margin: 30px 36px; }
+
+.logo-desktop {
+  height: 100%;
+  width: auto;
+  position: absolute; }
+
+.logo-container {
+  -ms-flex-negative: 20;
+      flex-shrink: 20; }
+
+.logo-mobile {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2; }
 
 .search-icon {
-  padding: 30px; }
+  padding: 30px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3; }
+  @media (min-width: 768px) {
+    .search-icon {
+      padding: 20px;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      margin: 20px 25px 0 0; } }
 
 @media (min-width: 768px) {
   .mobile {
@@ -358,12 +445,21 @@ h4 {
 --------------------------------------------------------------*/
 /* Links */
 /* Menus */
-/* Menu Toggled */
 .main-navigation.toggled {
   width: 0;
   opacity: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease; }
+  @media (min-width: 768px) {
+    .main-navigation.toggled {
+      opacity: 1;
+      width: 100%;
+      -webkit-transition: 0s;
+      transition: 0s; } }
+
+@media (min-width: 768px) {
+  .menu-main-nav-container {
+    width: 100%; } }
 
 .main-navigation {
   width: 262px;
@@ -372,19 +468,56 @@ h4 {
   background: white;
   z-index: 99;
   top: 85px;
-  font-size: 1.85rem;
+  font-size: 1.625rem;
   font-weight: bold;
   opacity: 1;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   overflow: hidden;
   white-space: nowrap; }
+  @media (min-width: 768px) {
+    .main-navigation {
+      background: none;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: normal;
+      -webkit-transition: 0s;
+      transition: 0s;
+      height: auto;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+      position: static;
+      width: 100%;
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
   .main-navigation .menu {
     list-style: none;
-    margin: 20px;
+    margin: 20px 32px;
     height: auto; }
+    @media (min-width: 768px) {
+      .main-navigation .menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; } }
     .main-navigation .menu li {
       padding-bottom: 30px; }
+      @media (min-width: 768px) {
+        .main-navigation .menu li {
+          padding: 0 3%; } }
     .main-navigation .menu .selected + .show {
       height: auto;
       display: -webkit-box;
@@ -399,6 +532,9 @@ h4 {
   .main-navigation a {
     color: #3D3D3D;
     text-decoration: none; }
+    @media (min-width: 768px) {
+      .main-navigation a {
+        text-align: center; } }
   .main-navigation .sub-menu {
     height: 0;
     overflow: hidden;
@@ -409,6 +545,9 @@ h4 {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     white-space: normal; }
+    @media (min-width: 768px) {
+      .main-navigation .sub-menu {
+        width: 0; } }
     .main-navigation .sub-menu a {
       font-size: 1.4rem;
       font-weight: normal;
@@ -435,23 +574,15 @@ h4 {
                 justify-content: flex-start;
         -webkit-box-align: start;
             -ms-flex-align: start;
-                align-items: flex-start; }
-      .main-navigation .primary-menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row; } }
+                align-items: flex-start; } }
 
 .menu-toggle {
   position: relative;
   z-index: 100; }
 
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none; } }
+.menu-item-type-taxonomy:after {
+  font-family: FontAwesome;
+  content: '\f107'; }
 
 /*--------------------------------------------------------------
 # Accessibility
