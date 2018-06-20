@@ -13,9 +13,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
-				</header><!-- .page-header -->
 
 				<div class="page-content">
 					<section class="error-page-container">
@@ -25,6 +22,7 @@ get_header(); ?>
 							<h2><?php echo esc_html( '404 not found' ); ?></h2>
 							<p><?php echo esc_html( 'The page that you&rsquo;re looking for doesn&rsquo;t exist or another error has occured.' ); ?></p>
 							<p><?php echo esc_html( 'Sorry for the inconvenience.' ); ?></p>
+							<a href="<?php echo home_url() ?>">Close</a>
 						</div> <!-- error-page-contents -->
 					</section>
 				</div><!-- .page-content -->
