@@ -331,6 +331,20 @@ h4 {
   height: 85px;
   background-color: white;
   border-bottom: 3px solid #003DA6; }
+  .site-header .search-field {
+    width: 0;
+    opacity: 0;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    height: 30px;
+    margin-top: 3px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .site-header .search-field.reveal {
+      width: 100%;
+      opacity: 1; }
   .home .site-header {
     position: fixed; }
   @media (min-width: 768px) {
@@ -414,11 +428,7 @@ h4 {
   width: auto;
   position: absolute; }
 
-.logo-container {
-  -ms-flex-negative: 20;
-      flex-shrink: 20; }
-
-.logo-mobile {
+.mobile-logo-container {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2; }

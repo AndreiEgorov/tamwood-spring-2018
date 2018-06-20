@@ -23,7 +23,7 @@
 			<header id="masthead" class="site-header" role="banner">
 				<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<div class="desktop-header">
-					<div class="logo-container">
+					<div class="desktop-logo-container">
 						<a href="<?php echo home_url() ?>">
 							<img class="desktop logo-desktop" src="<?php echo get_template_directory_uri() ?>/assets/logos/tamwood-logo.svg">
 						</a>
@@ -34,10 +34,21 @@
 							<button class="mobile apply-now">Apply Now</button>	
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 						</nav><!-- #site-navigation -->
-						<img class="mobile logo-mobile" src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">
+						<div class="mobile-logo-container">
+							<a href="<?php echo home_url(); ?>">
+								<img class="mobile logo-mobile" src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">
+							</a>
+						</div>
 						<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85">
 						<a class="desktop apply-now" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
 					</div>
+					<form role="search" method="get" class="search" action="<?php echo home_url( '/' ); ?>">
+						<fieldset>
+							<label>
+								<input type="search" class="search-field" placeholder="SEARCH ..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+							</label>
+						</fieldset>
+					</form>
 				</div>
 			</header><!-- #masthead -->
 
