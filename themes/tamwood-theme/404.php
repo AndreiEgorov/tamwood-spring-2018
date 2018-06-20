@@ -18,34 +18,15 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' ); ?></p>
-
-					<?php get_search_form(); ?>
-
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-					<?php if ( tamwood_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php echo esc_html( 'Most Used Categories' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
-
-					<?php
-						$archive_content = '<p>' . sprintf( esc_html( 'Try looking in the monthly archives. %1$s' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
+					<section class="error-page-container">
+						<h1><?php echo esc_html( 'Error' ); ?></h1>
+						<div class="error-page-contents">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/flyaroundtheworld.png">
+							<h2><?php echo esc_html( '404 not found' ); ?></h2>
+							<p><?php echo esc_html( 'The page that you&rsquo;re looking for doesn&rsquo;t exist or another error has occured.' ); ?></p>
+							<p><?php echo esc_html( 'Sorry for the inconvenience.' ); ?></p>
+						</div> <!-- error-page-contents -->
+					</section>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 

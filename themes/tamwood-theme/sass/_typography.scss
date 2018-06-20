@@ -29,7 +29,7 @@ h1{
 	font-weight: bold;
 	text-transform: uppercase;
 	@include desktop{
-		font-size: 4.28rem
+		font-size: 4.28rem;
 	}
 }
 h2{
@@ -37,7 +37,7 @@ h2{
 	font-weight: 500;
 	text-transform: capitalize;
 	@include desktop{
-		font-size: 2.57rem
+		font-size: 2.57rem;
 	}
 }
 h3{
@@ -45,7 +45,7 @@ h3{
 	font-weight: 300;
 	text-transform: capitalize;
 	@include desktop{
-		font-size: 1.55rem
+		font-size: 2rem;
 	}
 }
 h4{ 
@@ -53,8 +53,15 @@ h4{
 	font-weight: 300;
 	text-transform: capitalize;
 	@include desktop{
-		font-size: 1rem
+		font-size: 1.28rem;
 	}
 }
 /* Copy */
 
+p{
+	font-size: 1rem;
+	font-family: $font_text-copy ;
+	@include desktop {
+		font-size: 1.28rem;
+	}
+}

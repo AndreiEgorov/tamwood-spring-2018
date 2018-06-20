@@ -4,6 +4,8 @@
     var $hamburgerMenu = $('.hamburger');
     var $subMenuToggle = $('.menu-item-has-children a');
     var $subMenu = $('.sub-menu');
+    var $searchToggle = $('.search-icon');
+    var $searchBar = $('.search-field');
   
     $menuToggle.on('click', function(evt) {
         evt.preventDefault();
@@ -20,6 +22,14 @@
         toggleState($(this), 'selected');
         toggleState($(this).next($subMenu), 'show');
         // $subMenuToggle.toggleClass('test');
+    });
+
+    /**
+     * Search Bar
+     */
+    $searchToggle.on('click', function(evt) {
+        evt.preventDefault();
+        toggleState($searchBar, 'reveal');
     });
   
     function toggleState(elem, className) {
