@@ -922,7 +922,7 @@ object {
   height: 2.5rem; }
   .search-no-results fieldset label {
     background-color: #ffffff;
-    border: 1px solid #003DA6;
+    border: 2px solid #003DA6;
     border-radius: 3px;
     height: 2.5rem;
     font-size: 1.5rem; }
@@ -930,7 +930,13 @@ object {
     width: 10rem;
     position: relative;
     bottom: 4px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    border: none; }
+  .search-no-results fieldset .search-submit {
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin-left: 1rem; }
   .search-no-results fieldset .fa {
     color: #003DA6;
-    font-size: 1rem; }
+    font-size: 1.2rem; }

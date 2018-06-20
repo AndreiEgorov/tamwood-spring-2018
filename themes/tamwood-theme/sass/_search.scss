@@ -18,7 +18,7 @@
         height: 2.5rem;
         label {
             background-color: #ffffff;
-            border: 1px solid $color_brand-main;
+            border: 2px solid $color_brand-main;
             border-radius: 3px;
             height: 2.5rem;
             font-size: 1.5rem;
@@ -28,10 +28,17 @@
             position: relative;
             bottom: 4px;
             font-size: 1rem;
+            border: none;
+        }
+        .search-submit {
+            background: transparent;
+            padding: 0;
+            border: none;
+            margin-left: 1rem;
         }
         .fa {
             color: $color_brand-main;
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
     }
 }
