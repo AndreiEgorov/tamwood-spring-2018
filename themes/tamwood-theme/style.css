@@ -847,10 +847,6 @@ object {
     font-size: 1.28rem;
     color: #fff;
     padding-left: 7.5%; }
-.single-program {
-  min-width: 375px; }
-  .single-program .site-header {
-    position: initial; }
 
 .error404 .error-page-container {
   text-align: center;
@@ -870,3 +866,31 @@ object {
     padding-bottom: 2rem; }
   .error404 .error-page-container .error-page-contents {
     padding: 0.5rem 2rem; }
+
+.testimonials {
+  margin-top: 30rem; }
+
+.carousel-box {
+  margin: 0 auto;
+  width: 95%;
+  background: green; }
+  .carousel-box .carousel-box-parts {
+    background: red;
+    width: 68%;
+    height: 110vw;
+    margin: 0 auto; }
+    .carousel-box .carousel-box-parts .main-carousel {
+      width: 95%;
+      margin: 0 auto;
+      height: 80%; }
+      .carousel-box .carousel-box-parts .main-carousel .flickity-viewport {
+        height: 100%; }
+        .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell {
+          width: 100%; }
+          .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell .image-container {
+            height: 250px; }
+            .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell .image-container .fp-carousel {
+              max-width: 100%;
+              height: auto; }
+
+/* external css: flickity.css */

@@ -14,17 +14,25 @@ get_header(); ?>
 		<h1><?php echo CFS()->get( 'hero_title' ); ?></h1>
 		<p><?php echo CFS()->get( 'blurb' ); ?></p>
 
+	<!-- Test Area, Andrei -->
+	
+	<?php get_template_part( 'template-parts/content','fpcarousel' )?>
+	
+
+	<!-- _____________ -->
+
 		<section class="testimonials home-carousel">
-			<h1>Testimonials</h1>
-			<?php $loop = CFS()->get( 'testimonial' );
-			foreach ( $loop as $row ) {
-				?> 
-				<img src="<?php echo $row['testifier_image']; ?>">
-				<p><?php echo $row['quote']; ?></p>
-				<p><?php echo $row['testifier']; ?></p>
-				<?php }?>
+				<h1>Testimonials</h1>
+				<?php $loop = CFS()->get( 'testimonial' );
+				foreach ( $loop as $row ) {
+					?> 
+					<img src="<?php echo $row['testifier_image']; ?>">
+					<p><?php echo $row['quote']; ?></p>
+					<p><?php echo $row['testifier']; ?></p>
+					<?php }?>
 			</section>
 			
+
 			<section class="accreditations">
 				<h1>Accreditaions</h1>
 				<ul class="accreditations-logos">

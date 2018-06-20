@@ -1,0 +1,53 @@
+
+.testimonials{
+    margin-top: 30rem;
+}
+.carousel-box{
+    margin: 0 auto;
+    width: 95%;
+    background: green;
+
+    .carousel-box-parts{
+        background: red;
+        width: 68%;
+        height: 110vw;
+        margin: 0 auto;
+
+        .main-carousel{
+            width: 95%;
+            margin: 0 auto;
+            height: 80%;
+            .flickity-viewport{
+                height: 100%;
+                .carousel-cell{
+                    width: 100%;
+                    // height: 60% !important; 
+                    .image-container{
+                        height: 250px;
+                        // overflow: hidden;
+                        // background: orange;
+                        // background:  url("http://localhost:8888/tamwood/wp-content/uploads/2018/06/Profile-image-testimonials.png") no-repeat fixed center; 
+                        
+                        .fp-carousel{
+                            max-width:100% ;
+                            height: auto;
+                        }
+                    }
+                   
+                }
+               
+            }
+
+            
+    
+       
+        }
+    }
+    
+}
+
+/* external css: flickity.css */
+
+
+
+

@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
     var $menuToggle = $('.menu-toggle');
     var $mainNavigation = $('.main-navigation');
     var $hamburgerMenu = $('.hamburger');
@@ -6,17 +6,17 @@
     var $subMenu = $('.sub-menu');
     var $searchToggle = $('.search-icon');
     var $searchBar = $('.search-field');
-  
-    $menuToggle.on('click', function(evt) {
+
+    $menuToggle.on('click', function (evt) {
         evt.preventDefault();
         $mainNavigation.toggleClass('toggled');
         $hamburgerMenu.toggleClass('is-active');
     });
-  
+
     /**
      * Accordion Menus
      */
-    $subMenuToggle.on('click', function() {
+    $subMenuToggle.on('click', function () {
         //evt.preventDefault();
         // $subMenuToggle.removeClass('selected');
         toggleState($(this), 'selected');
@@ -27,11 +27,11 @@
     /**
      * Search Bar
      */
-    $searchToggle.on('click', function(evt) {
+    $searchToggle.on('click', function (evt) {
         evt.preventDefault();
         toggleState($searchBar, 'reveal');
     });
-  
+
     function toggleState(elem, className) {
         if (!elem.hasClass(className)) {
             elem.addClass(className);
@@ -40,6 +40,25 @@
             elem.removeClass(className);
         }
     }
-    
-  })(jQuery);
-  
+
+
+
+
+    // flickity
+
+    $('.main-carousel').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true
+    });
+
+
+
+
+
+
+
+
+
+
+})(jQuery);
