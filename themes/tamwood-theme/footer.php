@@ -25,9 +25,6 @@
 							<li>
 								<a href="https://twitter.com/tamwoodschools "><i class="fa fa-twitter"></i></a>
 							</li>
-							<li>
-								<a href="https://www.linkedin.com/company/tamwood-careers-ltd/"><i class="fa fa-linkedin"></i></a>
-							</li>
 						</ul>
 					</div> <!-- social-media-list -->
 				</div> <!-- footer-container -->

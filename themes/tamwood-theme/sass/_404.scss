@@ -4,22 +4,47 @@
         max-width: 80%;
         margin: 0 auto;
         margin-top: 8rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
         background-color: $color_main-light ;
         line-height: 2;
+        height: auto;
         h1 {
             display: none;
+            text-decoration: none;
+            @include desktop {
+                display: block;
+                position: absolute;
+                top: 23%;
+            }
         }
         h2 {
             text-transform: none;
             font-weight: 300;
             padding-bottom: 2rem;
+            @include desktop {
+                color: $color_brand-main ;
+                font-weight: 500;
+            }
         }
         p {
             font-size: 1.2rem;
             padding-bottom: 2rem;
         }
+        img {
+            margin-left: 2rem;
+            margin-top: 2rem;
+        }
         .error-page-contents {
             padding: 0.5rem 2rem;
+        }
+        a {
+            @include button;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border: 3px solid $color_brand-secondary;
+            background-color: $color_brand-secondary;
+            margin-bottom: 4rem;
         }
     }
 }
