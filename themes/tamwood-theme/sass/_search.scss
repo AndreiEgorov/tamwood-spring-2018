@@ -1,0 +1,37 @@
+.search-no-results {
+    .search-noresults-container {
+        width: 80%;
+        margin : 0 auto;
+        background-color: $color_main-light ;
+        margin-top: 4rem;
+        padding-top: 3rem;
+        text-align: center;
+    }
+    .search {
+        display: none;
+    }
+    .page-content {
+        padding: 3rem;
+    }
+    fieldset {
+        margin-top: 2rem;
+        height: 2.5rem;
+        label {
+            background-color: #ffffff;
+            border: 1px solid $color_brand-main;
+            border-radius: 3px;
+            height: 2.5rem;
+            font-size: 1.5rem;
+        }
+        input {
+            width: 10rem;
+            position: relative;
+            bottom: 4px;
+            font-size: 1rem;
+        }
+        .fa {
+            color: $color_brand-main;
+            font-size: 1rem;
+        }
+    }
+}
