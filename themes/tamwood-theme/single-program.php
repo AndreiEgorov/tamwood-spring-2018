@@ -47,7 +47,7 @@ get_header(); ?>
 		</section>
 
 		<section class="program-section program-nav">
-		<!-- <h1>--------------------------</h1> -->
+		<!-- Nav -------------------------- -->
 			<ul class='section-navigation-mobile'>
 				<?php 
 				$section_option = CFS()->get( 'section_option' );
@@ -61,7 +61,7 @@ get_header(); ?>
 				<?php 
 				} ?>
 			</ul>
-		<!-- <h1>--------------------------</h1> -->
+		<!-- End Nav -------------------------- -->
 		</section>
 
 		<section class="program-section details container">

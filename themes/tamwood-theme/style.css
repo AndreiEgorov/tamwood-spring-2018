@@ -334,6 +334,7 @@ p {
           order: 1; }
 
 .site-header {
+  z-index: 9001;
   width: 100%;
   height: 85px;
   background-color: white;
@@ -464,10 +465,14 @@ p {
 --------------------------------------------------------------*/
 /* Links */
 /* Menus */
+@media (min-width: 768px) {
+  .menu-main-nav-container {
+    position: relative; } }
+
 .main-navigation-mobile {
   top: 85px;
   position: fixed;
-  height: 100vh;
+  height: 91vh;
   z-index: 99;
   font-size: 1.625rem;
   font-weight: bold;
@@ -476,6 +481,8 @@ p {
   opacity: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease; }
+  .main-navigation-mobile .apply-now {
+    visibility: hidden; }
   .main-navigation-mobile.toggled {
     width: 262px;
     background: white;
@@ -483,6 +490,8 @@ p {
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     overflow: auto; }
+    .main-navigation-mobile.toggled .apply-now {
+      visibility: initial; }
   .main-navigation-mobile li {
     padding-bottom: 30px; }
   .main-navigation-mobile .menu {
@@ -519,66 +528,46 @@ p {
       font-weight: 300; }
 
 .main-navigation-desktop {
-  display: none; }
+  display: none;
+  position: absolute;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  top: 139px;
+  right: 16px; }
+  .main-navigation-desktop .sub-menu {
+    display: none; }
+  .main-navigation-desktop .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .main-navigation-desktop .menu-item-has-children:hover .sub-menu {
+    display: initial;
+    position: absolute;
+    background: forestgreen; }
+    .main-navigation-desktop .menu-item-has-children:hover .sub-menu .menu-item-has-children:after {
+      font-family: 'FontAwesome';
+      content: '\f107'; }
+    .main-navigation-desktop .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu {
+      display: none; }
+    .main-navigation-desktop .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover {
+      display: block; }
+      .main-navigation-desktop .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
+        display: block;
+        background: lightcyan; }
   @media (min-width: 768px) {
     .main-navigation-desktop {
       display: initial;
-      background: none;
-      font-size: 1rem;
-      text-transform: uppercase;
-      font-weight: normal;
       -webkit-transition: 0s;
-      transition: 0s;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-      position: static;
-      width: 100%;
-      -webkit-box-ordinal-group: 4;
-          -ms-flex-order: 3;
-              order: 3;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      overflow: visible;
-      width: auto; }
-      .main-navigation-desktop .menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        overflow: visible; }
-        .main-navigation-desktop .menu li {
-          width: 100px;
-          padding: 0 5px; }
-          .main-navigation-desktop .menu li:hover .sub-menu {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column; }
-      .main-navigation-desktop a {
-        color: #3D3D3D;
-        text-decoration: none; }
-      .main-navigation-desktop .sub-menu {
-        display: none;
-        width: auto;
-        background: white;
-        white-space: nowrap; }
-        .main-navigation-desktop .sub-menu a {
-          background: white; } }
+      transition: 0s; } }
 
 .menu-toggle {
   position: relative;
   z-index: 100; }
-
-.menu-item-type-taxonomy:after {
-  font-family: FontAwesome;
-  content: '\f107'; }
 
 /*--------------------------------------------------------------
 # Accessibility

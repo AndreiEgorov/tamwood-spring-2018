@@ -5,15 +5,15 @@
 /* Links */
 
 /* Menus */
-// .menu-main-nav-container {
-//     @include desktop {
-//         width: 100%; 
-//     }
-// }
+.menu-main-nav-container {
+    @include desktop {
+        position: relative;
+    }
+}
 .main-navigation-mobile {
     top: 85px;
     position: fixed;
-    height: 100vh;
+    height: 91vh;
     z-index: 99;
     font-size: 1.625rem;
     font-weight: bold;
@@ -22,6 +22,9 @@
     width: 0;
     opacity: 0;
     transition: 0.5s ease;
+    .apply-now  {
+        visibility: hidden;
+    }
     &.toggled {
         width: 262px;
         background: white;
@@ -29,7 +32,10 @@
         opacity: 1;
         transition: 0.5s ease;
         overflow: auto;
+        .apply-now {
+            visibility: initial;
         }
+    }
     li {
         padding-bottom: 30px;
     }
@@ -73,57 +79,50 @@
 }
 .main-navigation-desktop {
     display: none;
-    @include desktop {
-        display: initial;
-        background: none;
-        font-size: 1rem;
-        text-transform: uppercase; 
-        font-weight: normal;
-        transition: 0s;
-        // height: 50px;
-        align-self: flex-end;
-        position: static;
-        width: 100%;
-        order: 3;
-        justify-content: space-between;
-        // margin-top: 17px;
-        overflow: visible;
-        width: auto;
-        .menu {
-            display: flex;
-            flex-direction: row;
-            overflow: visible;
-            li {
-                width: 100px;
-                padding: 0 5px;
-                &:hover {
+    position: absolute;
+    font-size: 1rem;
+    text-transform: uppercase; 
+    font-weight: normal;
+    top: 139px;
+    right: 16px;
+    .sub-menu {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+    .menu-item-has-children {
+        &:hover{
+            .sub-menu {
+                display: initial;
+                position: absolute;
+                background: forestgreen;
+                .menu-item-has-children {
+                    &:after {
+                        font-family: 'FontAwesome';
+                        content: '\f107';
+                    }
                     .sub-menu {
-                        display: flex;
-                        flex-direction: column;
+                        display: none;
+                    }
+                    &:hover {
+                        display: block;
+                        .sub-menu {
+                            display: block;
+                            background: lightcyan;
+                        }
                     }
                 }
             }
         }
-        a {
-            color: $color_text-main;
-            text-decoration: none;
-        }
-        .sub-menu {
-            display: none;
-            width: auto;
-            background: white;
-            white-space: nowrap;
-            a {
-                background: white;
-            }
-        }
+    }
+    @include desktop {
+        display: initial;
+        transition: 0s;
     }
 }
 .menu-toggle {
     position: relative;
     z-index: 100;
-}
-.menu-item-type-taxonomy:after {
-    font-family: FontAwesome;
-    content: '\f107';
 }
