@@ -26,13 +26,14 @@ get_header(); ?>
 			<?php tamwood_numbered_pagination(); ?>
 
 		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<div class="search-noresults-container">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/flyaroundtheworld.png">
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			</div>
 
 		<?php endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

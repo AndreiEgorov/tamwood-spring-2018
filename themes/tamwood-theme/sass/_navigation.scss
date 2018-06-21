@@ -5,85 +5,48 @@
 /* Links */
 
 /* Menus */
-.main-navigation.toggled {
+// .menu-main-nav-container {
+//     @include desktop {
+//         width: 100%; 
+//     }
+// }
+.main-navigation-mobile {
+    top: 85px;
+    position: fixed;
+    height: 100vh;
+    z-index: 99;
+    font-size: 1.625rem;
+    font-weight: bold;
+    white-space: nowrap;
     // Animate
     width: 0;
     opacity: 0;
     transition: 0.5s ease;
-
-    @include desktop {
+    &.toggled {
+        width: 262px;
+        background: white;
+        // Animate
         opacity: 1;
-        width: 100%;
-        transition: 0s;
-    }
-}
-.menu-main-nav-container {
-    @include desktop {
-        width: 100%; 
-    }
-}
-  
-.main-navigation {
-    width: 262px;
-    height: 100vh;
-    position: fixed;
-    background: white;
-    z-index: 99;
-    top: 85px;
-    font-size: 1.625rem;
-    font-weight: bold;
-    // Animate
-    opacity: 1;
-    transition: 0.5s ease;
-    overflow: hidden;
-    white-space: nowrap;
-
-    @include desktop {
-        background: none;
-        font-size: 1rem;
-        text-transform: uppercase; 
-        font-weight: normal;
-        transition: 0s;
-        height: auto;
-        align-self: flex-end;
-        position: static;
-        width: 100%;
-        order: 3;
-        display: flex;
-        justify-content: space-between;
+        transition: 0.5s ease;
+        overflow: auto;
+        }
+    li {
+        padding-bottom: 30px;
     }
     .menu {
-        list-style: none;
         margin: 20px 32px;
-        height: auto;
-
-        @include desktop {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-
-        li {
-            padding-bottom: 30px;
-            @include desktop {
-                padding: 0 3%;
-            }
-        }
 
         .selected + .show{
                 height: auto;
-                display: flex;
-                flex-direction: column;
-                transition: 0.5s;
+                transition: 0.5s ease;
         }
+    }
+    @include desktop { 
+        display: none;
     }
     a {
         color: $color_text-main;
         text-decoration: none;
-        @include desktop {
-            text-align: center;
-        }
-        
     }
     .sub-menu {
         height: 0;
@@ -91,13 +54,10 @@
         background-image: linear-gradient(to right, $color_brand-main 33%, rgba(255,255,255,0) 0%);
         background-size: 222px 9px;
         background-repeat: repeat-x;
-        transition: 0.5s;
         white-space: normal;
         @include desktop {
             width: 0;
         }
-
-
         a {
             font-size: 1.4rem;
             font-weight: normal;
@@ -110,23 +70,55 @@
             font-weight: 300;
         }
     }
+}
+.main-navigation-desktop {
+    display: none;
     @include desktop {
-        // Hamburger Menu Container
+        display: initial;
+        background: none;
+        font-size: 1rem;
+        text-transform: uppercase; 
+        font-weight: normal;
+        transition: 0s;
+        // height: 50px;
+        align-self: flex-end;
+        position: static;
+        width: 100%;
+        order: 3;
+        justify-content: space-between;
+        // margin-top: 17px;
+        overflow: visible;
         width: auto;
-
-        ul {
-            opacity: 1;
-            height: auto;
-            overflow: auto;
-    
-            position: static;
+        .menu {
+            display: flex;
             flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
+            overflow: visible;
+            li {
+                width: 100px;
+                padding: 0 5px;
+                &:hover {
+                    .sub-menu {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+        a {
+            color: $color_text-main;
+            text-decoration: none;
+        }
+        .sub-menu {
+            display: none;
+            width: auto;
+            background: white;
+            white-space: nowrap;
+            a {
+                background: white;
+            }
         }
     }
 }
-  
 .menu-toggle {
     position: relative;
     z-index: 100;
