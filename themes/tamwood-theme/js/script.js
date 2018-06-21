@@ -1,6 +1,6 @@
 (function($) {
     var $menuToggle = $('.menu-toggle');
-    var $mainNavigation = $('.main-navigation');
+    var $mainNavigation = $('.main-navigation-mobile');
     var $hamburgerMenu = $('.hamburger');
     var $subMenuToggle = $('.menu-item-has-children a');
     var $subMenu = $('.sub-menu');
@@ -11,6 +11,8 @@
         evt.preventDefault();
         $mainNavigation.toggleClass('toggled');
         $hamburgerMenu.toggleClass('is-active');
+        $subMenuToggle.removeClass('selected');
+        $subMenu.removeClass('show');
     });
   
     /**
