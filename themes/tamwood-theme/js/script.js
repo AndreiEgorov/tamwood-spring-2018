@@ -8,13 +8,18 @@
     var $searchBar = $('.search-field');
     var $sectionNav = $('.section-navigation-option');
     var $backButton = $('.back-button');
+    var $subSubMenuToggle =  $('.menu-item-type-taxonomy');
+
+    $subSubMenuToggle.append('<i class="fa fa-angle-down toggle-menu mobile"></i>');
+    $subSubMenuToggle.append('<i class="fa fa-angle-up toggle-menu hidden"></i>');
 
     $menuToggle.on('click', function (evt) {
         evt.preventDefault();
-        $mainNavigation.toggleClass('toggled');
-        $hamburgerMenu.toggleClass('is-active');
+        toggleState($mainNavigation, 'toggled');
+        toggleState($hamburgerMenu, 'is-active');
         $subMenuToggle.removeClass('selected');
         $subMenu.removeClass('show');
+        $searchBar.removeClass('reveal');
     });
 
     /**
@@ -27,6 +32,12 @@
         toggleState($(this).next($subMenu), 'show');
         // $subMenuToggle.toggleClass('test');
     });
+    $('.toggle-menu').on('click', function() {
+        toggleState($(this).prevAll('a'), 'selected');
+        toggleState($(this).prevAll($subMenu), 'show');
+        toggleState($('.fa-angle-down'), 'hidden');
+        toggleState($('.fa-angle-up'), 'hidden');
+    });
 
     /**
      * Search Bar
@@ -34,6 +45,8 @@
     $searchToggle.on('click', function (evt) {
         evt.preventDefault();
         toggleState($searchBar, 'reveal');
+        $mainNavigation.removeClass('toggled');
+        $hamburgerMenu.removeClass('is-active');
     });
 
     $sectionNav.on('click', function (evt) {
@@ -73,9 +86,6 @@
         }
     }
 
-
-
-
     //  Learn more button for Instructor-info
 
     var $learnBtn = $('.learn-more');
@@ -93,13 +103,6 @@
             element.removeClass(nameOfClass);
         }
     }
-
-
-
-
-
-
-
 
     // flickity carousel  front page
 
@@ -124,10 +127,6 @@
         cellAlign: 'left',
         contain: true
     });
-
-
-
-
 
 
 

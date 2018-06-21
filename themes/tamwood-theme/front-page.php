@@ -31,11 +31,27 @@ get_header(); ?>
 					<p><?php echo $row['testifier']; ?></p>
 					<?php }?>
 			</section>
-			
-
-			<section class="accreditation">
-				<h1>Accreditaion</h1>
-				<ul class="accreditation-logos">
+			<section>
+			<h1>Departments</h1>
+    		<?php
+				$args = array( 'post_type' => 'program', 'order' => 'DSC', 'posts_per_page' => 3 );
+				$program = get_posts( $args ); // returns an array of posts
+			?>
+				<div>
+				<?php foreach ( $program as $post ) : setup_postdata( $post ); ?>
+				
+				<div>
+						<div>
+							<h2><?php the_title(); ?></h2>
+							<img src="<?php echo CFS()->get( 'hero_image' ); ?>">
+						</div>
+					</div>
+						<?php endforeach; wp_reset_postdata(); ?>
+					</div>
+			</section>
+			<section class="accreditations">
+				<h1>Accreditaions</h1>
+				<ul class="accreditations-logos">
 					<li>
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/BC_PrivateTrainingDesignated_RGB_Color Internet.png">
 					</li>
