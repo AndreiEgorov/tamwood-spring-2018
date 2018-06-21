@@ -9,7 +9,12 @@
 	display: block;
 	margin: 0 auto;
 }
-
+@mixin desktop {
+	@media (min-width: $desktop-width) {
+	  @content;
+	}
+}
+//button colors
 @mixin button{
 	text-decoration: none;
 	font-family: "Fira Sans";	
@@ -19,12 +24,19 @@
 	text-align: center;
 	height: 62px;	
 	width: 190px;	
-	
 	padding: 10px 27px;
 	margin: 50px;
 	@content;
 }
-
+// green button
+@mixin primary-green{
+	@include button;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	border: 3px solid $color_brand-tertiary;
+	background-color: $color_brand-tertiary;
+	@content;
+}
 @mixin secondary-green{
 	@include button;
 	color: $color_brand-tertiary;
@@ -35,18 +47,16 @@
 		background-color: $color_brand-tertiary;
 		color: #FFFFFF;
 	} 
-
 }
-@mixin primary-green{
+// pink button
+@mixin primary-pink{
 	@include button;
 	text-transform: uppercase;
 	color: #FFFFFF;
-	border: 3px solid $color_brand-tertiary;
-	background-color: $color_brand-tertiary;
+	border: 3px solid $color_brand-secondary;
+	background-color: $color_brand-secondary;
 	@content;
-
 }
-
 @mixin secondary-pink{
 	@include button;
 	color: $color_brand-secondary;
@@ -56,17 +66,16 @@
 	&:hover{
 		background-color: $color_brand-secondary;
 		color: #FFFFFF;
-	} 
-
+	}
 }
-@mixin primary-pink{
+//blue button
+@mixin primary-blue{
 	@include button;
 	text-transform: uppercase;
 	color: #FFFFFF;
-	border: 3px solid $color_brand-secondary;
-	background-color: $color_brand-secondary;
+	border: 3px solid $color_brand-main;
+	background-color: $color_brand-main;
 	@content;
-
 }
 @mixin secondary-blue{
 	@include button;
@@ -78,11 +87,7 @@
 		background-color: $color_brand-main;
 		color: #FFFFFF;
 	} 
-
 }
-
-
-
 
 *{
 	box-sizing: border-box;
@@ -90,15 +95,4 @@
 .primary-main{
 	@include primary-green;
 	margin: 50px;
-
-	
 }
-
-
-
-@mixin desktop {
-	@media (min-width: $desktop-width) {
-	  @content;
-	}
-}
-

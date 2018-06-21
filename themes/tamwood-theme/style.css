@@ -782,6 +782,81 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/* Accreditations */
+.page-template-accreditations .hero-image {
+  display: none; }
+
+.page-template-accreditations section {
+  width: 90%;
+  margin: auto; }
+
+.page-template-accreditations h1 {
+  margin-bottom: 2rem; }
+
+.page-template-accreditations h3 {
+  margin: 1rem 0; }
+  @media (min-width: 768px) {
+    .page-template-accreditations h3 {
+      font-size: 2rem;
+      font-weight: 500; } }
+
+.page-template-accreditations p {
+  padding: 0 2.5rem; }
+  @media (min-width: 768px) {
+    .page-template-accreditations p {
+      padding: 0; } }
+
+.page-template-accreditations .accreditations-loop {
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem; }
+  @media (min-width: 768px) {
+    .page-template-accreditations .accreditations-loop {
+      text-align: initial;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.page-template-accreditations .accreditations-loop-contents {
+  padding: 0 2rem; }
+
+.page-template-accreditations .row-1 {
+  background-color: #EAEEF6; }
+  .page-template-accreditations .row-1 img {
+    width: 124;
+    height: 124; }
+    @media (min-width: 768px) {
+      .page-template-accreditations .row-1 img {
+        width: 250px;
+        height: 250px; } }
+
+.page-template-accreditations .row-2 img {
+  width: 278px;
+  height: 100px; }
+  @media (min-width: 768px) {
+    .page-template-accreditations .row-2 img {
+      width: 315px;
+      height: 113px; } }
+
+.page-template-accreditations .apply-now-button {
+  text-align: center;
+  margin-bottom: 4rem; }
+  .page-template-accreditations .apply-now-button a {
+    text-decoration: none;
+    font-family: "Fira Sans";
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 21px;
+    text-align: center;
+    height: 62px;
+    width: 190px;
+    padding: 10px 27px;
+    margin: 50px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 3px solid #003DA6;
+    background-color: #003DA6; }
+
 .single-program .site-header {
   position: initial; }
 
