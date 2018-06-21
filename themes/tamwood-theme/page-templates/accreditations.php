@@ -1,10 +1,10 @@
 <?php 
-/** Template Name: Accreditation */
+/** Template Name: Accreditations */
 
 get_header(); ?>
 <?php get_template_part( 'template-parts/content', 'banner' ); ?>
 <section>
-    <?php $loop = CFS()->get( 'accreditation' );
+    <?php $loop = CFS()->get( 'accreditations' );
         foreach ( $loop as $row ) {?>
         <div>
             <img src="<?php echo $row['accreditation_image'] ?>">

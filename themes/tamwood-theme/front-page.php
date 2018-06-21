@@ -31,29 +31,8 @@ get_header(); ?>
 					<p><?php echo $row['testifier']; ?></p>
 					<?php }?>
 			</section>
-<<<<<<< HEAD
 			
 
-=======
-			<section>
-			<h1>Departments</h1>
-    		<?php
-				$args = array( 'post_type' => 'program', 'order' => 'DSC', 'posts_per_page' => 3 );
-				$program = get_posts( $args ); // returns an array of posts
-			?>
-				<div>
-				<?php foreach ( $program as $post ) : setup_postdata( $post ); ?>
-				
-				<div>
-						<div>
-							<h2><?php the_title(); ?></h2>
-							<img src="<?php echo CFS()->get( 'hero_image' ); ?>">
-						</div>
-					</div>
-						<?php endforeach; wp_reset_postdata(); ?>
-					</div>
-			</section>
->>>>>>> a1e6b979db3671bff8086d0ae128ad454540ab9b
 			<section class="accreditation">
 				<h1>Accreditaion</h1>
 				<ul class="accreditation-logos">
