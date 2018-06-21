@@ -44,9 +44,17 @@
 
 
 
-    // flickity
+    // flickity carousel  front page
 
     $('.main-carousel').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true
+    });
+
+    //carousel student support page
+
+    $('.student-support-carousel').flickity({
         // options
         cellAlign: 'left',
         contain: true

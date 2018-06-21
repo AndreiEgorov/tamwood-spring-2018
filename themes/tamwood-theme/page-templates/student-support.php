@@ -12,12 +12,37 @@ get_header(); ?>
         </div> <?php
     }?>
 </section>
-<section>
+
+
+
+
+
+
+<!-- Test Area , Andrei -->
+<h1>------------------------------</h1>
+
+<div class="student-support-carousel" data-flickity='{ "wrapAround": true, "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots":false}'>
+
 <?php $loop = CFS()->get( 'image_gallery' );
     foreach ( $loop as $row ) {
         ?> 
-        <img src="<?php echo $row['image']; ?>">
+
+        <div class="carousel-cell" style="background:url(<?php echo $row['image']; ?>); 
+        height: 202px; 
+        width: 202px;
+        margin-left: 1.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;"  >
+        </div>
         <?php
     }?>
-</section>
+
+
+</div>
+
+<h1>------------------------------</h1>
+<!-- ------------------------ -->
+
+
 <?php get_footer(); ?>
