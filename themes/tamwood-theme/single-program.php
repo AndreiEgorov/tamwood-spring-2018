@@ -11,7 +11,8 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 	<?php get_template_part( 'template-parts/content','banner' )?>
 	<?php while ( have_posts() ) : the_post(); ?>
-		<section class='program-overview container'>
+
+		<section class='program-section program-overview container'>
 			<h1><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h1>
 			<h4 class='blurb'><?php echo CFS()->get( 'blurb' )?></h4>
 			<p class='overview-text'><?php echo CFS()->get( 'program_overview' )?></p>
@@ -44,13 +45,17 @@ get_header(); ?>
 				}?>
 			</ul>
 		</section>
-		<section class="program-nav">
+
+		<section class="program-section program-nav">
 		<!-- <h1>--------------------------</h1> -->
 			<ul class='section-navigation-mobile'>
-				<?php $section_option = CFS()->get( 'section_option' );
+				<?php 
+				$section_option = CFS()->get( 'section_option' );
+				$i = 0;
 
-				foreach ( $section_option as $option ) {?>
-					<li class='section-navigation-option'>
+				foreach ( $section_option as $option ) {
+					$i++ ?>
+					<li class="section-navigation-option option-<?php echo $i ?>">
 						<p><?php echo $option['option']; ?></p>
 					</li> 	
 				<?php 
@@ -58,7 +63,8 @@ get_header(); ?>
 			</ul>
 		<!-- <h1>--------------------------</h1> -->
 		</section>
-		<section class="details container">
+
+		<section class="program-section details container">
 			<img src="<?php echo get_template_directory_uri() ?>/assets/icons/placeholder (1)@2x.png" alt="downtown building">
 			<h3>Program Length (REPLACE IMAGE)</h3>
 			<?php echo CFS()->get( 'program_length' )?>
@@ -86,8 +92,9 @@ get_header(); ?>
 			</ul>
 		</section>
 
-		<section class='certificates-and-hiring-partners container'>
-			<?php echo CFS()->get( 'certificates_box_title' ) ?>
+		<section class='program-section certificates-and-hiring-partners container hidden'>
+			<button class="back-button">Back</button>
+			<h1 class="program-heading"><?php echo CFS()->get( 'certificates_box_title' ) ?></h1>
 			<?php 
 			$c_logos = CFS()->get( 'certificates_logos' );
 
@@ -95,8 +102,10 @@ get_header(); ?>
 				echo '<img src=" ' . $c_logo['logo'] . '" alt="" />';
 			}?>
 		</section>
-		<section class="courses container">
-			<h1><?php echo CFS()->get( 'courses_page_title' )?></h1>
+
+		<section class="program-section courses container hidden">
+			<button class="back-button">Back</button>
+			<h1 class="program-heading"><?php echo CFS()->get( 'courses_page_title' )?></h1>
 			<?php $course = CFS()->get( 'course' );?>
 			<ul>
 				<?php 
@@ -128,13 +137,15 @@ get_header(); ?>
 			</ul>
 		</section>
 
-		<section class="requirements container">
-			<h1><?php echo CFS()->get( 'requirements_page_title' )?></h1>
+		<section class="program-section requirements container hidden">
+			<button class="back-button">Back</button>
+			<h1 class="program-heading"><?php echo CFS()->get( 'requirements_page_title' )?></h1>
 			<p><?php echo CFS()->get( 'requirements' )?></p>
 		</section>
 		
-		<section class='start-dates container'>
-			<h1><?php echo CFS()->get( 'start_dates_page_title' )?></h1>
+		<section class='program-section start-dates container hidden'>
+			<button class="back-button">Back</button>
+			<h1 class="program-heading"><?php echo CFS()->get( 'start_dates_page_title' )?></h1>
 			<div>
 				<h3><?php echo CFS()->get_field_info( 'summer' )['label'];?></h3>
 				<p><?php echo CFS()->get( 'summer' )?></p>
@@ -153,8 +164,9 @@ get_header(); ?>
 			</div>
 		</section>
 
-		<section class='program-fees container'>
-			<h1><?php echo CFS()->get( 'tuition_page_title' )?></h1>
+		<section class='program-section program-fees container hidden'>
+			<button class="back-button">Back</button>
+			<h1 class="program-heading"><?php echo CFS()->get( 'tuition_page_title' )?></h1>
 			<?php $program_fees_box1 = CFS()->get( 'program_fees_box' );?>
 			<ul>
 				<?php 

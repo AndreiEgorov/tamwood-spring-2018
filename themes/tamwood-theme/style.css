@@ -831,6 +831,9 @@ object {
     color: #fff;
     padding-left: 7.5%; }
 
+.hidden {
+  display: none; }
+
 .error404 .error-page-container {
   text-align: center;
   max-width: 80%;

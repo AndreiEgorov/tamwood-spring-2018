@@ -6,6 +6,8 @@
     var $subMenu = $('.sub-menu');
     var $searchToggle = $('.search-icon');
     var $searchBar = $('.search-field');
+    var $sectionNav = $('.section-navigation-option');
+    var $backButton = $('.back-button');
   
     $menuToggle.on('click', function(evt) {
         evt.preventDefault();
@@ -32,6 +34,34 @@
     $searchToggle.on('click', function(evt) {
         evt.preventDefault();
         toggleState($searchBar, 'reveal');
+    });
+
+    $sectionNav.on('click', function(evt) {
+        evt.preventDefault();
+        // $('.program-heading').prepend('<button class="back-button">Back</button>');
+        if ($(this).hasClass('option-1')) {
+            $('.program-section').addClass('hidden');
+            toggleState($('.courses'), 'hidden');
+        } else if ($(this).hasClass('option-2')) {
+            $('.program-section').addClass('hidden');
+            toggleState($('.requirements'), 'hidden');
+        } else if ($(this).hasClass('option-3')) {
+            $('.program-section').addClass('hidden');
+            toggleState($('.start-dates'), 'hidden');
+        } else if ($(this).hasClass('option-4')) {
+            $('.program-section').addClass('hidden');
+            toggleState($('.program-fees'), 'hidden');
+        } else if ($(this).hasClass('option-5')) {
+            $('.program-section').addClass('hidden');
+            toggleState($('.certificates-and-hiring-partners'), 'hidden');
+        }
+    });
+    $backButton.on('click', function() {
+        // evt.preventDefault();
+        // $backButton.addClass('hidden');
+        $('.program-overview').removeClass('hidden');
+        $('.program-nav').removeClass('hidden');
+        $('.details').removeClass('hidden');
     });
   
     function toggleState(elem, className) {
