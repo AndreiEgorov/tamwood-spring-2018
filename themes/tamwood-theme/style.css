@@ -275,7 +275,7 @@ h1 {
   text-transform: uppercase; }
   @media (min-width: 768px) {
     h1 {
-      font-size: 4.28rem; } }
+      font-size: 3.3rem; } }
 
 h2 {
   font-size: 1.85rem;
@@ -283,7 +283,7 @@ h2 {
   text-transform: capitalize; }
   @media (min-width: 768px) {
     h2 {
-      font-size: 2.57rem; } }
+      font-size: 2rem; } }
 
 h3 {
   font-size: 1.57rem;
@@ -291,7 +291,7 @@ h3 {
   text-transform: capitalize; }
   @media (min-width: 768px) {
     h3 {
-      font-size: 2rem; } }
+      font-size: 1.5rem; } }
 
 h4 {
   font-size: 1.28rem;
@@ -299,7 +299,7 @@ h4 {
   text-transform: capitalize; }
   @media (min-width: 768px) {
     h4 {
-      font-size: 1.28rem; } }
+      font-size: 1rem; } }
 
 /* Copy */
 p {
@@ -658,7 +658,8 @@ p {
             -ms-flex-align: center;
                 align-items: center;
         max-width: 1440px;
-        margin: 0 auto; } }
+        margin: 0 auto;
+        padding-top: 0.5rem; } }
   .site-footer a {
     color: #ffffff;
     font-family: "Fira Sans", sans-serif;
@@ -687,7 +688,7 @@ p {
                 align-items: center;
         font-size: 1.2rem; }
         .site-footer .menu-footer-menu-container .menu li {
-          padding-right: 1.5rem; } }
+          padding-right: 1.4rem; } }
   .site-footer .social-media {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -705,7 +706,8 @@ p {
             -ms-flex-align: center;
                 align-items: center; } }
     .site-footer .social-media li {
-      margin: 0 14px; }
+      margin: 0 14px;
+      margin-top: 1rem; }
       @media (min-width: 768px) {
         .site-footer .social-media li {
           margin: 0 4px; } }
@@ -714,21 +716,23 @@ p {
               box-sizing: border-box;
       background-color: #ffffff;
       border-radius: 50%;
-      margin: 8px;
-      padding: 8px;
-      font-size: 1rem; }
+      width: 20px;
+      height: 20px;
+      font-size: 1rem;
+      padding: 5px 0 0 5px; }
       @media (min-width: 768px) {
         .site-footer .social-media .fa {
           font-size: 2.5rem;
           margin: 0;
           width: 50px;
           height: 50px;
-          padding: 5px 0 0 7px; } }
+          padding: 7px 0 0 10px;
+          font-size: 2rem; } }
     .site-footer .social-media .fa-facebook {
-      padding: 8px 11px; }
+      padding-left: 6px; }
       @media (min-width: 768px) {
         .site-footer .social-media .fa-facebook {
-          padding-left: 12px; } }
+          padding-left: 15px; } }
     .site-footer .social-media a {
       color: #003DA6; }
 
@@ -832,16 +836,86 @@ object {
   max-width: 80%;
   margin: 0 auto;
   margin-top: 8rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   background-color: #EAEEF6;
-  line-height: 2; }
+  line-height: 2;
+  height: auto; }
   .error404 .error-page-container h1 {
-    display: none; }
+    display: none;
+    text-decoration: none; }
+    @media (min-width: 768px) {
+      .error404 .error-page-container h1 {
+        display: block;
+        position: absolute;
+        top: 23%; } }
   .error404 .error-page-container h2 {
     text-transform: none;
     font-weight: 300;
     padding-bottom: 2rem; }
+    @media (min-width: 768px) {
+      .error404 .error-page-container h2 {
+        color: #003DA6;
+        font-weight: 500; } }
   .error404 .error-page-container p {
     font-size: 1.2rem;
     padding-bottom: 2rem; }
+  .error404 .error-page-container img {
+    margin-left: 2rem;
+    margin-top: 2rem; }
   .error404 .error-page-container .error-page-contents {
     padding: 0.5rem 2rem; }
+  .error404 .error-page-container a {
+    text-decoration: none;
+    font-family: "Fira Sans";
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 21px;
+    text-align: center;
+    height: 62px;
+    width: 190px;
+    padding: 10px 27px;
+    margin: 50px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 3px solid #B52371;
+    background-color: #B52371;
+    margin-bottom: 4rem; }
+
+.search-no-results .search-noresults-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #EAEEF6;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  text-align: center; }
+
+.search-no-results .search {
+  display: none; }
+
+.search-no-results .page-content {
+  padding: 3rem; }
+
+.search-no-results fieldset {
+  margin-top: 2rem;
+  height: 2.5rem; }
+  .search-no-results fieldset label {
+    background-color: #ffffff;
+    border: 2px solid #003DA6;
+    border-radius: 3px;
+    height: 2.5rem;
+    font-size: 1.5rem; }
+  .search-no-results fieldset input {
+    width: 10rem;
+    position: relative;
+    bottom: 4px;
+    font-size: 1rem;
+    border: none; }
+  .search-no-results fieldset .search-submit {
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin-left: 1rem; }
+  .search-no-results fieldset .fa {
+    color: #003DA6;
+    font-size: 1.2rem; }

@@ -29,7 +29,7 @@ h1{
 	font-weight: bold;
 	text-transform: uppercase;
 	@include desktop{
-		font-size: 4.28rem;
+		font-size: 3.3rem;
 	}
 }
 h2{
@@ -37,7 +37,7 @@ h2{
 	font-weight: 500;
 	text-transform: capitalize;
 	@include desktop{
-		font-size: 2.57rem;
+		font-size: 2rem;
 	}
 }
 h3{
@@ -45,7 +45,7 @@ h3{
 	font-weight: 300;
 	text-transform: capitalize;
 	@include desktop{
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 }
 h4{ 
@@ -53,7 +53,7 @@ h4{
 	font-weight: 300;
 	text-transform: capitalize;
 	@include desktop{
-		font-size: 1.28rem;
+		font-size: 1rem;
 	}
 }
 /* Copy */
