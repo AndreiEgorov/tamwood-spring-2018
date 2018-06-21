@@ -29,11 +29,14 @@
 						</a>
 					</div>
 					<div class="header-container">
-						<a class="hamburger menu-toggle mobile" type="button"></a>
-						<nav id="site-navigation" class="main-navigation toggled" role="navigation">
-							<button class="mobile apply-now">Apply Now</button>	
+						<button class="hamburger menu-toggle mobile" type="button"></button>
+						<nav id="site-navigation" class="main-navigation main-navigation-mobile" role="navigation">
+							<a class="mobile apply-now" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>	
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						</nav><!-- #site-navigation -->
+						</nav><!-- #site-navigation for mobile-->
+						<nav id="site-navigation" class="main-navigation main-navigation-desktop" role="navigation">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						</nav><!-- #site-navigation for desktop-->
 						<div class="mobile-logo-container">
 							<a href="<?php echo home_url(); ?>">
 								<img class="mobile logo-mobile" src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">

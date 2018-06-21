@@ -86,6 +86,10 @@ add_filter( 'stylesheet_uri', 'tamwood_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function tamwood_scripts() {
+	wp_enqueue_script( 'flickity', "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" );
+	wp_enqueue_style( 'flickity-style', "https://unpkg.com/flickity@2/dist/flickity.min.css");
+
+	
 	wp_enqueue_style( 'font-awesome-cdn', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0' );
 	wp_enqueue_style( 'tamwood-style', get_stylesheet_uri() );
 

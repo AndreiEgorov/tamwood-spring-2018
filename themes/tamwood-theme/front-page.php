@@ -14,17 +14,46 @@ get_header(); ?>
 		<h1><?php echo CFS()->get( 'hero_title' ); ?></h1>
 		<p><?php echo CFS()->get( 'blurb' ); ?></p>
 
+	<!-- Test Area, Andrei -->
+	
+	<?php get_template_part( 'template-parts/content','fpcarousel' )?>
+	
+
+	<!-- _____________ -->
+
 		<section class="testimonials home-carousel">
-			<h1>Testimonials</h1>
-			<?php $loop = CFS()->get( 'testimonial' );
-			foreach ( $loop as $row ) {
-				?> 
-				<img src="<?php echo $row['testifier_image']; ?>">
-				<p><?php echo $row['quote']; ?></p>
-				<p><?php echo $row['testifier']; ?></p>
-				<?php }?>
+				<h1>Testimonials</h1>
+				<?php $loop = CFS()->get( 'testimonial' );
+				foreach ( $loop as $row ) {
+					?> 
+					<img src="<?php echo $row['testifier_image']; ?>">
+					<p><?php echo $row['quote']; ?></p>
+					<p><?php echo $row['testifier']; ?></p>
+					<?php }?>
 			</section>
+<<<<<<< HEAD
 			
+
+=======
+			<section>
+			<h1>Departments</h1>
+    		<?php
+				$args = array( 'post_type' => 'program', 'order' => 'DSC', 'posts_per_page' => 3 );
+				$program = get_posts( $args ); // returns an array of posts
+			?>
+				<div>
+				<?php foreach ( $program as $post ) : setup_postdata( $post ); ?>
+				
+				<div>
+						<div>
+							<h2><?php the_title(); ?></h2>
+							<img src="<?php echo CFS()->get( 'hero_image' ); ?>">
+						</div>
+					</div>
+						<?php endforeach; wp_reset_postdata(); ?>
+					</div>
+			</section>
+>>>>>>> a1e6b979db3671bff8086d0ae128ad454540ab9b
 			<section class="accreditations">
 				<h1>Accreditaions</h1>
 				<ul class="accreditations-logos">
