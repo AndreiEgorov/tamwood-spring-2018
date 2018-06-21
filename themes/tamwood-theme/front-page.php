@@ -54,9 +54,9 @@ get_header(); ?>
 					</div>
 			</section>
 >>>>>>> a1e6b979db3671bff8086d0ae128ad454540ab9b
-			<section class="accreditations">
-				<h1>Accreditaions</h1>
-				<ul class="accreditations-logos">
+			<section class="accreditation">
+				<h1>Accreditaion</h1>
+				<ul class="accreditation-logos">
 					<li>
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/BC_PrivateTrainingDesignated_RGB_Color Internet.png">
 					</li>
