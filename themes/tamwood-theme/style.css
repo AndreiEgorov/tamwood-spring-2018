@@ -830,12 +830,9 @@ object {
     font-size: 1.28rem;
     color: #fff;
     padding-left: 7.5%; }
-<<<<<<< HEAD
-=======
 
 .hidden {
   display: none; }
->>>>>>> a1e6b979db3671bff8086d0ae128ad454540ab9b
 
 .error404 .error-page-container {
   text-align: center;
@@ -871,7 +868,22 @@ object {
     margin-top: 2rem; }
   .error404 .error-page-container .error-page-contents {
     padding: 0.5rem 2rem; }
-<<<<<<< HEAD
+  .error404 .error-page-container a {
+    text-decoration: none;
+    font-family: "Fira Sans";
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 21px;
+    text-align: center;
+    height: 62px;
+    width: 190px;
+    padding: 10px 27px;
+    margin: 50px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 3px solid #B52371;
+    background-color: #B52371;
+    margin-bottom: 4rem; }
 
 .testimonials {
   margin-top: 30rem; }
@@ -980,23 +992,6 @@ object {
     .page-template-instructors .instructor-area .instructor-bio .instructor-info-shown {
       display: initial;
       height: 500px; }
-=======
-  .error404 .error-page-container a {
-    text-decoration: none;
-    font-family: "Fira Sans";
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 21px;
-    text-align: center;
-    height: 62px;
-    width: 190px;
-    padding: 10px 27px;
-    margin: 50px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    border: 3px solid #B52371;
-    background-color: #B52371;
-    margin-bottom: 4rem; }
 
 .search-no-results .search-noresults-container {
   width: 80%;
@@ -1035,4 +1030,3 @@ object {
   .search-no-results fieldset .fa {
     color: #003DA6;
     font-size: 1.2rem; }
->>>>>>> a1e6b979db3671bff8086d0ae128ad454540ab9b
