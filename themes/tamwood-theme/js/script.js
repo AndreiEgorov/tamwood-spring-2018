@@ -44,6 +44,31 @@
 
 
 
+    //  Learn more button for Instructor-info
+
+    var $learnBtn = $('.learn-more');
+    var $hiddenText = $('.instructor-info');
+
+    $learnBtn.on('click', function (event) {
+        event.preventDefault();
+        showText($hiddenText, 'instructor-info-shown');
+    })
+
+    function showText(element, nameOfClass) {
+        if (!element.hasClass(nameOfClass)) {
+            element.addClass(nameOfClass);
+        } else {
+            element.removeClass(nameOfClass);
+        }
+    }
+
+
+
+
+
+
+
+
     // flickity carousel  front page
 
     $('.main-carousel').flickity({
@@ -60,7 +85,13 @@
         contain: true
     });
 
+    // flickity carousel  : instructors
 
+    $('.instructors-carousel').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true
+    });
 
 
 

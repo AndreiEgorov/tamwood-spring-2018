@@ -68,6 +68,19 @@
 	@content;
 
 }
+@mixin secondary-blue{
+	@include button;
+	color: $color_brand-main;
+	border: 3px solid $color_brand-main;
+	background-color: #FFFFFF;
+	@content;
+	&:hover{
+		background-color: $color_brand-main;
+		color: #FFFFFF;
+	} 
+
+}
+
 
 
 
@@ -80,6 +93,8 @@
 
 	
 }
+
+
 
 @mixin desktop {
 	@media (min-width: $desktop-width) {

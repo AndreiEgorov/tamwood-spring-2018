@@ -914,3 +914,63 @@ object {
       .page-template-student-support .flickity-enabled .flickity-viewport .flickity-slider .is-selected {
         height: 230px !important;
         width: 230px !important; }
+
+.page-template-instructors section img {
+  width: 150px; }
+
+.page-template-instructors .instructor-area {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .page-template-instructors .instructor-area .instructor-bio {
+    background: #EAEEF6;
+    position: relative;
+    bottom: 11.5rem;
+    padding-top: 11.5rem;
+    padding-bottom: 6.5rem;
+    width: 100%; }
+    .page-template-instructors .instructor-area .instructor-bio .instructor-name {
+      padding: 1rem;
+      font-weight: 300; }
+    .page-template-instructors .instructor-area .instructor-bio .learn-more {
+      text-decoration: none;
+      font-family: "Fira Sans";
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 21px;
+      text-align: center;
+      height: 62px;
+      width: 190px;
+      padding: 10px 27px;
+      margin: 50px;
+      color: #003DA6;
+      border: 3px solid #003DA6;
+      background-color: #FFFFFF;
+      font-size: 18px;
+      position: relative;
+      top: 3rem;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .page-template-instructors .instructor-area .instructor-bio .learn-more:hover {
+        background-color: #003DA6;
+        color: #FFFFFF; }
+    .page-template-instructors .instructor-area .instructor-bio .instructor-info {
+      overflow: scroll;
+      padding: 1.5rem;
+      display: none;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .page-template-instructors .instructor-area .instructor-bio .instructor-info-shown {
+      display: initial;
+      height: 500px; }

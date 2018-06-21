@@ -1,0 +1,75 @@
+//THIS PARTAL IS TO BE ADDED TO "_page-template.php" into .page-template-instructors body class
+
+.page-template-instructors{
+    //delete code in this bracket after test, Andrei
+    //--------------------------------
+    section{
+        img{
+            width:150px;
+        }
+    }
+    //---------------------------------
+   
+    .instructor-area{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        // .instructor-image{
+
+        // }
+        .instructor-bio{
+          
+            background: $color_main-light;
+            position: relative;
+            bottom: 11.5rem;
+            padding-top: 11.5rem;
+            padding-bottom: 6.5rem;
+            width: 100%;
+            
+
+           .instructor-name{
+            padding: 1rem;
+            font-weight: 300;
+           } 
+            //    .instructor-position{
+
+            //    }
+
+        .learn-more{
+            @include secondary-blue;
+            font-size: $font_size-main-desktop;
+            position: relative;
+            top: 3rem;
+            align-items: center;
+             }
+
+             //class added via Wysiwig
+           .instructor-info{
+            overflow: scroll;
+            padding: 1.5rem;
+            display: none;
+            align-items: center;
+           }
+           .instructor-info-shown{
+               display: initial;
+               height: 500px;
+           }
+        }
+
+        
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+}
