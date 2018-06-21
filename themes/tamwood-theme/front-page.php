@@ -31,10 +31,6 @@ get_header(); ?>
 					<p><?php echo $row['testifier']; ?></p>
 					<?php }?>
 			</section>
-<<<<<<< HEAD
-			
-
-=======
 			<section>
 			<h1>Departments</h1>
     		<?php
@@ -53,7 +49,6 @@ get_header(); ?>
 						<?php endforeach; wp_reset_postdata(); ?>
 					</div>
 			</section>
->>>>>>> a1e6b979db3671bff8086d0ae128ad454540ab9b
 			<section class="accreditations">
 				<h1>Accreditaions</h1>
 				<ul class="accreditations-logos">
