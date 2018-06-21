@@ -25,33 +25,14 @@ get_header(); ?>
 
 				<h1>--------------------------------</h1>
 
-					<ul class="product-categories">
-							<?php
-							$terms = get_terms(array(
-								'taxonomy' => "program_type",
-								'hide_empty' => 0,
-							));
-							
-							if(!empty($terms) && ! is_wp_error( $terms )) :
-							?>
-							<?php foreach ( $terms as $term ) : ?>
-
-									<li>
-										<a href="<?php echo get_term_link( $term ); ?>" class="kind-of-category"> <?php echo $term->name; ?> </a>
-									</li>
-
-								<?php endforeach; ?>	
-								
-							<?php endif; ?>	
-					</ul>
-
-
-
-
-
 
 				
 				<section>
+
+					<div></div>
+
+
+
 
 					<h1>Departments</h1>
 
