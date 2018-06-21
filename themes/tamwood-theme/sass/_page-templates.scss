@@ -3,3 +3,74 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+/* Accreditations */
+.page-template-accreditations {
+    .hero-image {
+        display: none;
+    }
+    section {
+        width: 90%;
+        margin: auto;
+    }
+    h1 {
+        margin-bottom: 2rem;
+    }
+    h3 {
+        margin: 1rem 0;
+        @include desktop {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+    p {
+        padding: 0 2.5rem;
+        @include desktop {
+            padding: 0;
+        }
+    }
+    .accreditations-loop {
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        @include desktop {
+            text-align: initial;
+            display: flex;
+        }
+    }
+    .accreditations-loop-contents {
+        padding: 0 2rem;
+    }
+    .row-1 {
+        background-color: $color_main-light;
+        img {
+            width: 124;
+            height: 124;
+            @include desktop {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+    .row-2 {
+        img {
+            width: 278px;
+            height: 100px;
+            @include desktop {
+                width: 315px;
+                height: 113px;
+            }
+        }
+    }
+    .apply-now-button {
+        text-align: center;
+        margin-bottom: 4rem;
+        a {
+            @include button;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border: 3px solid $color_brand-main;
+            background-color: $color_brand-main;
+        }
+    }
+}
