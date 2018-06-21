@@ -324,10 +324,10 @@ p {
       display: inherit; } }
 
 .hamburger {
-  background: center/30px url("../../assets/icons/hamburger@3x.png") no-repeat;
+  background: center/30px url("../assets/icons/hamburger@3x.png") no-repeat;
   width: 85px;
   height: 100%;
-  border: none;
+  border: 1px solid #003DA6;
   outline: none;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
