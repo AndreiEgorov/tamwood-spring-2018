@@ -958,9 +958,10 @@ object {
   background: green; }
   .carousel-box .carousel-box-parts {
     background: red;
-    width: 68%;
+    width: 96%;
     height: 110vw;
-    margin: 0 auto; }
+    margin: 0 auto;
+    text-align: center; }
     .carousel-box .carousel-box-parts .main-carousel {
       width: 95%;
       margin: 0 auto;
@@ -994,8 +995,7 @@ object {
           -ms-flex-align: center;
               align-items: center; }
       .page-template-student-support .flickity-enabled .flickity-viewport .flickity-slider .is-selected {
-        height: 230px !important;
-        width: 230px !important; }
+        height: 230px !important; }
 
 .page-template-instructors section img {
   width: 150px; }
@@ -1094,3 +1094,27 @@ object {
   .search-no-results fieldset .fa {
     color: #003DA6;
     font-size: 1.2rem; }
+
+.page-template-default .title-wrapper {
+  border: 3px #fff solid;
+  margin: 1.5% 2.5%;
+  top: 6.5rem;
+  position: absolute;
+  width: 95%;
+  height: 162px; }
+  .page-template-default .title-wrapper .hero-title {
+    text-align: center;
+    padding: 4rem 0;
+    color: #fff; }
+
+.page-template-default .content-banner {
+  padding-top: 6.1rem; }
+  .page-template-default .content-banner .page-title {
+    padding: 2rem 0;
+    color: #003DA6; }
+
+.page-template-default .container .blurb {
+  padding-bottom: 3.2rem; }
+
+.page-template-default .container section {
+  text-align: center; }
