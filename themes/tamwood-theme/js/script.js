@@ -6,15 +6,10 @@
     var $subMenu = $('.sub-menu');
     var $searchToggle = $('.search-icon');
     var $searchBar = $('.search-field');
-<<<<<<< HEAD
-
-    $menuToggle.on('click', function (evt) {
-=======
     var $sectionNav = $('.section-navigation-option');
     var $backButton = $('.back-button');
-  
-    $menuToggle.on('click', function(evt) {
->>>>>>> a1e6b979db3671bff8086d0ae128ad454540ab9b
+
+    $menuToggle.on('click', function (evt) {
         evt.preventDefault();
         $mainNavigation.toggleClass('toggled');
         $hamburgerMenu.toggleClass('is-active');
@@ -41,9 +36,7 @@
         toggleState($searchBar, 'reveal');
     });
 
-<<<<<<< HEAD
-=======
-    $sectionNav.on('click', function(evt) {
+    $sectionNav.on('click', function (evt) {
         evt.preventDefault();
         // $('.program-heading').prepend('<button class="back-button">Back</button>');
         if ($(this).hasClass('option-1')) {
@@ -63,15 +56,14 @@
             toggleState($('.certificates-and-hiring-partners'), 'hidden');
         }
     });
-    $backButton.on('click', function() {
+    $backButton.on('click', function () {
         // evt.preventDefault();
         // $backButton.addClass('hidden');
         $('.program-overview').removeClass('hidden');
         $('.program-nav').removeClass('hidden');
         $('.details').removeClass('hidden');
     });
-  
->>>>>>> a1e6b979db3671bff8086d0ae128ad454540ab9b
+
     function toggleState(elem, className) {
         if (!elem.hasClass(className)) {
             elem.addClass(className);
