@@ -1,8 +1,6 @@
 <?php 
-/** Template Name: Employment Services */
-
-get_header(); ?>
-<?php get_template_part( 'template-parts/content', 'banner' ); ?>
+get_header();
+get_template_part( 'template-parts/content', 'banner' ); ?>
 <section>
     <h3><?php echo CFS()->get( 'section_title' ); ?></h3>
     <h4><?php echo CFS()->get( 'section_info' ); ?></h4>

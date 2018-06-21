@@ -1,9 +1,7 @@
 <?php 
-/** Template Name: Contact Us */
-
-get_header(); ?>
-<?php get_template_part( 'template-parts/content-banner' ); ?>
-<?php echo CFS()->get( 'contact_form' ); ?>
+get_header();
+get_template_part( 'template-parts/content-banner' );
+echo CFS()->get( 'contact_form' ); ?>
 
 <section>
     <?php

@@ -1,8 +1,6 @@
 <?php 
-/** Template Name: Accommodation */
-
-get_header(); ?>
-<?php get_template_part( 'template-parts/content', 'banner' ); ?>
+get_header();
+get_template_part( 'template-parts/content', 'banner' ); ?>
 <section>
     <?php $loop = CFS()->get( 'options' );
         foreach ( $loop as $row ) {
