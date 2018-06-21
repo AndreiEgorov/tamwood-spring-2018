@@ -11,7 +11,7 @@ get_header(); ?>
 
 <!-- Test Area , Andrei -->
 <h1>------------------------------</h1>
-<div class="instructors-carousel" data-flickity='{ "wrapAround": true, "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots":false}'>
+<div class="instructors-carousel">
 
 <?php $loop = CFS()->get( 'instructors' );
     foreach ( $loop as $row ) {

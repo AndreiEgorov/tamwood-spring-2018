@@ -1,0 +1,45 @@
+//THIS PARTAL IS TO BE ADDED TO "_page-template.php" into .page-template-instructors body class
+.page-template-default{
+    //overlay text "re-invent yourself with a border
+        .title-wrapper{
+            border: 3px $color__background-body solid;
+            margin: 1.5% 2.5%;
+            top: 6.5rem;
+            position: absolute;
+            width: 95%;
+            height: 162px;
+            
+            .hero-title{     
+                text-align: center;
+                padding: 4rem 0;
+                color: $color__background-body;
+            }
+        }
+    //-----------
+
+    .content-banner{
+        padding-top: 6.1rem;
+        .page-title{
+            padding: 2rem 0;
+            color:$color_brand-main;
+        }
+       
+
+    }
+    .container{
+        //blurb class assigned through Wysiwyg
+        .blurb{
+            padding-bottom: 3.2rem;
+        }
+        section{
+            text-align: center;
+        }
+        
+    }
+
+
+
+
+
+
+}
