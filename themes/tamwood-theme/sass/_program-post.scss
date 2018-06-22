@@ -3,7 +3,6 @@
     .site-header{
         position: initial;
     }
-
     //program overview section
     .blurb{
         display: none;
@@ -11,7 +10,6 @@
     .overview-text{
         margin: 3.14rem 0;
     }
-
     .program-type{
         display: flex;
         .box-section{
@@ -26,21 +24,16 @@
                 justify-content: space-between;
                 .box{ 
                     flex-basis: 48%;
-                    
                     h4{
                         border:3px solid $color_brand-secondary;
                         height: 115px; 
                         padding: 1.3rem 2rem;
-                    } 
-                   
+                    }
                 }
-                
             }
         }
-
     }
     .section-navigation-mobile{
- 
         width: 100%;
         .section-navigation-option{
             display: flex;
@@ -53,7 +46,6 @@
         }
     }
 }
-
 .hidden {
     display: none;
 }

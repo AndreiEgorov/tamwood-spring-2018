@@ -19,7 +19,7 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
             </div>
         <?php } ?>
         <div class="apply-now-button">
-            <a href="<?php echo esc_url(home_url()); ?>">Apply Now</a>
+            <a href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
         </div>
     </section>
 <?php get_footer(); ?>

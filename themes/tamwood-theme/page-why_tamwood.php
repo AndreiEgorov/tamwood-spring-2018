@@ -1,7 +1,11 @@
 <?php 
-get_header(); 
-get_template_part( 'template-parts/content', 'banner' ); ?>
+/** Template Name: Why Tamwood */
+
+get_header(); ?>
+<?php get_template_part( 'template-parts/content', 'banner' ); ?>
+<p><?php echo CFS()->get( 'page_copy' ); ?></p>
 <section>
+
     <?php $loop = CFS()->get( 'info_boxes' );
         foreach ( $loop as $row ) {?>
         <div>

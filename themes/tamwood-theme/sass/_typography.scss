@@ -12,15 +12,12 @@ textarea {
 	// @include font-size(1);
 	line-height: $font__line-height-body;
 }
-
 html{
 	font-size: $font_size-main-mobile;
 	@include desktop{
 		font-size: $font_size-main-desktop;
 	}
 }
-
-
 
 /* Headings */
 
