@@ -104,10 +104,6 @@
         }
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6866a1fd83e1064026e2089539bd9606d8c8c6e5
     // flickity carousel  front page
 
     if ($('.main-carousel').length) {

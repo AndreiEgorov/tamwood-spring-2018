@@ -13,13 +13,13 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content','banner' )?>
 
 			<div class ='title-wrapper'>
-				<h1 class='hero-title'><?php echo CFS()->get( 'hero_title' ); ?></h1>
+				<h1 class='hero-title'><?php echo esc_html(CFS()->get( 'hero_title' )); ?></h1>
 			</div>
 
 			<div class='container'>
 
-				<?php echo CFS()->get( 'blurb' ); ?>
-				<p class='page-copy'><?php echo CFS()->get( 'page_copy' ); ?></p>
+				<h4><?php echo wp_kses( CFS()->get( 'blurb' ), array( 'p' => array( 'class' => '' ) ) ); ?><h4>
+				<p class='page-copy'><?php echo wp_kses( CFS()->get( 'page_copy' ), array( 'p' => array( 'class' => '' ) ) ); ?></p>
 		
 
 
@@ -45,7 +45,7 @@ get_header(); ?>
 
 							<div>
 								<h2><?php the_title(); ?></h2>
-								<img src="<?php echo CFS()->get( 'hero_image' ); ?>">
+								<img src="<?php echo esc_url(CFS()->get( 'hero_image' )); ?>">
 							</div>
 
 						</div>
@@ -80,7 +80,7 @@ get_header(); ?>
 
 							<div>
 								<h2><?php the_title(); ?></h2>
-								<img src="<?php echo CFS()->get( 'hero_image' ); ?>">
+								<img src="<?php echo esc_url(CFS()->get( 'hero_image' )); ?>">
 							</div>
 
 						</div>
