@@ -6,8 +6,11 @@
 
 /* Accreditations */
 .page-id-13 {
-    .hero-image {
+    .hero-image, .page-title {
         display: none;
+    }
+    .content-banner {
+        padding-top: 2rem;
     }
     section {
         width: 90%;

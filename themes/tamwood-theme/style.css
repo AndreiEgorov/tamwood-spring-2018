@@ -339,6 +339,9 @@ p {
   height: 85px;
   background-color: white;
   border-bottom: 3px solid #003DA6; }
+  @media (min-width: 768px) {
+    .site-header {
+      height: 185px; } }
   .site-header .search-field {
     width: 0;
     opacity: 0;
@@ -356,9 +359,6 @@ p {
       opacity: 1; }
   .home .site-header {
     position: fixed; }
-  @media (min-width: 768px) {
-    .site-header {
-      height: 185px; } }
 
 .desktop-header {
   height: 100%;
@@ -772,8 +772,11 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 /* Accreditations */
-.page-id-13 .hero-image {
+.page-id-13 .hero-image, .page-id-13 .page-title {
   display: none; }
+
+.page-id-13 .content-banner {
+  padding-top: 2rem; }
 
 .page-id-13 section {
   width: 90%;
