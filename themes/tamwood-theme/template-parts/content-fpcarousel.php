@@ -1,10 +1,9 @@
 <section class="carousel-box">
     <div class="carousel-box-parts">
 
-
-    <h1>Testimonials</h1>   
+    <h1 class='testimonials'>Testimonials</h1>   
                 
-    <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
+    <div class="main-carousel">
     <?php $loop = CFS()->get( 'testimonial' );
 
         foreach ( $loop as $row ) { ?> 
@@ -18,6 +17,7 @@
                 background-repeat: no-repeat;">
                 </div>
             </div>
+            
             <p class='quote'><?php echo $row['quote']; ?></p>
             <p class='testifier'><?php echo $row['testifier']; ?></p>
 

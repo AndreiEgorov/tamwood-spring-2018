@@ -106,27 +106,43 @@
 
     // flickity carousel  front page
 
-    $('.main-carousel').flickity({
-        // options
-        cellAlign: 'left',
-        contain: true
-    });
+    if ($('.main-carousel').length) {
+        $('.main-carousel').flickity({
+            // options
+            // cellAlign: left,
+            contain: true,
+            wrapAround: true,
+        });
+    }
 
     //carousel student support page
 
-    $('.student-support-carousel').flickity({
-        // options
-        cellAlign: 'left',
-        contain: true
-    });
+    if ($('.student-support-carousel').length) {
+        $('.student-support-carousel').flickity({
+            wrapAround: true,
+            freeScroll: false,
+            contain: true,
+            prevNextButtons: false,
+            pageDots: false,
+            // cellAlign: 'left',
+        });
+    }
+
 
     // flickity carousel  : instructors
 
-    $('.instructors-carousel').flickity({
-        // options
-        cellAlign: 'left',
-        contain: true
-    });
+    if ($('.instructors-carousel').length) {
+        $('.instructors-carousel').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true,
+            wrapAround: true,
+            freeScroll: false,
+            prevNextButtons: false,
+            pageDots: false
+        });
+    }
+
 
 
 

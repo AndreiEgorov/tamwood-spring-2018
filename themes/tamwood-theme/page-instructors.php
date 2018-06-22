@@ -1,27 +1,16 @@
 <?php 
-/** Template Name: Our Instructors */
-
-get_header(); ?>
-<?php get_template_part( 'template-parts/content', 'banner' ); ?>
-
-
-
-
-
+get_header();
+get_template_part( 'template-parts/content', 'banner' ); ?>
 
 <!-- Test Area , Andrei -->
 <h1>------------------------------</h1>
-<div class="instructors-carousel" data-flickity='{ "wrapAround": true, "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots":false}'>
+<div class="instructors-carousel">
 
 <?php $loop = CFS()->get( 'instructors' );
     foreach ( $loop as $row ) {
         ?> 
-
-        
         <div class="instructor-area">
-
-            
-            <div class="instructor-image" style="background:url(<?php echo $row['instructor_image']; ?>); 
+            <div class="instructor-image" style="background:url(<?php echo esc_url($row['instructor_image']); ?>); 
             height: 268px; 
             width: 240px;
             z-index: 10;
@@ -35,40 +24,26 @@ get_header(); ?>
                 <h2 class="instructor-name"><?php echo $row['instructor_name']; ?></h3>
                 <h3 class="instructor-position"><?php echo $row['instructor_position']; ?></h4>
                
-               <?php echo $row['instructor_info']; ?>
+               <?php echo wp_kses( $row['instructor_info'], array( 'p' => array( 'class' => '' ) ) ); ?>
                
                <a class="learn-more" id="instructor-learn-more" href="#">Learn More</a>
 
             </div>
-            
-
         </div>
-        <?php
-        
+        <?php   
     }?>
-
-
 </div>
 
 <h1>------------------------------</h1>
-<!-- ------------------------ -->
-
-<!-- ------------------------ -->
-
-
-
-
-
-
 
 <section>
     <?php $loop = CFS()->get( 'instructors' );
         foreach ( $loop as $row ) {?>
         <div>
-            <img src="<?php echo $row['instructor_image']; ?>">
-            <h3><?php echo $row['instructor_name']; ?></h3>
-            <h4><?php echo $row['instructor_position']; ?></h4>
-            <p><?php echo $row['instructor_info']; ?></p>
+            <img src="<?php echo esc_url($row['instructor_image']); ?>">
+            <h3><?php echo esc_html($row['instructor_name']); ?></h3>
+            <h4><?php echo esc_html($row['instructor_position']); ?></h4>
+            <p><?php echo wp_kses( $row['instructor_info'], array( 'p' => array( 'class' => '' ) ) );?></p>
         </div>
        <?php }?>
 </section>

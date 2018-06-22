@@ -1,12 +1,9 @@
-<section>
+<section class="content-banner">
     <div class='hero-image'>    
     </div>
-    
-    <h1><?php echo CFS()->get( 'page_title' ); ?></h1>
-    
-    <p><?php echo CFS()->get( 'page_copy' ); ?></p>
-    
+
+    <div class='container'>
+        <h1 class="page-title"><?php echo CFS()->get( 'page_title' ); ?></h1>
     </div>
-    
-    
+
 </section>
