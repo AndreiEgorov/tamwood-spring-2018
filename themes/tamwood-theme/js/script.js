@@ -8,7 +8,7 @@
     var $searchBar = $('.search-field');
     var $sectionNav = $('.section-navigation-option');
     var $backButton = $('.back-button');
-    var $subSubMenuToggle =  $('.menu-item-type-taxonomy');
+    var $subSubMenuToggle = $('.menu-item-type-taxonomy');
 
     $subSubMenuToggle.append('<i class="fa fa-angle-down toggle-menu mobile"></i>');
     $subSubMenuToggle.append('<i class="fa fa-angle-up toggle-menu hidden"></i>');
@@ -32,7 +32,7 @@
         toggleState($(this).next($subMenu), 'show');
         // $subMenuToggle.toggleClass('test');
     });
-    $('.toggle-menu').on('click', function() {
+    $('.toggle-menu').on('click', function () {
         toggleState($(this).prevAll('a'), 'selected');
         toggleState($(this).prevAll($subMenu), 'show');
         toggleState($('.fa-angle-down'), 'hidden');
