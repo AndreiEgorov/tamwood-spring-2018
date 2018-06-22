@@ -10,7 +10,7 @@
 
         <div class="carousel-cell">
             <div class='image-container'>
-                <div class="image-container" style="background:url(<?php echo $row['testifier_image']; ?>); 
+                <div class="image-container" style="background:url(<?php echo esc_url($row['testifier_image']); ?>); 
                 height: 250px; 
                 background-size: cover;
                 background-position: center;
@@ -18,8 +18,8 @@
                 </div>
             </div>
             
-            <p class='quote'><?php echo $row['quote']; ?></p>
-            <p class='testifier'><?php echo $row['testifier']; ?></p>
+            <p class='quote'><?php echo wp_kses($row['quote'], array( 'h3' => array( 'class' => '' ) ) ); ?></p>
+            <p class='testifier'><?php echo esc_html($row['testifier']); ?></p>
 
         </div>
        
