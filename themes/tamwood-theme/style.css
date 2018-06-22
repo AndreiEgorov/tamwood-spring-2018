@@ -312,6 +312,14 @@ p {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+.page-copy {
+  width: 85%;
+  margin: 0 auto; }
+
+.page-contents {
+  width: 85%;
+  margin: 0 auto; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -772,14 +780,11 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 /* Accreditations */
-.page-id-13 .hero-image, .page-id-13 .page-title {
+.page-id-13 .content-banner {
   display: none; }
 
-.page-id-13 .content-banner {
-  padding-top: 2rem; }
-
 .page-id-13 section {
-  width: 90%;
+  width: 85%;
   margin: auto; }
 
 .page-id-13 h1 {
@@ -812,7 +817,7 @@ object {
 
 @media (min-width: 768px) {
   .page-id-13 .accreditations-loop-contents {
-    padding-left: 4rem; } }
+    padding-left: 6rem; } }
 
 @media (min-width: 768px) {
   .page-id-13 .accreditations-loop-image {
@@ -861,6 +866,24 @@ object {
   @media (min-width: 768px) {
     .page-id-13 .apply-now-button {
       display: none; } }
+
+/* Why Tamwood */
+.page-id-2 p {
+  padding-bottom: 2rem; }
+
+.page-id-2 .info-loop {
+  background-color: #EAEEF6;
+  margin-bottom: 2rem;
+  padding: 2rem 0; }
+  .page-id-2 .info-loop .inside-box {
+    text-align: center;
+    width: 90%;
+    border: 1px solid #ffffff;
+    margin: 0 auto; }
+
+.page-id-2 .row-1 img {
+  width: 66px;
+  height: 92px; }
 
 .single-program .site-header {
   position: initial; }

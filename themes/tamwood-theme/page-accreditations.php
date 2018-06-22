@@ -1,7 +1,7 @@
 <?php 
 get_header();
 get_template_part( 'template-parts/content', 'banner' ); ?>
-<section>
+<section class="page-contents">
     <h1 class="mobile">Accreditation</h1>
     <h1 class="desktop">Tamwood Careers Accreditation</h1>
     <?php $loop = CFS()->get( 'accreditations' );
