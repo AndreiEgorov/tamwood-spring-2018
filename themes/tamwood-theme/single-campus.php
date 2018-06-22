@@ -11,8 +11,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
         <?php get_template_part( 'template-parts/content','banner' )?>
 
-        <?php echo CFS()->get( 'article_intro' )?>
-        <?php echo CFS()->get( 'main_text' )?>
+        <?php echo esc_html(CFS()->get( 'article_intro' ))?>
+        <?php echo esc_html(CFS()->get( 'main_text' ))?>
         
         <a class="primary-main" href="#">Apply Now</a>
 
@@ -23,7 +23,7 @@ get_header(); ?>
            
             
             <?php
-            echo '<img src="' . $field['feature_icon'] . '"/>';
+            echo '<img src="' . esc_url($field['feature_icon']) . '"/>';
             echo $field['feature_description'];
         }
         
@@ -39,9 +39,9 @@ get_header(); ?>
         <!-- --------------------------------- -->
        
         <div>
-            <?php echo CFS()->get( 'campus_location' )?>
-            <p><?php echo CFS()->get('contact_info_title')?></p>
-            <div><?php echo CFS()->get('contact_info')?></div>
+            <?php echo esc_html(CFS()->get( 'campus_location' ))?>
+            <p><?php echo esc_html(CFS()->get('contact_info_title'))?></p>
+            <div><?php echo esc_html(CFS()->get('contact_info'))?></div>
         </div>
         
 

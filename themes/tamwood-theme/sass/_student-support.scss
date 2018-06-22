@@ -11,43 +11,29 @@
     //    height: 200px;
     //     background: green;
     // }
-   
-
-
     .flickity-enabled{
         height: 250px;
         border: 3px solid black;
         *{
             box-sizing: border-box;
         }
-
-         .flickity-viewport{
-             height: 250px!important;
-             display: flex;
-             border: 3px solid orange;
-
-             .flickity-slider{
+        .flickity-viewport{
+            height: 250px!important;
+            display: flex;
+            border: 3px solid orange;
+            .flickity-slider{
                 display: flex;
                 align-items: center;
-
                 // .carousel-cell {
                 //     // margin: 0 !important;
                 // }
-
-                  .is-selected{
-                     height: 230px !important;
+                .is-selected{
+                    height: 230px !important;
                     //  width: 230px !important;
-
-                 }
-             }
-
-             
-     
-            
-         }
-     }
-
-
+                }
+            }
+        }
+    }
 }
 
 

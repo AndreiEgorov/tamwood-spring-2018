@@ -1,6 +1,5 @@
 .desktop {
     display: none;
-
     @include desktop {
         display: inherit;
     }
@@ -15,6 +14,13 @@
 }
 .site-header {
     z-index: 9001;
+    width: 100%;
+    height: 85px;
+    background-color: white;
+    border-bottom: 3px solid $color_brand-main;
+    @include desktop {
+        height: 185px;
+    }
     .search-field {
         width: 0;
         opacity: 0;
@@ -26,7 +32,6 @@
         height: 30px;
         margin-top: 3px;
         transition: 0.3s;
-    
         &.reveal {
             width: 100%;
             opacity: 1;
@@ -34,14 +39,6 @@
     }
     .home & {
         position: fixed;
-    }
-    width: 100%;
-    height: 85px;
-    background-color: white;
-    border-bottom: 3px solid $color_brand-main;
-
-    @include desktop {
-        height: 185px;
     }
 }
 .desktop-header {
@@ -55,13 +52,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     @include desktop {
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: flex-end;
         flex-wrap: wrap;
-
         .apply-now.desktop {
             @include primary-pink;
             margin: 32px 15px 0 0;

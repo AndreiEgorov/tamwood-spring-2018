@@ -13,7 +13,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content','banner' )?>
 
 			<div class ='title-wrapper'>
-				<h1 class='hero-title'><?php echo CFS()->get( 'hero_title' ); ?></h1>
+				<h1 class='hero-title'><?php echo esc_html(CFS()->get( 'hero_title' )); ?></h1>
 			</div>
 
 			<div class='container'>

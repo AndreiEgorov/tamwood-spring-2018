@@ -5,9 +5,12 @@
 /* Front page */
 
 /* Accreditations */
-.page-template-accreditations {
-    .hero-image {
+.page-id-13 {
+    .hero-image, .page-title {
         display: none;
+    }
+    .content-banner {
+        padding-top: 2rem;
     }
     section {
         width: 90%;
@@ -18,19 +21,20 @@
     }
     h3 {
         margin: 1rem 0;
+        font-size: 2rem;
         @include desktop {
-            font-size: 2rem;
             font-weight: 500;
         }
     }
     p {
         padding: 0 2.5rem;
+        font-size: 1.2rem;
         @include desktop {
             padding: 0;
         }
     }
     .accreditations-loop {
-        padding: 2rem;
+        padding: 3rem;
         text-align: center;
         margin-bottom: 2rem;
         @include desktop {
@@ -39,13 +43,20 @@
         }
     }
     .accreditations-loop-contents {
-        padding: 0 2rem;
+        @include desktop {
+            padding-left: 4rem;
+        }
+    }
+    .accreditations-loop-image {
+        @include desktop {
+            padding-top: 2rem;
+        }
     }
     .row-1 {
         background-color: $color_main-light;
         img {
-            width: 124;
-            height: 124;
+            width: 124px;
+            height: 124px;
             @include desktop {
                 width: 250px;
                 height: 250px;
@@ -53,6 +64,11 @@
         }
     }
     .row-2 {
+        .accreditations-loop-image {
+            @include desktop {
+                padding-top: 6rem;
+            }
+        }
         img {
             width: 278px;
             height: 100px;
@@ -71,6 +87,9 @@
             color: #FFFFFF;
             border: 3px solid $color_brand-main;
             background-color: $color_brand-main;
+        }
+        @include desktop {
+            display: none;
         }
     }
 }

@@ -1,14 +1,12 @@
 <?php 
-/** Template Name: Student Support */
-
-get_header(); ?>
-<?php get_template_part( 'template-parts/content', 'banner' ); ?>
+get_header(); 
+get_template_part( 'template-parts/content', 'banner' ); ?>
 <section>
 <?php $loop = CFS()->get( 'subsection' );
     foreach ( $loop as $row ) { ?>
         <div>
-            <h3> <?php echo $row['subsection_title']; ?> </h3>
-            <p> <?php echo $row['subsection_blurb']; ?> </p> 
+            <h3> <?php echo esc_html($row['subsection_title']); ?> </h3>
+            <p> <?php echo wp_kses( $row['subsection_blurb'], array( 'p' => array( 'class' => '' ) ) ); ?> </p> 
         </div> <?php
     }?>
 </section>
@@ -27,7 +25,7 @@ get_header(); ?>
     foreach ( $loop as $row ) {
         ?> 
 
-        <div class="carousel-cell" style="background:url(<?php echo $row['image']; ?>); 
+        <div class="carousel-cell" style="background:url(<?php echo esc_url($row['image']); ?>); 
         height: 202px; 
         width: 202px;
         margin-left: 1.5rem;
