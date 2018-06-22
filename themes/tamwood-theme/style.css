@@ -949,27 +949,45 @@ object {
     background-color: #B52371;
     margin-bottom: 4rem; }
 
-.testimonials {
-  margin-top: 30rem; }
-
 .carousel-box {
   margin: 0 auto;
-  width: 95%;
-  background: green; }
+  width: 95%; }
   .carousel-box .carousel-box-parts {
-    background: red;
-    width: 96%;
-    height: 110vw;
+    background: #EAEEF6;
+    width: 86%;
+    height: 480px;
     margin: 0 auto;
     text-align: center; }
     .carousel-box .carousel-box-parts .main-carousel {
-      width: 95%;
+      width: 89%;
       margin: 0 auto;
       height: 80%; }
+      .carousel-box .carousel-box-parts .main-carousel .flickity-prev-next-button.previous {
+        background: transparent;
+        right: 105%;
+        left: unset;
+        top: 50%; }
+        .carousel-box .carousel-box-parts .main-carousel .flickity-prev-next-button.previous path {
+          fill: #003DA6; }
+      .carousel-box .carousel-box-parts .main-carousel .flickity-prev-next-button.next {
+        background: transparent;
+        left: 105%;
+        right: unset;
+        top: 50%; }
+        .carousel-box .carousel-box-parts .main-carousel .flickity-prev-next-button.next path {
+          fill: #003DA6; }
+      .carousel-box .carousel-box-parts .main-carousel ol {
+        display: none; }
       .carousel-box .carousel-box-parts .main-carousel .flickity-viewport {
         height: 100%; }
         .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell {
           width: 100%; }
+          .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell .quote {
+            font-style: italic;
+            width: 100%;
+            padding-top: 0.7rem; }
+          .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell .testifier:before {
+            content: "\2014"; }
 
 /* external css: flickity.css */
 .page-template-student-support section img {
@@ -1117,4 +1135,46 @@ object {
   padding-bottom: 3.2rem; }
 
 .page-template-default .container section {
-  text-align: center; }
+  text-align: center;
+  margin-top: 3.9rem; }
+
+.page-template-default .container h1 {
+  margin-bottom: 0.4rem; }
+
+.page-template-default .container h3 {
+  width: 69%;
+  margin: 0 auto; }
+
+.page-template-default .container .department-image {
+  width: 62%;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.page-template-default .container .learn-button {
+  text-decoration: none;
+  font-family: "Fira Sans";
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: center;
+  height: 62px;
+  width: 190px;
+  padding: 10px 27px;
+  margin: 50px;
+  color: #B52371;
+  border: 3px solid #B52371;
+  background-color: #FFFFFF;
+  display: inline-block;
+  padding: 1.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.4rem; }
+  .page-template-default .container .learn-button:hover {
+    background-color: #B52371;
+    color: #FFFFFF; }
+
+.page-template-default .container .designated {
+  width: 34%; }
+
+.page-template-default .container .bccareer {
+  width: 81.7%; }

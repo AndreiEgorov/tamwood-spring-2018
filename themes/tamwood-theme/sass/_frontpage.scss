@@ -33,7 +33,37 @@
         }
         section{
             text-align: center;
+            margin-top: 3.9rem;
         }
+        h1{
+            margin-bottom:0.4rem;
+           
+        }
+        h3{
+            width: 69%;
+            margin: 0 auto;
+        }
+        .department-image{
+            width: 62%;
+            height: 170px;
+            object-fit: cover;
+        }
+        .learn-button{
+            @include secondary-pink;
+            display: inline-block;
+            padding: 1.2rem;
+            margin-top: 0.8rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .designated{
+            width:34%;
+
+        }
+        .bccareer{
+            width: 81.7%;
+        }
+
         
     }
 

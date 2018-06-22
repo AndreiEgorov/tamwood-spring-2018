@@ -21,39 +21,36 @@ get_header(); ?>
 				<?php echo CFS()->get( 'blurb' ); ?>
 				<p class='page-copy'><?php echo CFS()->get( 'page_copy' ); ?></p>
 	
-				<section>
+				<section class='departments'>
 
-				<h1>Departments</h1>
-				<div class="department">
+					<h1>Departments</h1>
+					<div class="department">
 
-					<img class="department-image" src="<?php echo wp_get_attachment_url( 280 ); ?>" alt="Global startup school image">
-					<?php 
+						<img class="department-image" src="<?php echo wp_get_attachment_url( 280 ); ?>" alt="Global startup school image">
+						<?php 
+						
+						$department_taxonomy = get_terms('program_type', array(
+							'slug' => 'global_sturtup_school',
+							'hide_empty' => 0,
+						));
+						$school_array = get_object_vars($department_taxonomy[0]);			
+						?>
+						<h3 class="department-program"><?php echo $school_array['name'];?></h3> 
+						<a class='learn-button' href="<?php echo $school_array['description'];?>">Learn More</a>  <!-- link to external site -->
 					
-					$department_taxonomy = get_terms('program_type', array(
-						'slug' => 'global_sturtup_school',
-						'hide_empty' => 0,
-					));
-					$school_array = get_object_vars($department_taxonomy[0]);			
-					?>
-					<h3 class="department-program"><?php echo $school_array['name'];?></h3> 
-					<a href="<?php echo $school_array['description'];?>">Learn More</a>  <!-- link to external site -->
-				
-				</div>
-				<div class="department">
-					<img class="department-image" src="<?php echo wp_get_attachment_url( 285 ); ?>" alt="International business management image">
-					<h3 class="department-program">  <?php echo  get_object_vars($term = get_terms('program_type', array('slug' => 'international_business_management_coop','hide_empty' => 0,))[0])['name']; ?> </h3>
-					<a href="<?php echo get_term_link( $term ); ?>"> Learn More</a>
-				</div>
-				<div class="department">
-					<img class="department-image" src="<?php echo wp_get_attachment_url( 279 ); ?>" alt=" Hospitality and Tourism image">
-					<h3 class="department-program"><?php echo get_object_vars($term1 = get_terms('program_type', array('slug'=>'hospitality-and-tourism', 'hide_empty'=> 0))[0])['name'];?></h3>
-					<a href="<?php echo get_term_link($term1); ?>"> Learn More</a>	
-				</div>
-
+					</div>
+					<div class="department">
+						<img class="department-image" src="<?php echo wp_get_attachment_url( 278 ); ?>" alt="International business management image">
+						<h3 class="department-program">  <?php echo  get_object_vars($term = get_terms('program_type', array('slug' => 'international_business_management_coop','hide_empty' => 0,))[0])['name']; ?> </h3>
+						<a class='learn-button' href="<?php echo get_term_link( $term ); ?>"> Learn More</a>
+					</div>
+					<div class="department">
+						<img class="department-image" src="<?php echo wp_get_attachment_url( 279 ); ?>" alt=" Hospitality and Tourism image">
+						<h3 class="department-program"><?php echo get_object_vars($term1 = get_terms('program_type', array('slug'=>'hospitality-and-tourism', 'hide_empty'=> 0))[0])['name'];?></h3>
+						<a class='learn-button' href="<?php echo get_term_link($term1); ?>"> Learn More</a>	
+					</div>
 					
-				
 				<section>
-
 				
 
 				</section>
@@ -65,14 +62,16 @@ get_header(); ?>
 					<h1>Accreditaions</h1>
 					<ul class="accreditations-logos">
 						<li>
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/BC_PrivateTrainingDesignated_RGB_Color Internet.png">
+							<img class="designated" src="<?php echo get_template_directory_uri(); ?>/assets/logos/BC_PrivateTrainingDesignated_RGB_Color Internet.png">
 						</li>
 						<li>
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/bc1@3x.png">
+							<img class="bccareer" src="<?php echo get_template_directory_uri(); ?>/assets/logos/bc1@3x.png">
 						</li>
 					</ul>
 
 				</section>
+
+				<a href=""></a>
 
 			</div> <!--  container -->
 		</main><!-- #main -->

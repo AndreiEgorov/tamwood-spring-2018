@@ -18,8 +18,8 @@
                 </div>
             </div>
             
-            <p class='quote'><?php echo $row['quote']; ?></p>
-            <p class='testifier'><?php echo $row['testifier']; ?></p>
+           <?php echo $row['quote']; ?>
+            <h4 class='testifier'><?php echo $row['testifier']; ?></h4>
 
         </div>
        
