@@ -51,19 +51,23 @@ License: none (public domain)
 .primary-main {
   text-decoration: none;
   font-family: "Fira Sans";
-  font-size: 25px;
   font-weight: bold;
   line-height: 21px;
   text-align: center;
-  height: 62px;
-  width: 190px;
-  padding: 10px 27px;
   margin: 50px;
+  display: inline-block;
+  padding: 0.57rem 1.57rem;
+  font-size: 1.28rem;
+  height: 3.43rem;
+  width: 10.7rem;
   text-transform: uppercase;
   color: #FFFFFF;
   border: 3px solid #7FBC16;
   background-color: #7FBC16;
   margin: 50px; }
+  @media (min-width: 768px) {
+    .primary-main {
+      padding-top: 18px; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -394,14 +398,15 @@ p {
       .header-container .apply-now.desktop {
         text-decoration: none;
         font-family: "Fira Sans";
-        font-size: 25px;
         font-weight: bold;
         line-height: 21px;
         text-align: center;
-        height: 62px;
-        width: 190px;
-        padding: 10px 27px;
         margin: 50px;
+        display: inline-block;
+        padding: 0.57rem 1.57rem;
+        font-size: 1.28rem;
+        height: 3.43rem;
+        width: 10.7rem;
         text-transform: uppercase;
         color: #FFFFFF;
         border: 3px solid #B52371;
@@ -413,18 +418,22 @@ p {
         -webkit-box-ordinal-group: 3;
             -ms-flex-order: 2;
                 order: 2; } }
+    @media (min-width: 768px) and (min-width: 768px) {
+      .header-container .apply-now.desktop {
+        padding-top: 18px; } }
 
 .apply-now.mobile {
   text-decoration: none;
   font-family: "Fira Sans";
-  font-size: 25px;
   font-weight: bold;
   line-height: 21px;
   text-align: center;
-  height: 62px;
-  width: 190px;
-  padding: 10px 27px;
   margin: 50px;
+  display: inline-block;
+  padding: 0.57rem 1.57rem;
+  font-size: 1.28rem;
+  height: 3.43rem;
+  width: 10.7rem;
   text-transform: uppercase;
   color: #FFFFFF;
   border: 3px solid #B52371;
@@ -432,6 +441,9 @@ p {
   font-size: 1.14rem;
   margin: 0 auto;
   width: 150px; }
+  @media (min-width: 768px) {
+    .apply-now.mobile {
+      padding-top: 18px; } }
 
 .logo-desktop {
   height: 100%;
@@ -846,18 +858,22 @@ object {
   .page-id-13 .apply-now-button a {
     text-decoration: none;
     font-family: "Fira Sans";
-    font-size: 25px;
     font-weight: bold;
     line-height: 21px;
     text-align: center;
-    height: 62px;
-    width: 190px;
-    padding: 10px 27px;
     margin: 50px;
+    display: inline-block;
+    padding: 0.57rem 1.57rem;
+    font-size: 1.28rem;
+    height: 3.43rem;
+    width: 10.7rem;
     text-transform: uppercase;
     color: #FFFFFF;
     border: 3px solid #003DA6;
     background-color: #003DA6; }
+    @media (min-width: 768px) {
+      .page-id-13 .apply-now-button a {
+        padding-top: 18px; } }
   @media (min-width: 768px) {
     .page-id-13 .apply-now-button {
       display: none; } }
@@ -951,19 +967,23 @@ object {
   .error404 .error-page-container a {
     text-decoration: none;
     font-family: "Fira Sans";
-    font-size: 25px;
     font-weight: bold;
     line-height: 21px;
     text-align: center;
-    height: 62px;
-    width: 190px;
-    padding: 10px 27px;
     margin: 50px;
+    display: inline-block;
+    padding: 0.57rem 1.57rem;
+    font-size: 1.28rem;
+    height: 3.43rem;
+    width: 10.7rem;
     text-transform: uppercase;
     color: #FFFFFF;
     border: 3px solid #B52371;
     background-color: #B52371;
     margin-bottom: 4rem; }
+    @media (min-width: 768px) {
+      .error404 .error-page-container a {
+        padding-top: 18px; } }
 
 .carousel-box {
   margin: 0 auto;
@@ -1060,14 +1080,15 @@ object {
     .page-template-instructors .instructor-area .instructor-bio .learn-more {
       text-decoration: none;
       font-family: "Fira Sans";
-      font-size: 25px;
       font-weight: bold;
       line-height: 21px;
       text-align: center;
-      height: 62px;
-      width: 190px;
-      padding: 10px 27px;
       margin: 50px;
+      display: inline-block;
+      padding: 0.57rem 1.57rem;
+      font-size: 1.28rem;
+      height: 3.43rem;
+      width: 10.7rem;
       color: #003DA6;
       border: 3px solid #003DA6;
       background-color: #FFFFFF;
@@ -1077,6 +1098,9 @@ object {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+      @media (min-width: 768px) {
+        .page-template-instructors .instructor-area .instructor-bio .learn-more {
+          padding-top: 18px; } }
       .page-template-instructors .instructor-area .instructor-bio .learn-more:hover {
         background-color: #003DA6;
         color: #FFFFFF; }
@@ -1170,21 +1194,21 @@ object {
 .page-template-default .container .learn-button {
   text-decoration: none;
   font-family: "Fira Sans";
-  font-size: 25px;
   font-weight: bold;
   line-height: 21px;
   text-align: center;
-  height: 62px;
-  width: 190px;
-  padding: 10px 27px;
   margin: 50px;
+  display: inline-block;
+  padding: 0.57rem 1.57rem;
+  font-size: 1.28rem;
+  height: 3.43rem;
+  width: 10.7rem;
   color: #B52371;
   border: 3px solid #B52371;
-  background-color: #FFFFFF;
-  display: inline-block;
-  padding: 1.2rem;
-  margin-top: 0.8rem;
-  margin-bottom: 1.4rem; }
+  background-color: #FFFFFF; }
+  @media (min-width: 768px) {
+    .page-template-default .container .learn-button {
+      padding-top: 18px; } }
   .page-template-default .container .learn-button:hover {
     background-color: #B52371;
     color: #FFFFFF; }
@@ -1194,3 +1218,26 @@ object {
 
 .page-template-default .container .bccareer {
   width: 81.7%; }
+
+.page-template-default .container .apply-button {
+  text-decoration: none;
+  font-family: "Fira Sans";
+  font-weight: bold;
+  line-height: 21px;
+  text-align: center;
+  margin: 50px;
+  display: inline-block;
+  padding: 0.57rem 1.57rem;
+  font-size: 1.28rem;
+  height: 3.43rem;
+  width: 10.7rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: 3px solid #B52371;
+  background-color: #B52371;
+  display: inline-block;
+  padding: 20px 18px;
+  font-size: 18px; }
+  @media (min-width: 768px) {
+    .page-template-default .container .apply-button {
+      padding-top: 18px; } }

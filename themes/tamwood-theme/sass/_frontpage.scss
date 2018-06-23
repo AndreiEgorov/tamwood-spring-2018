@@ -46,10 +46,10 @@
         }
         .learn-button{
             @include secondary-pink;
-            display: inline-block;
-            padding: 1.2rem;
-            margin-top: 0.8rem;
-            margin-bottom: 1.4rem;
+            // display: inline-block;
+            // padding: 1.2rem;
+            // margin-top: 0.8rem;
+            // margin-bottom: 1.4rem;
         }
 
         .designated{
@@ -59,7 +59,14 @@
         .bccareer{
             width: 81.7%;
         }
+        .apply-button{
+            @include primary-pink{
+                display: inline-block;
+                padding: 20px 18px;
+                font-size:18px;
 
+            }
+        }
         
     }
 }

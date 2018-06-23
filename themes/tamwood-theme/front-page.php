@@ -71,7 +71,7 @@ get_header(); ?>
 
 				</section>
 
-				<a href=""></a>
+				<a class='apply-button' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
 
 			</div> <!--  container -->
 		</main><!-- #main -->
