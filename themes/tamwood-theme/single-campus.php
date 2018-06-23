@@ -11,8 +11,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
         <?php get_template_part( 'template-parts/content','banner' )?>
 
-        <?php echo esc_html(CFS()->get( 'article_intro' ))?>
-        <?php echo esc_html(CFS()->get( 'main_text' ))?>
+        <p><?php echo wp_kses(CFS()->get( 'article_intro' ), array( 'p' => array( 'class' => '' ) ) );?></p>
+        <?php echo wp_kses(CFS()->get( 'main_text' ), array( 'p' => array( 'class' => '' ) ) );?>
         
         <a class="primary-main" href="#">Apply Now</a>
 
@@ -39,9 +39,9 @@ get_header(); ?>
         <!-- --------------------------------- -->
        
         <div>
-            <?php echo esc_html(CFS()->get( 'campus_location' ))?>
+            <?php echo CFS()->get( 'campus_location' )?>
             <p><?php echo esc_html(CFS()->get('contact_info_title'))?></p>
-            <div><?php echo esc_html(CFS()->get('contact_info'))?></div>
+            <div><?php echo wp_kses(CFS()->get('contact_info'), array( 'p' => array( 'class' => '' ) ) );?></div>
         </div>
         
 
