@@ -46,6 +46,7 @@
         }
         .learn-button{
             @include secondary-pink;
+            line-height: unset;
             // display: inline-block;
             // padding: 1.2rem;
             // margin-top: 0.8rem;
