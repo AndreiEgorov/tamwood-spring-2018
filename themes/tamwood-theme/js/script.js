@@ -20,6 +20,7 @@
         $subMenuToggle.removeClass('selected');
         $subMenu.removeClass('show');
         $searchBar.removeClass('reveal');
+        toggleState($('.overlay'), 'darken');
     });
 
     /**
@@ -47,6 +48,9 @@
         toggleState($searchBar, 'reveal');
         $mainNavigation.removeClass('toggled');
         $hamburgerMenu.removeClass('is-active');
+    });
+    $searchBar.on('blur', function(){
+        $searchBar.removeClass('reveal');
     });
 
     $sectionNav.on('click', function (evt) {
