@@ -920,7 +920,7 @@ textarea {
       .main-navigation-desktop .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover {
         display: block; }
         .main-navigation-desktop .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
-          padding: 10px 10px 0;
+          padding: 10px 15px 0 30px;
           display: block;
           background: white;
           margin-left: -15px;
