@@ -6,37 +6,15 @@
 
 /* Fields */
 
-// input[type="text"],
-// input[type="email"],
-// input[type="url"],
-// input[type="password"],
-// input[type="search"],
-// textarea {
-// 	color: #666;
-// 	border: 1px solid #ccc;
-// 	border-radius: 3px;
-
-// 	&:focus {
-// 		color: #111;
-// 	}
-// }
-
-// input[type="text"],
-// input[type="email"],
-// input[type="url"],
-// input[type="password"],
-// input[type="search"] {
-// 	padding: 3px;
-// }
-
-// textarea {
-// 	padding-left: 3px;
-// 	width: 100%;
-// }
-input {
+input,
+textarea {
     background: $color_secondary-background;
     border: 1px solid #c5c5c5;
     max-width: 500px;
+    &:focus {
+        background: white;
+        outline: 1px solid $color_brand-main;
+    }
 }
 .gform_heading {
     display: none;
@@ -61,7 +39,6 @@ input {
     }
 }
 .gform_wrapper {
-    width: 85%;
     label {
         font-weight: normal !important;
         font-size: 1.28rem !important;
@@ -146,7 +123,8 @@ input {
 #field_1_24 .gfield_description,
 #label_1_28_1,
 #label_1_28_2,
-#label_1_28_3 {
+#label_1_28_3,
+#label_1_29_1 {
     font-family: $font_text-copy;
     font-size: 1rem !important;
     line-height: $font__line-height-body*1.1;
@@ -230,4 +208,14 @@ input {
     @include secondary-pink;
     margin: 0;
     text-transform: uppercase;
+}
+#field_2_2,
+#field_2_3 {
+    // width: 50%;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    .ginput_container {
+        width: 50%;
+    }
 }

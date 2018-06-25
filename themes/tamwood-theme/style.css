@@ -329,10 +329,15 @@ p {
 --------------------------------------------------------------*/
 /* Buttons */
 /* Fields */
-input {
+input,
+textarea {
   background: #F4F4F4;
   border: 1px solid #c5c5c5;
   max-width: 500px; }
+  input:focus,
+  textarea:focus {
+    background: white;
+    outline: 1px solid #003DA6; }
 
 .gform_heading {
   display: none; }
@@ -357,32 +362,34 @@ input {
   .gf_step:not(.gf_step_active) {
     display: none; }
 
-.gform_wrapper {
-  width: 85%; }
-  .gform_wrapper label {
-    font-weight: normal !important;
-    font-size: 1.28rem !important; }
-  .entry-content .gform_wrapper {
-    margin: 0 auto; }
-  .gform_wrapper .apply-page-three-box {
-    border: 2px solid #B52371;
-    padding-bottom: 20px; }
-    .gform_wrapper .apply-page-three-box p {
-      padding: 25px 10px 0; }
-    .gform_wrapper .apply-page-three-box h2 {
-      color: white;
-      background: #B52371;
-      text-align: center;
-      font-weight: 300;
-      text-transform: uppercase; }
-    .gform_wrapper .apply-page-three-box.step-one, .gform_wrapper .apply-page-three-box.step-three {
-      background: #EED9EF; }
-  .gform_wrapper .step-one {
-    border-bottom: none; }
-  .gform_wrapper .step-two a {
-    color: #3D3D3D;
-    text-decoration: none;
-    border-bottom: 2px solid #B52371; }
+.gform_wrapper label {
+  font-weight: normal !important;
+  font-size: 1.28rem !important; }
+
+.entry-content .gform_wrapper {
+  margin: 0 auto; }
+
+.gform_wrapper .apply-page-three-box {
+  border: 2px solid #B52371;
+  padding-bottom: 20px; }
+  .gform_wrapper .apply-page-three-box p {
+    padding: 25px 10px 0; }
+  .gform_wrapper .apply-page-three-box h2 {
+    color: white;
+    background: #B52371;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase; }
+  .gform_wrapper .apply-page-three-box.step-one, .gform_wrapper .apply-page-three-box.step-three {
+    background: #EED9EF; }
+
+.gform_wrapper .step-one {
+  border-bottom: none; }
+
+.gform_wrapper .step-two a {
+  color: #3D3D3D;
+  text-decoration: none;
+  border-bottom: 2px solid #B52371; }
 
 #gform_page_1_4 .gfield_radio {
   display: -webkit-box;
@@ -437,7 +444,8 @@ input {
 #field_1_24 .gfield_description,
 #label_1_28_1,
 #label_1_28_2,
-#label_1_28_3 {
+#label_1_28_3,
+#label_1_29_1 {
   font-family: "Merriweather", serif;
   font-size: 1rem !important;
   line-height: 1.65; }
@@ -577,6 +585,15 @@ input {
   #gform_previous_button_1_18:hover {
     background-color: #B52371;
     color: #FFFFFF; }
+
+#field_2_2,
+#field_2_3 {
+  display: inline;
+  margin: 0;
+  padding: 0; }
+  #field_2_2 .ginput_container,
+  #field_2_3 .ginput_container {
+    width: 50%; }
 
 .desktop {
   display: none; }
