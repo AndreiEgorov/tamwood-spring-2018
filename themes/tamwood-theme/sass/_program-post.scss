@@ -3,48 +3,138 @@
     .site-header{
         position: initial;
     }
+   
+    
     //program overview section
-    .blurb{
-        display: none;
-    }
-    .overview-text{
-        margin: 3.14rem 0;
-    }
-    .program-type{
-        display: flex;
-        .box-section{
-            margin-bottom:1rem;
-            width: 100%;
-            text-align: center;
-            .box-title{
-                margin-bottom: 1rem;
+        .blurb{
+            display: none;
+        }
+        .overview-text{
+            
+            p{
+                margin-top: 3.14rem;
             }
-            .box-set{
-                display: flex;
-                justify-content: space-between;
-                .box{ 
-                    flex-basis: 48%;
-                    h4{
-                        border:3px solid $color_brand-secondary;
-                        height: 115px; 
-                        padding: 1.3rem 2rem;
+            p:nth-child(2){
+                display: none;
+                
+            }
+        
+        }
+        ol{
+            display: none;
+        }
+        .program-type{
+            display: flex;
+            .box-section{
+                margin-bottom:1rem;
+                width: 100%;
+                text-align: center;
+                .box-title{
+                    margin-bottom: 1rem;
+                }
+                .box-set{
+                    display: flex;
+                    justify-content: space-between;
+                    .box{ 
+                        flex-basis: 48%;
+                        h4{
+                            border:3px solid $color_brand-secondary;
+                            height: 115px; 
+                            padding: 1.3rem 2rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
                     }
                 }
             }
         }
-    }
-    .section-navigation-mobile{
-        width: 100%;
-        .section-navigation-option{
+
+
+            //mobile program menu
+                .section-navigation-mobile{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .section-navigation-option{
+                        display: flex;
+                        align-items: center;
+                        margin:5px 0;
+                        height: 34px;
+                        font-size: 1.28rem;
+                        color: $color__background-body;
+                        padding-left: 7.5%;    
+                    }
+                    .option-5{
+                        order:-1;
+                    }
+                }
+            //End of program menu 
+        .button-box{
+            display: flex;
+            justify-content: center;
+            .apply-button{
+                @include primary-pink{
+                    display: inline-block;
+                    // padding: 20px 18px;
+                    font-size:18px;
+    
+                }
+            }   
+    
+        }
+
+        .details{
+            
+            .detail{
+            margin: 0 auto;
+            margin-bottom:4.07rem;
+            width: 68%;
             display: flex;
             align-items: center;
-            margin:5px 0;
-            height: 50px;
-            font-size: 1.28rem;
-            color: $color__background-body;
-            padding-left: 7.5%;
+            text-align: center;
+            flex-direction: column;
+                .icon{
+                    height: 55px;
+                }
+                h3{
+                    margin: 1rem;
+                }
+                ul{
+                   
+                    li{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;         
+                                       
+                        div{
+                            
+                            border: 1px solid $color_brand-secondary;
+                        }
+                       
+                    }
+                    li:nth-child(1){
+                        background-color: $color_secondary-light;
+                        
+                    }
+                    li div:nth-child(1){
+                        background-color: $color_secondary-light;
+                    }
+                    li:nth-child(1) div:nth-child(1){
+                        border: none;
+                        background-color: white;
+
+                    }
+
+                    
+                }
+            }
         }
-    }
+            
+       
+    //End of  program overview section
+
+
+
 }
 .hidden {
     display: none;

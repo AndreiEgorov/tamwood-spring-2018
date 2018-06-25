@@ -15,7 +15,7 @@ get_header(); ?>
 		<section class='program-section program-overview container'>
 			<h1><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h1>
 			<h4 class='blurb'><?php echo wp_kses((CFS()->get( 'blurb' )), array( 'p' => array( 'class' => '' ) ) );?></h4>
-			<p class='overview-text'><?php echo wp_kses((CFS()->get( 'program_overview' )),array( 'p' => array( 'class' => '' ) ) );?></p>
+			<div class='overview-text'><?php echo wp_kses((CFS()->get( 'program_overview' )),array( 'p' => '' ) );?></div>
 			<?php $fields = CFS()->get( 'program_highlights_table' );?>
 			<ol type="1">
 				<?php 
@@ -63,32 +63,47 @@ get_header(); ?>
 			</ul>
 		<!-- End Nav -------------------------- -->
 		</section>
+		
+		<div class='container button-box'>
+			<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+		</div>
 
 		<section class="program-section details container">
-			<img src="<?php echo get_template_directory_uri() ?>/assets/icons/placeholder (1)@2x.png" alt="downtown building">
-			<h3>Program Length (REPLACE IMAGE)</h3>
-			<?php echo wp_kses(CFS()->get( 'program_length' ), array ( 'p' => array( 'class' => '' ) ) );?>
-		
-			<img src="<?php echo get_template_directory_uri() ?>/assets/icons/clock-150x150@2x.png" alt="downtown building">
-			<h3>Location (REPLACE IMAGE)</h3>
-			<?php echo wp_kses(CFS()->get( 'location' ), array ( 'p' => array( 'class' => '' ) ) ); ?>
+			<div class="detail">
+				<img class='icon' src="<?php echo get_template_directory_uri() ?>/assets/icons/placeholder (1)@2x.png" alt="downtown building">
+				<h3>Program Length</h3>
+				<?php echo wp_kses(CFS()->get( 'program_length' ), array ( 'p' => array( 'class' => '' ) ) );?>
+			</div>
 
-			<img src="<?php echo get_template_directory_uri() ?>/assets/icons/downtown.png" alt="downtown building">
-			<h3>Schedule (REPLACE IMAGE)</h3>
+			<div class="detail">
+				<img class='icon' src="<?php echo get_template_directory_uri() ?>/assets/icons/clock-150x150@2x.png" alt="downtown building">
+				<h3>Location</h3>
+				<?php echo wp_kses(CFS()->get( 'location' ), array ( 'p' => array( 'class' => '' ) ) ); ?>
+			</div>
 
-			<?php $schedule = CFS()->get( 'schedule' );?>
-			<ul>
-				<?php 
-				foreach ( $schedule as $row ) {?>
-					<li>
-						<div>
-							<?php echo esc_html($row['column_1']); ?>
-							<?php echo esc_html($row['column_2']); ?>
-							<?php echo esc_html($row['column_3']); ?>	
-						</div>
-					</li>
-				<?php 
-				}?>
+			<div class="detail schedule">
+				<img class='icon' src="<?php echo get_template_directory_uri() ?>/assets/icons/calendar-150x150@2x.png" alt="downtown building">
+				<h3>Schedule </h3>
+				<?php $schedule = CFS()->get( 'schedule' );?>
+				<ul>
+					<?php 
+					foreach ( $schedule as $row ) {?>
+						<li>
+							<div>
+								<?php echo wp_kses( $row['column_1'], array('li' => array('p' => ''))); ?>
+							</div>	
+							<div>
+								<?php echo esc_html($row['column_2']); ?>
+							</div>
+							<div>
+								<?php echo esc_html($row['column_3']); ?>
+							</div>
+								
+							
+						</li>
+					<?php 
+					}?>
+			</div>
 			</ul>
 		</section>
 
