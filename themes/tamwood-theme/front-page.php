@@ -68,7 +68,10 @@ get_header(); ?>
 						</li>
 					</ul>
 				</section>
+				<div class='button-box'>
 				<a class='apply-button' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+
+				</div>
 
 			</div> <!--  container -->
 		</main><!-- #main -->

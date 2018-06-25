@@ -1995,7 +1995,7 @@ object {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: 375px; }
+  min-width: 356px; }
   @media (min-width: 768px) {
     .page-template-default .title-wrapper {
       height: 493px;
@@ -2109,30 +2109,44 @@ object {
 .page-template-default .container .bccareer {
   width: 81.7%; }
 
-.page-template-default .container .apply-button {
-  text-decoration: none;
-  font-family: "Fira Sans";
-  font-weight: bold;
-  text-align: center;
-  margin: 50px;
-  display: inline-block;
-  padding: 0.57rem 1.57rem;
-  font-size: 1.28rem;
-  height: 3.43rem;
-  width: 10.7rem;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  border: 3px solid #B52371;
-  background-color: #B52371;
-  display: inline-block;
-  font-size: 18px; }
+.page-template-default .container .button-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .page-template-default .container .button-box .apply-button {
+    text-decoration: none;
+    font-family: "Fira Sans";
+    font-weight: bold;
+    text-align: center;
+    margin: 50px;
+    display: inline-block;
+    padding: 0.57rem 1.57rem;
+    font-size: 1.28rem;
+    height: 3.43rem;
+    width: 10.7rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 3px solid #B52371;
+    background-color: #B52371;
+    display: inline-block;
+    font-size: 18px; }
+    @media (min-width: 768px) {
+      .page-template-default .container .button-box .apply-button {
+        line-height: 21px;
+        padding-top: 18px; } }
+    @media (min-width: 768px) {
+      .page-template-default .container .button-box .apply-button {
+        display: none; } }
+
+.single-campus .content-banner {
+  margin: 0 auto; }
   @media (min-width: 768px) {
-    .page-template-default .container .apply-button {
-      line-height: 21px;
-      padding-top: 18px; } }
-  @media (min-width: 768px) {
-    .page-template-default .container .apply-button {
-      display: none; } }
+    .single-campus .content-banner .hero-image {
+      background-position: center;
+      height: 45vh !important; } }
 
 .single-campus .intro {
   font-weight: 300;
@@ -2146,6 +2160,11 @@ object {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media (min-width: 768px) {
+    .single-campus .button-box {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
   .single-campus .button-box .apply-button-green {
     text-decoration: none;
     font-family: "Fira Sans";
@@ -2170,6 +2189,13 @@ object {
     @media (min-width: 768px) {
       .single-campus .button-box .apply-button-green {
         display: none; } }
+  .single-campus .button-box .desktop-shown {
+    display: none; }
+    @media (min-width: 768px) {
+      .single-campus .button-box .desktop-shown {
+        display: initial;
+        font-size: 1.28rem;
+        margin-left: 0; } }
 
 .single-campus .campus-features {
   display: -webkit-box;
@@ -2184,9 +2210,82 @@ object {
           justify-content: center;
   width: 62%;
   margin: 0 auto; }
+  @media (min-width: 768px) {
+    .single-campus .campus-features {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      width: 68%;
+      min-width: 768px; } }
   .single-campus .campus-features .feature {
     text-align: center;
     margin-top: 57px; }
     .single-campus .campus-features .feature img {
       height: 65px;
       width: 65px; }
+    .single-campus .campus-features .feature .feature-description {
+      padding: 1rem;
+      font-size: 18px; }
+      @media (min-width: 768px) {
+        .single-campus .campus-features .feature .feature-description {
+          padding: 1rem 0.5rem 0 0.5rem; } }
+
+@media (min-width: 768px) {
+  .single-campus .contact-info-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 5.6rem;
+    margin-bottom: 3.55rem;
+    height: 345px;
+    width: 58%; } }
+
+.single-campus .contact-info-box .map {
+  width: 69%;
+  background: #F1F7E3;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .single-campus .contact-info-box .map p {
+      height: 100%; } }
+  .single-campus .contact-info-box .map iframe {
+    height: 100%; }
+
+.single-campus .contact-info-box .contact-info {
+  width: 69%;
+  margin: 0 auto;
+  background: #F1F7E3; }
+  .single-campus .contact-info-box .contact-info .contact-title {
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (min-width: 768px) {
+      .single-campus .contact-info-box .contact-info .contact-title {
+        height: 21%;
+        background: #7FBC16;
+        color: #fff;
+        font-weight: 500; } }
+  .single-campus .contact-info-box .contact-info div {
+    padding: 5% 6%;
+    margin-bottom: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 79%; }
