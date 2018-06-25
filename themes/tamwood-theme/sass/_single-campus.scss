@@ -6,7 +6,19 @@
         //     margin: 0 auto;
         // }
     //______
-
+       
+    .content-banner{
+        // max-width: 1440px;
+        margin: 0 auto;
+        .hero-image{
+            @include desktop{
+                background-position: center;
+                height: 45vh !important;
+                // height: 472px!important;
+               
+            }
+        }  
+    }  
     .intro{
         font-weight: 300;
         color: $color_brand-tertiary;
@@ -15,18 +27,39 @@
     .button-box{
         display: flex;
         justify-content: center;
+        @include desktop{
+            justify-content: flex-start;
+        }
+
         .apply-button-green{
             @include primary-green{
                 display: inline-block;
                 // padding: 20px 18px;
                 font-size:18px;
     
-            }
+            }  
             @include desktop{
                 display: none;
+                
+            }
+        }  
+        
+        .desktop-shown{
+            display: none;
+            
+            @include desktop{
+                display: initial;
+                font-size:1.28rem;
+                margin-left: 0;
+                
+                
             }
         }
+        
+        
+
     }
+
    
     
     .campus-features{
@@ -36,6 +69,11 @@
         justify-content: center;
         width: 62%;
         margin: 0 auto;
+        @include desktop{
+            flex-direction: row;
+            width: 68%;
+            min-width: 768px;
+        }
         .feature{
             text-align: center;
             margin-top: 57px;
@@ -45,13 +83,73 @@
                 height: 65px;
                 width: 65px;
             }
-            // .feature-description{
-           
-            // }
+            .feature-description{
+                padding: 1rem;
+                font-size: 18px;
+                @include desktop{
+                    padding: 1rem 0.5rem 0 0.5rem;
+                }
+            }
             
         }
+        
     }
-    
+    .contact-info-box{
+        @include desktop{
+            display: flex;
+            margin-top:5.6rem;
+            margin-bottom: 3.55rem;
+            height: 345px;
+            width:58%;
+            
+        }
+     
+        .map{
+            width:69%;
+            background: $color_tertiary-light;  
+            margin: 0 auto;
+            p{
+                @include desktop{
+                    height: 100%;
+                    
+                }
+                    
+            }
+            iframe{
+                height: 100%;
+            }
+
+        }
+        .contact-info{
+            width:69%;
+            margin: 0 auto;
+            background: $color_tertiary-light;
+            .contact-title{
+                font-weight: 300;
+                // text-align: center;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                @include desktop{
+                    height: 21%;
+                    background: $color_brand-tertiary;
+                    color: $color__background-body;
+                    font-weight: 500;
+                   
+                }
+            }
+            div{
+                padding:5% 6%;
+                margin-bottom:5rem;
+                display:flex;
+                flex-direction: column;
+                align-items: flex-start; //perhaps, must be centered as looks better in tablet
+                justify-content: center;
+                height: 79%;
+                // color: $color_text-main;
+            }
+        }
+    }
 
         
 
