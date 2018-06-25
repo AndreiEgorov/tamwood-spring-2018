@@ -30,21 +30,22 @@
 					</div>
 					<div class="header-container">
 						<button class="hamburger menu-toggle mobile" type="button"></button>
-						<nav id="site-navigation-mobile" class="main-navigation main-navigation-mobile" role="navigation">
-							<a class="mobile apply-now" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>	
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						</nav><!-- #site-navigation for mobile-->
-						<nav id="site-navigation-desktop" class="main-navigation main-navigation-desktop" role="navigation">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						</nav><!-- #site-navigation for desktop-->
 						<div class="mobile-logo-container">
 							<a href="<?php echo home_url(); ?>">
 								<img class="mobile logo-mobile" src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">
 							</a>
 						</div>
 						<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85">
-						<a class="desktop apply-now" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
 					</div>
+					<nav id="site-navigation-mobile" class="main-navigation main-navigation-mobile" role="navigation">
+						<a class="mobile apply-now" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>	
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav><!-- #site-navigation for mobile-->
+					<nav id="site-navigation-desktop" class="main-navigation main-navigation-desktop" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav><!-- #site-navigation for desktop-->
+					<a class="desktop apply-now" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+				</div>
 					<form role="search" method="get" class="search" action="<?php echo home_url( '/' ); ?>">
 						<fieldset>
 							<label>
@@ -52,7 +53,7 @@
 							</label>
 						</fieldset>
 					</form>
-				</div>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
+				<div class="overlay"></div>

@@ -461,10 +461,11 @@ textarea {
   font-size: 2.57rem;
   font-weight: bold; }
 
-.apply-page-three-blurb h3 {
+#field_1_37 h3 {
   text-transform: initial;
   color: #003DA6;
-  font-weight: 300 !important; }
+  font-weight: 300 !important;
+  width: 100%; }
 
 .gfield_required {
   display: none; }
@@ -550,7 +551,9 @@ textarea {
   color: #FFFFFF;
   border: 3px solid #B52371;
   background-color: #B52371;
-  margin: 0; }
+  margin: 0;
+  padding: 0 0 48px 0;
+  font-size: 1.78rem; }
   @media (min-width: 768px) {
     #gform_next_button_1_12,
     #gform_next_button_1_18,
@@ -576,7 +579,9 @@ textarea {
   border: 3px solid #B52371;
   background-color: #FFFFFF;
   margin: 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 0 0 48px 0;
+  font-size: 1.78rem; }
   @media (min-width: 768px) {
     #gform_previous_button_1,
     #gform_previous_button_1_21,
@@ -615,11 +620,10 @@ textarea {
           order: 1; }
 
 .site-header {
-  z-index: 9001;
+  z-index: 100;
   width: 100%;
   height: 85px;
-  background-color: white;
-  border-bottom: 3px solid #003DA6; }
+  background-color: white; }
   @media (min-width: 768px) {
     .site-header {
       height: 185px; } }
@@ -646,6 +650,9 @@ textarea {
   position: relative; }
 
 .header-container {
+  border-bottom: 3px solid #003DA6;
+  z-index: 500;
+  position: absolute;
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -759,9 +766,10 @@ textarea {
     position: relative; } }
 
 .main-navigation-mobile {
-  top: 85px;
+  top: 0;
+  padding-top: 85px;
   position: fixed;
-  height: 91vh;
+  height: 100vh;
   z-index: 99;
   font-size: 1.625rem;
   font-weight: bold;
@@ -780,7 +788,8 @@ textarea {
     transition: 0.5s ease;
     overflow: auto; }
     .main-navigation-mobile.toggled .apply-now {
-      visibility: initial; }
+      visibility: initial;
+      margin-left: 36px; }
   .main-navigation-mobile li {
     padding-bottom: 30px; }
   .main-navigation-mobile .menu {
@@ -855,8 +864,21 @@ textarea {
       transition: 0s; } }
 
 .menu-toggle {
-  position: relative;
-  z-index: 100; }
+  position: relative; }
+
+.overlay {
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease; }
+  .overlay.darken {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5; }
 
 /*--------------------------------------------------------------
 # Accessibility
