@@ -50,9 +50,13 @@ get_header(); ?>
        
        
         <div>
+<<<<<<< HEAD
             <?php echo esc_html( CFS()->get( 'campus_location' ), array('p'));?>
+=======
+            <?php echo CFS()->get( 'campus_location' )?>
+>>>>>>> dd67e47501257d525b502890ed361bb95ea3c75f
             <p><?php echo esc_html(CFS()->get('contact_info_title'))?></p>
-            <div><?php echo esc_html(CFS()->get('contact_info'))?></div>
+            <div><?php echo wp_kses(CFS()->get('contact_info'), array( 'p' => array( 'class' => '' ) ) );?></div>
         </div>
         
 
