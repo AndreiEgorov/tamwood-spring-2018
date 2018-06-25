@@ -198,13 +198,26 @@ get_header(); ?>
 
 		<section class='program-section certificates-and-hiring-partners container hidden'>
 			<button class="back-button">Back</button>
-			<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'certificates_box_title' )) ?></h1>
-			<?php 
-			$c_logos = CFS()->get( 'certificates_logos' );
+			<div class="certificates-box">
+				<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'certificates_box_title' )) ?></h1>
+				<?php 
+				$c_logos = CFS()->get( 'certificates_logos' );
 
-			foreach ( $c_logos as $c_logo ) {
-				echo '<img src=" ' . esc_url($c_logo['logo']) . '" alt="" />';
-			}?>
+				foreach ( $c_logos as $c_logo ) {
+					echo '<img src=" ' . esc_url($c_logo['logo']) . '" alt="" />';
+				}?>
+			</div>
+			
+			<div class="partners-box">
+				<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'hiring_partners_title' )) ?></h1>
+				<?php 
+				$p_logos = CFS()->get( 'partners_logos' );
+
+				foreach ( $p_logos as $p_logo ) {
+					echo '<img src=" ' . esc_url($p_logo['logo']) . '" alt="" />';
+				}?>
+			</div>
+
 		</section>
 	<?php endwhile; // End of the loop. ?>
 	</main><!-- #main -->
