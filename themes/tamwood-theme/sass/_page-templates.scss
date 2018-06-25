@@ -262,6 +262,8 @@
         @include desktop {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
             width: 35%;
         }
     }
@@ -292,10 +294,9 @@
             padding-bottom: 2rem;
             font-weight: 200;
             @include desktop {
-                position: relative;
-                top: 11rem;
-                left: 8rem;
                 color: $color_text-main;
+                order: 3;
+                margin: 1rem 0 0 1.5rem;
             }
         }
         img {
@@ -306,23 +307,24 @@
                 padding: 0;
             }
         }
+        .location-group {
+            @include desktop {
+                margin: 1rem 0 0 1rem;
+                padding-top: 1rem;
+            }
+        }
         .price-text {
             text-align: center;
             padding: 0;
             @include desktop {
-                position: relative;
-                top: 5rem;
-                left: 1rem;
+                margin-bottom: 0;
             }
         }
         h4 {
             color: $color_brand-tertiary;
             font-weight: 500;
             @include desktop {
-                position: relative;
                 color: $color_text-main;
-                top: 7rem;
-                right: 10rem;
                 font-family: 'Merriweather', sans-serif;
             }
         }

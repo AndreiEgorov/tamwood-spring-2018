@@ -539,7 +539,6 @@ textarea {
   text-decoration: none;
   font-family: "Fira Sans";
   font-weight: bold;
-  line-height: 21px;
   text-align: center;
   margin: 50px;
   display: inline-block;
@@ -557,6 +556,7 @@ textarea {
     #gform_next_button_1_18,
     #gform_next_button_1_21,
     #gform_submit_button_1 {
+      line-height: 21px;
       padding-top: 18px; } }
 
 #gform_previous_button_1,
@@ -565,7 +565,6 @@ textarea {
   text-decoration: none;
   font-family: "Fira Sans";
   font-weight: bold;
-  line-height: 21px;
   text-align: center;
   margin: 50px;
   display: inline-block;
@@ -582,6 +581,7 @@ textarea {
     #gform_previous_button_1,
     #gform_previous_button_1_21,
     #gform_previous_button_1_18 {
+      line-height: 21px;
       padding-top: 18px; } }
   #gform_previous_button_1:hover,
   #gform_previous_button_1_21:hover,
@@ -1014,8 +1014,6 @@ textarea {
     .site-footer .social-media a {
       color: #003DA6; }
 
-<<<<<<< HEAD
-=======
 .hero-image {
   height: 190px; }
   @media (min-width: 768px) {
@@ -1032,7 +1030,6 @@ textarea {
       max-width: 1440px;
       min-width: 768px; } }
 
->>>>>>> 72aca27cddc121929c4f9d84f64101850adae58b
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -1259,7 +1256,6 @@ object {
   text-decoration: none;
   font-family: "Fira Sans";
   font-weight: bold;
-  line-height: 21px;
   text-align: center;
   margin: 50px;
   display: inline-block;
@@ -1273,6 +1269,7 @@ object {
   background-color: #B52371; }
   @media (min-width: 768px) {
     .page-id-2 .apply-button {
+      line-height: 21px;
       padding-top: 18px; } }
   @media (min-width: 768px) {
     .page-id-2 .apply-button {
@@ -1349,6 +1346,11 @@ object {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       width: 35%; } }
 
 @media (min-width: 768px) {
@@ -1379,10 +1381,11 @@ object {
     font-weight: 200; }
     @media (min-width: 768px) {
       .page-id-22 .part-2 h3 {
-        position: relative;
-        top: 11rem;
-        left: 8rem;
-        color: #3D3D3D; } }
+        color: #3D3D3D;
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
+        margin: 1rem 0 0 1.5rem; } }
   .page-id-22 .part-2 img {
     padding-bottom: 1.2rem; }
     @media (min-width: 768px) {
@@ -1390,23 +1393,22 @@ object {
         height: 176px;
         width: 176px;
         padding: 0; } }
+  @media (min-width: 768px) {
+    .page-id-22 .part-2 .location-group {
+      margin: 1rem 0 0 1rem;
+      padding-top: 1rem; } }
   .page-id-22 .part-2 .price-text {
     text-align: center;
     padding: 0; }
     @media (min-width: 768px) {
       .page-id-22 .part-2 .price-text {
-        position: relative;
-        top: 5rem;
-        left: 1rem; } }
+        margin-bottom: 0; } }
   .page-id-22 .part-2 h4 {
     color: #7FBC16;
     font-weight: 500; }
     @media (min-width: 768px) {
       .page-id-22 .part-2 h4 {
-        position: relative;
         color: #3D3D3D;
-        top: 7rem;
-        right: 10rem;
         font-family: 'Merriweather', sans-serif; } }
 
 .page-id-22 .apply-now-button {
@@ -1416,7 +1418,6 @@ object {
   text-decoration: none;
   font-family: "Fira Sans";
   font-weight: bold;
-  line-height: 21px;
   text-align: center;
   margin: 50px;
   display: inline-block;
@@ -1431,6 +1432,7 @@ object {
   background-color: #7FBC16; }
   @media (min-width: 768px) {
     .page-id-22 .apply-button {
+      line-height: 21px;
       padding-top: 18px; } }
   @media (min-width: 768px) {
     .page-id-22 .apply-button {
@@ -1925,11 +1927,8 @@ object {
 
 .page-template-default .container .blurb {
   padding-bottom: 3.2rem;
-<<<<<<< HEAD
-  width: 100%; }
-=======
+  width: 100%;
   font-weight: 300; }
->>>>>>> 72aca27cddc121929c4f9d84f64101850adae58b
 
 .page-template-default .container section {
   text-align: center; }
