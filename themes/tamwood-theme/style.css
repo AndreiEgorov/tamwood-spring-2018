@@ -52,7 +52,6 @@ License: none (public domain)
   text-decoration: none;
   font-family: "Fira Sans";
   font-weight: bold;
-  line-height: 21px;
   text-align: center;
   margin: 50px;
   display: inline-block;
@@ -67,6 +66,7 @@ License: none (public domain)
   margin: 50px; }
   @media (min-width: 768px) {
     .primary-main {
+      line-height: 21px;
       padding-top: 18px; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -317,11 +317,11 @@ p {
 # Elements
 --------------------------------------------------------------*/
 .page-copy {
-  width: 85%;
+  width: 100%;
   margin: 0 auto; }
 
 .page-contents {
-  width: 85%;
+  width: 100%;
   margin: 0 auto; }
 
 /*--------------------------------------------------------------
@@ -673,7 +673,6 @@ textarea {
         text-decoration: none;
         font-family: "Fira Sans";
         font-weight: bold;
-        line-height: 21px;
         text-align: center;
         margin: 50px;
         display: inline-block;
@@ -694,13 +693,13 @@ textarea {
                 order: 2; } }
     @media (min-width: 768px) and (min-width: 768px) {
       .header-container .apply-now.desktop {
+        line-height: 21px;
         padding-top: 18px; } }
 
 .apply-now.mobile {
   text-decoration: none;
   font-family: "Fira Sans";
   font-weight: bold;
-  line-height: 21px;
   text-align: center;
   margin: 50px;
   display: inline-block;
@@ -717,6 +716,7 @@ textarea {
   width: 150px; }
   @media (min-width: 768px) {
     .apply-now.mobile {
+      line-height: 21px;
       padding-top: 18px; } }
 
 .logo-desktop {
@@ -1130,7 +1130,6 @@ object {
     text-decoration: none;
     font-family: "Fira Sans";
     font-weight: bold;
-    line-height: 21px;
     text-align: center;
     margin: 50px;
     display: inline-block;
@@ -1144,6 +1143,7 @@ object {
     background-color: #003DA6; }
     @media (min-width: 768px) {
       .page-id-13 .apply-now-button a {
+        line-height: 21px;
         padding-top: 18px; } }
   @media (min-width: 768px) {
     .page-id-13 .apply-now-button {
@@ -1257,7 +1257,6 @@ object {
     text-decoration: none;
     font-family: "Fira Sans";
     font-weight: bold;
-    line-height: 21px;
     text-align: center;
     margin: 50px;
     display: inline-block;
@@ -1272,6 +1271,7 @@ object {
     margin-bottom: 4rem; }
     @media (min-width: 768px) {
       .error404 .error-page-container a {
+        line-height: 21px;
         padding-top: 18px; } }
 
 .carousel-box {
@@ -1370,7 +1370,6 @@ object {
       text-decoration: none;
       font-family: "Fira Sans";
       font-weight: bold;
-      line-height: 21px;
       text-align: center;
       margin: 50px;
       display: inline-block;
@@ -1389,6 +1388,7 @@ object {
               align-items: center; }
       @media (min-width: 768px) {
         .page-template-instructors .instructor-area .instructor-bio .learn-more {
+          line-height: 21px;
           padding-top: 18px; } }
       .page-template-instructors .instructor-area .instructor-bio .learn-more:hover {
         background-color: #003DA6;
@@ -1484,7 +1484,6 @@ object {
   text-decoration: none;
   font-family: "Fira Sans";
   font-weight: bold;
-  line-height: 21px;
   text-align: center;
   margin: 50px;
   display: inline-block;
@@ -1494,9 +1493,11 @@ object {
   width: 10.7rem;
   color: #B52371;
   border: 3px solid #B52371;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  line-height: unset; }
   @media (min-width: 768px) {
     .page-template-default .container .learn-button {
+      line-height: 21px;
       padding-top: 18px; } }
   .page-template-default .container .learn-button:hover {
     background-color: #B52371;
@@ -1512,7 +1513,6 @@ object {
   text-decoration: none;
   font-family: "Fira Sans";
   font-weight: bold;
-  line-height: 21px;
   text-align: center;
   margin: 50px;
   display: inline-block;
@@ -1529,4 +1529,5 @@ object {
   font-size: 18px; }
   @media (min-width: 768px) {
     .page-template-default .container .apply-button {
+      line-height: 21px;
       padding-top: 18px; } }
