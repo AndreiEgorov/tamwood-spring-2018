@@ -1,0 +1,71 @@
+.single-campus{
+
+    // keep this for now to resolve potential width issue
+        // .content-banner .page-title{
+        //     width: 84%;
+        //     margin: 0 auto;
+        // }
+    //______
+
+    .intro{
+        font-weight: 300;
+        color: $color_brand-tertiary;
+        margin: 2.28rem 0;
+    }       
+    .button-box{
+        display: flex;
+        justify-content: center;
+        .apply-button-green{
+            @include primary-green{
+                display: inline-block;
+                // padding: 20px 18px;
+                font-size:18px;
+    
+            }
+            @include desktop{
+                display: none;
+            }
+        }
+    }
+   
+    
+    .campus-features{
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 62%;
+        margin: 0 auto;
+        .feature{
+            text-align: center;
+            margin-top: 57px;
+            
+        
+            img{
+                height: 65px;
+                width: 65px;
+            }
+            // .feature-description{
+           
+            // }
+            
+        }
+    }
+    
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
