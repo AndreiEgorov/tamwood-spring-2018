@@ -747,14 +747,19 @@ p {
 
 .hero-image {
   height: 190px; }
+  @media (min-width: 768px) {
+    .hero-image {
+      height: 572px !important; } }
 
 .container {
   margin: 0 auto;
   max-width: 700px;
-  width: 85%; }
+  width: 85%;
+  min-width: 375px; }
   @media (min-width: 768px) {
     .container {
-      max-width: 1440px; } }
+      max-width: 1440px;
+      min-width: 768px; } }
 
 /*--------------------------------------------------------------
 # Media
@@ -1009,46 +1014,115 @@ object {
         padding-top: 18px; } }
 
 .carousel-box {
-  margin: 0 auto;
-  width: 95%; }
-  .carousel-box .carousel-box-parts {
-    background: #EAEEF6;
-    width: 86%;
-    height: 480px;
+  min-width: 375px; }
+  @media (min-width: 768px) {
+    .carousel-box {
+      margin-top: 3.8rem; } }
+  .carousel-box .main-carousel {
+    width: 69%;
     margin: 0 auto;
-    text-align: center; }
-    .carousel-box .carousel-box-parts .main-carousel {
-      width: 89%;
-      margin: 0 auto;
-      height: 80%; }
-      .carousel-box .carousel-box-parts .main-carousel .flickity-prev-next-button.previous {
-        background: transparent;
-        right: 105%;
-        left: unset;
-        top: 50%; }
-        .carousel-box .carousel-box-parts .main-carousel .flickity-prev-next-button.previous path {
-          fill: #003DA6; }
-      .carousel-box .carousel-box-parts .main-carousel .flickity-prev-next-button.next {
-        background: transparent;
-        left: 105%;
-        right: unset;
-        top: 50%; }
-        .carousel-box .carousel-box-parts .main-carousel .flickity-prev-next-button.next path {
-          fill: #003DA6; }
-      .carousel-box .carousel-box-parts .main-carousel ol {
-        display: none; }
-      .carousel-box .carousel-box-parts .main-carousel .flickity-viewport {
-        height: 100%; }
-        .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell {
-          width: 100%; }
-          .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell .quote {
-            font-style: italic;
-            width: 100%;
-            padding-top: 0.7rem; }
-          .carousel-box .carousel-box-parts .main-carousel .flickity-viewport .carousel-cell .testifier:before {
-            content: "\2014"; }
+    background: #EAEEF6; }
+    @media (min-width: 768px) {
+      .carousel-box .main-carousel {
+        width: 85%;
+        max-width: 1440px;
+        min-width: 768px; } }
+    .carousel-box .main-carousel .flickity-viewport {
+      height: 33rem !important;
+      width: 100%; }
+      @media (min-width: 768px) {
+        .carousel-box .main-carousel .flickity-viewport {
+          height: 25rem !important; } }
+      .carousel-box .main-carousel .flickity-viewport .carousel-cell {
+        height: 100%;
+        min-width: 100%; }
+        .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell {
+          width: 88%;
+          margin: 0 auto;
+          height: 100%;
+          text-align: center; }
+          @media (min-width: 768px) {
+            .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell {
+              width: 100% !important;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex; }
+              .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell .title-box {
+                border: #fff 2px solid;
+                width: 55%;
+                height: 85%;
+                right: -1.5%;
+                margin: 4%;
+                top: 0%;
+                position: absolute; } }
+          .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell .image-container {
+            height: 52%;
+            width: auto; }
+            @media (min-width: 768px) {
+              .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell .image-container {
+                -ms-flex-preferred-size: 40%;
+                    flex-basis: 40%;
+                height: 100%; } }
+            .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell .image-container img {
+              height: 100%;
+              -o-object-fit: cover;
+                 object-fit: cover;
+              -o-object-position: center;
+                 object-position: center;
+              width: 100%; }
+          .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell .desktop-text-holder {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -ms-flex-line-pack: center;
+                align-content: center;
+            position: relative; }
+            @media (min-width: 768px) {
+              .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell .desktop-text-holder {
+                -ms-flex-preferred-size: 60%;
+                    flex-basis: 60%;
+                padding: 1% 10%; } }
+            .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell .desktop-text-holder .quote {
+              font-style: italic;
+              padding: 0.5rem 0; }
+            .carousel-box .main-carousel .flickity-viewport .carousel-cell .cell .desktop-text-holder .testifier:before {
+              content: "\2014"; }
+    .carousel-box .main-carousel .flickity-prev-next-button.previous {
+      background: transparent;
+      right: 105%;
+      left: unset;
+      top: 50%; }
+      .carousel-box .main-carousel .flickity-prev-next-button.previous path {
+        fill: #003DA6; }
+    .carousel-box .main-carousel .flickity-prev-next-button.next {
+      background: transparent;
+      left: 105%;
+      right: unset;
+      top: 50%; }
+      .carousel-box .main-carousel .flickity-prev-next-button.next path {
+        fill: #003DA6; }
+    .carousel-box .main-carousel ol {
+      display: none; }
+      @media (min-width: 768px) {
+        .carousel-box .main-carousel ol {
+          display: initial;
+          right: 0%;
+          bottom: 10%;
+          width: 60%; }
+          .carousel-box .main-carousel ol li {
+            width: 7px;
+            height: 7px; } }
 
-/* external css: flickity.css */
+.testifier-image {
+  width: 100%; }
+
 .page-template-student-support section img {
   width: 330px; }
 
@@ -1182,24 +1256,86 @@ object {
   top: 6.5rem;
   position: absolute;
   width: 95%;
-  height: 162px; }
+  height: 162px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 375px; }
+  @media (min-width: 768px) {
+    .page-template-default .title-wrapper {
+      height: 493px;
+      border: 7px #fff solid;
+      top: 11.4rem; } }
   .page-template-default .title-wrapper .hero-title {
-    text-align: center;
-    padding: 4rem 0;
     color: #fff; }
 
 .page-template-default .content-banner {
-  padding-top: 6.1rem; }
+  padding-top: 6.1rem;
+  min-width: 375px; }
+  @media (min-width: 768px) {
+    .page-template-default .content-banner {
+      padding-top: 10.3rem; } }
   .page-template-default .content-banner .page-title {
     padding: 2rem 0;
     color: #003DA6; }
 
 .page-template-default .container .blurb {
-  padding-bottom: 3.2rem; }
+  padding-bottom: 3.2rem;
+  font-weight: 300; }
 
 .page-template-default .container section {
+  text-align: center; }
+
+.page-template-default .container .departments-section-title {
   text-align: center;
   margin-top: 3.9rem; }
+
+@media (min-width: 768px) {
+  .page-template-default .container .departments-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .page-template-default .container .departments-section .department {
+      text-align: left;
+      width: 32.25%; }
+      .page-template-default .container .departments-section .department .department-image {
+        width: 100%; }
+      .page-template-default .container .departments-section .department .department-program {
+        width: 100%;
+        height: 4.44rem;
+        text-align: initial;
+        font-weight: 500;
+        overflow: scroll; }
+      .page-template-default .container .departments-section .department .learn-button {
+        margin-left: 0;
+        margin-top: 0.5rem; } }
+
+.page-template-default .container .accreditations-section {
+  margin-top: 3.9rem; }
+  @media (min-width: 768px) {
+    .page-template-default .container .accreditations-section .accreditations-logos {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 1rem 0 2rem 0; }
+      .page-template-default .container .accreditations-section .accreditations-logos li {
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%; }
+        .page-template-default .container .accreditations-section .accreditations-logos li img {
+          height: 180px;
+          width: auto; } }
+
+.page-template-default .container .carousel-box {
+  margin-top: 2.05rem; }
 
 .page-template-default .container h1 {
   margin-bottom: 0.4rem; }
@@ -1259,9 +1395,11 @@ object {
   border: 3px solid #B52371;
   background-color: #B52371;
   display: inline-block;
-  padding: 20px 18px;
   font-size: 18px; }
   @media (min-width: 768px) {
     .page-template-default .container .apply-button {
       line-height: 21px;
       padding-top: 18px; } }
+  @media (min-width: 768px) {
+    .page-template-default .container .apply-button {
+      display: none; } }

@@ -1,86 +1,139 @@
 
-// .testimonials{
-   
-// }
 .carousel-box{
-    margin: 0 auto;
-    width: 95%;
-    // background: green;
-
-    .carousel-box-parts{
-        background: $color_main-light;
-        width: 86%;
-        height: 480px;
+    min-width: 375px;
+    @include desktop{
+        margin-top: 3.8rem;
+    }
+    .main-carousel{
+        width: 69%;
         margin: 0 auto;
-        text-align: center;
-        // .testimonials{
-        // }
-        .main-carousel{
-            width: 89%;
-            margin: 0 auto;
-            height: 80%;
-            // left button
-            .flickity-prev-next-button.previous{
-                background:transparent;
-                right: 105%;
-                left: unset;
-                top: 50%;
-                path{
-                    fill: $color_brand-main;
-                    
-                }
-                // path[d]{
-                //     [M 60,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z];
-                // }
-                
-            }
-            .flickity-prev-next-button.next{
-                background:transparent;
-                left: 105%;
-                right: unset;
-                top: 50%;
+        background:$color_main-light;
+        @include desktop{
+            width: 85%;
+            max-width: 1440px;
+            min-width: 768px;
+            
+        }
 
-                path{
-                    fill: $color_brand-main;
-                    
-                }
+        .flickity-viewport{
+            height: 33rem !important;
+            width: 100%;
+            @include desktop{
+                height: 25rem !important;
             }
-            ol{
-                display: none;
-            }
-            // .flickity-button{
-                
-            // }
-            .flickity-viewport{
+
+            .carousel-cell{
                 height: 100%;
+                min-width: 100%;
+                
 
-               
-                .carousel-cell{
-                    width: 100%; 
-                    .quote{
-                        font-style: italic;
-                        width: 100%;
-                        padding-top: 0.7rem;
+                .cell{
+                    width: 88%;
+                    margin:0 auto;
+                    height: 100%;
+                    text-align: center;
+                    @include desktop{
+                            width:100%!important;
+                            display:flex;
+                            .title-box{
+                                border: $color__background-body 2px solid;
+                                width:55%;
+                                height: 85%;
+                                right: -1.5%;
+                                margin:4%;
+                                top: 0%;
+                                position: absolute;
+                            }
+            
+                        
                     }
-                    .testifier:before{
-                        content: "\2014";
+                    .image-container{
+                        height:52%;
+                        width: auto;
+                        @include desktop{
+                            flex-basis: 40%;
+                                height:100%;
+                        }
+                        img{
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            width: 100%;
+                        }
                     }
-                    //will be removed after all tests are done, Andrei
-                    // .image-container{
-                    //     height: 250px;                        
-                    //     .fp-carousel{
-                    //         max-width:100% ;
-                    //         height: auto;
-                    //     }
-                    // }
-                    //-------------------------  
+
+                    .desktop-text-holder{
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-content: center;
+                        position: relative;
+                        @include desktop{
+                            flex-basis: 60%;
+                            padding: 1% 10%;
+                        }
+                       
+                        
+                        .quote{
+                            font-style: italic;
+                            padding: 0.5rem 0;
+                        }
+                       
+                        .testifier:before{
+                            content: "\2014";
+                        }
+                    }
+                }
+            }
+           
+        }
+        .flickity-prev-next-button.previous{
+            background:transparent;
+            right: 105%;
+            left: unset;
+            top: 50%;
+            path{
+                fill: $color_brand-main;
+                
+            }
+            // path[d]{
+            //     [M 60,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z];
+            // }
+            
+        }
+        .flickity-prev-next-button.next{
+            background:transparent;
+            left: 105%;
+            right: unset;
+            top: 50%;
+
+            path{
+                fill: $color_brand-main;
+                
+            }
+        }
+        ol{
+            display: none;
+            @include desktop{
+                display: initial;
+                right: 0%;
+                bottom: 10%;
+                width: 60%;
+                li{
+                    width: 7px;
+                    height: 7px;
                 }
             }
         }
-    }
+    } 
 }
-/* external css: flickity.css */
 
 
 
 
+
+
+
+.testifier-image{
+    width: 100%;
+}

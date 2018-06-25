@@ -8,15 +8,30 @@
         position: absolute;
         width: 95%;
         height: 162px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 375px;
+        @include desktop{
+            height: 493px;
+            border: 7px $color__background-body solid;
+            top: 11.4rem;
+
+        }
         .hero-title{     
-            text-align: center;
-            padding: 4rem 0;
             color: $color__background-body;
+ 
+         
         }
     }
     //-----------
     .content-banner{
         padding-top: 6.1rem;
+        min-width: 375px;
+        @include desktop{
+            padding-top: 10.3rem;
+
+        }
         .page-title{
             padding: 2rem 0;
             color:$color_brand-main;
@@ -26,10 +41,66 @@
         //blurb class assigned through Wysiwyg
         .blurb{
             padding-bottom: 3.2rem;
+            font-weight: 300;
         }
         section{
             text-align: center;
+        }
+        .departments-section-title{
+            text-align: center;
             margin-top: 3.9rem;
+
+        }
+        .departments-section{
+            // margin-top: 3.9rem; 
+
+            @include desktop{
+                display: flex;
+                justify-content: space-between;
+                .department{
+                    text-align: left;
+                    width: 32.25%;
+                    
+
+                    .department-image{
+                        width: 100%;
+                    }
+                    .department-program{
+                        width: 100%;
+                        height: 4.44rem;
+                        text-align: initial;
+                        font-weight: 500;
+                        overflow: scroll;
+                         
+
+                    }
+                    
+                    .learn-button{
+                        margin-left: 0;
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        .accreditations-section{
+            margin-top: 3.9rem; 
+            @include desktop{
+                .accreditations-logos{
+                    display: flex;
+                    margin: 1rem 0 2rem 0;
+                    li{
+                        flex-basis: 50%;
+                        img{
+                            height: 180px;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .carousel-box{
+            margin-top: 2.05rem;
         }
         h1{
             margin-bottom:0.4rem;
@@ -63,9 +134,12 @@
         .apply-button{
             @include primary-pink{
                 display: inline-block;
-                padding: 20px 18px;
+                // padding: 20px 18px;
                 font-size:18px;
 
+            }
+            @include desktop{
+                display: none;
             }
         }
         

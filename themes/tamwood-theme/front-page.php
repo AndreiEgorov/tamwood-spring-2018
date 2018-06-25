@@ -18,12 +18,13 @@ get_header(); ?>
 
 			<div class='container'>
 
-				<?php echo CFS()->get( 'blurb' ); ?>
-				<p class='page-copy'><?php echo CFS()->get( 'page_copy' ); ?></p>
-	
-				<section class='departments'>
+				<h2 class='blurb'><?php echo esc_html(CFS()->get( 'blurb' )); ?> </h2>
+				<p class='page-copy'><?php echo wp_kses(  CFS()->get( 'page_copy' ) , array('p')); ?></p>
 
-					<h1>Departments</h1>
+				<h1 class='departments-section-title'>Departments</h1>
+				<section class='departments-section'>
+
+					
 					<div class="department">
 
 						<img class="department-image" src="<?php echo wp_get_attachment_url( 280 ); ?>" alt="Global startup school image">
@@ -41,7 +42,7 @@ get_header(); ?>
 					</div>
 					<div class="department">
 						<img class="department-image" src="<?php echo wp_get_attachment_url( 278 ); ?>" alt="International business management image">
-						<h3 class="department-program">  <?php echo  get_object_vars($term = get_terms('program_type', array('slug' => 'international_business_management_coop','hide_empty' => 0,))[0])['name']; ?> </h3>
+						<h3 class="department-program business">  <?php echo  get_object_vars($term = get_terms('program_type', array('slug' => 'international_business_management_coop','hide_empty' => 0,))[0])['name']; ?> </h3>
 						<a class='learn-button' href="<?php echo get_term_link( $term ); ?>"> Learn More</a>
 					</div>
 					<div class="department">
@@ -50,14 +51,15 @@ get_header(); ?>
 						<a class='learn-button' href="<?php echo get_term_link($term1); ?>"> Learn More</a>	
 					</div>
 					
-				<section>
-				
-
 				</section>
+				
+			</div>
+			
 
 				<?php get_template_part( 'template-parts/content','fpcarousel' )?>
 				
-				<section class="accreditations">
+			<div class='container'>				
+				<section class="accreditations-section">
 
 					<h1>Accreditaions</h1>
 					<ul class="accreditations-logos">
