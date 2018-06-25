@@ -1,6 +1,7 @@
+// Search no results
 .search-no-results {
     .search-noresults-container {
-        width: 80%;
+        width: 85%;
         margin : 0 auto;
         background-color: $color_main-light ;
         margin-top: 4rem;
@@ -39,6 +40,32 @@
         .fa {
             color: $color_brand-main;
             font-size: 1.2rem;
+        }
+    }
+}
+
+// Search results
+.search-results {
+    .search-page-img {
+        width: 85%;
+        margin : 0 auto;
+        background-color: $color_main-light ;
+        text-align: center;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+    .page-title {
+        width: 85%;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+    .search-results-container {
+        width: 85%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        a {
+            text-decoration: none;
+            color: $color_brand-main;
         }
     }
 }

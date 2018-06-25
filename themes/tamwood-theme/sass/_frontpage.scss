@@ -26,6 +26,7 @@
         //blurb class assigned through Wysiwyg
         .blurb{
             padding-bottom: 3.2rem;
+            width: 100%;
         }
         section{
             text-align: center;
@@ -33,7 +34,6 @@
         }
         h1{
             margin-bottom:0.4rem;
-           
         }
         h3{
             width: 69%;
@@ -51,10 +51,8 @@
             // margin-top: 0.8rem;
             // margin-bottom: 1.4rem;
         }
-
         .designated{
             width:34%;
-
         }
         .bccareer{
             width: 81.7%;
@@ -64,9 +62,7 @@
                 display: inline-block;
                 padding: 20px 18px;
                 font-size:18px;
-
             }
         }
-        
     }
 }

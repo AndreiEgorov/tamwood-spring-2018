@@ -20,5 +20,8 @@ get_header(); ?>
             </div>
         </div>
     <?php }?>
+    <div class="apply-now-button">
+        <a class="apply-button" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+    </div>
 </section>
 <?php get_footer(); ?>

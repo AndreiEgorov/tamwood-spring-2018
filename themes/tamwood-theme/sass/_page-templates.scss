@@ -14,7 +14,7 @@
         margin: auto;
     }
     h1 {
-        margin-bottom: 2rem;
+        margin: 2rem 0;
     }
     h3 {
         margin: 1rem 0;
@@ -93,24 +93,252 @@
 
 /* Why Tamwood */
 .page-id-2 {
+    .page-copy {
+        width: 85%;
+        margin: 0 auto;
+        @include desktop {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
+    .page-contents {
+        width: 85%;
+        margin: 0 auto;
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
     p {
         padding-bottom: 2rem;
+        @include desktop {
+            padding-bottom: 0;
+            line-break: none;
+        }
     }
     .info-loop {
         background-color: $color_main-light;
         margin-bottom: 2rem;
-        padding: 2rem 0;
+        padding: 1rem;
+        @include desktop {
+            width: 32%;
+
+        }
+        img {
+            margin-bottom: 1rem;
+            @include desktop {
+                margin-bottom: 1.5rem;
+            }
+        }
+        h3 {
+            @include desktop {
+                font-weight: 500;
+                font-size: 2rem;
+                padding: 0 3rem;
+                margin-bottom: 2rem;
+                line-height: 1.2;
+            }
+        }
         .inside-box {
-            text-align: center;
-            width: 90%;
             border: 1px solid #ffffff;
-            margin: 0 auto;
+            padding: 2rem 1rem 2rem 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            @include desktop {
+                height: 100%;
+            }
+            p {
+                text-align: initial;
+            }
         }
     }
     .row-1 {
         img {
-            width: 66px;
             height: 92px;
+            width: 66px;
+            @include desktop {
+                height: 120px;
+                width: 95px;
+            }
+        }
+    }
+    .row-2 {
+        img {
+            height: 71px;
+            width: 67px;
+            @include desktop {
+                height: 120px;
+                width: 119px;
+            }
+        }
+    }
+    .row-3 {
+        img {
+            height: 63px;
+            width: 65px;
+            @include desktop {
+                height: 125px;
+                width: 120px;
+            }
+        }
+    }
+    .apply-now-button {
+        text-align: center;
+    }
+    .apply-button {
+        @include button;
+	    text-transform: uppercase;
+	    color: #FFFFFF;
+	    border: 3px solid $color_brand-secondary;
+        background-color: $color_brand-secondary;
+        @include desktop {
+            display: none;
+        }
+    }
+}
+
+// Accommodation
+.page-id-22 {
+    .container {
+        padding: 2rem 0;
+    }
+    .page-copy, .page-contents {
+        width: 85%;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+    }
+    .option-item {
+        margin-bottom: 2rem;
+        @include desktop {
+            width: 35%;
+            margin: 0 2rem;
+        }
+        h2 {
+            background-color: $color_brand-tertiary;
+            color: #ffffff;
+            padding: 0.5rem 0;
+            @include desktop {
+                color: $color_tertiary-light;
+                background-color: #ffffff;
+                font-weight: 800;
+                padding: 1rem 0;
+                font-size: 2rem;
+            }
+        }
+        h3 {
+            color: $color_brand-tertiary;
+            background-color: $color_tertiary-light;
+            padding: 1rem 0 0.5rem 0;
+            @include desktop {
+                color: #ffffff;
+                background-color: $color_brand-tertiary;
+                font-weight: bold;
+                font-size: 1.5rem;
+                padding: 0;
+                padding: 0.2rem 0;
+            }
+        }
+        p {
+            text-align: initial;
+            background-color: $color_tertiary-light;
+            padding: 0.5rem 1rem 2rem 1rem;
+        }
+    }
+    .part-1 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        @include desktop {
+            flex-direction: row;
+            padding: 0 2rem;
+            margin-bottom: 4rem;
+        }
+    }
+    .subsection-item {
+        margin-bottom: 2rem;
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            width: 35%;
+        }
+    }
+    .subsection-banner {
+        @include desktop {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    .part-2 {
+        text-align: center;
+        @include desktop {
+            text-align: initial;
+            margin-bottom: 3rem;
+        }
+        h2 {
+            padding-bottom: 2rem;
+        }
+        p {
+            text-align: initial;
+            padding: 0 2rem 2rem 0;
+            @include desktop {
+                margin-bottom: 2rem;
+            }
+        }
+        h3 {
+            color: $color_brand-tertiary;
+            padding-bottom: 2rem;
+            font-weight: 200;
+            @include desktop {
+                position: relative;
+                top: 11rem;
+                left: 8rem;
+                color: $color_text-main;
+            }
+        }
+        img {
+            padding-bottom: 1.2rem;
+            @include desktop {
+                height: 176px;
+                width: 176px;
+                padding: 0;
+            }
+        }
+        .price-text {
+            text-align: center;
+            padding: 0;
+            @include desktop {
+                position: relative;
+                top: 5rem;
+                left: 1rem;
+            }
+        }
+        h4 {
+            color: $color_brand-tertiary;
+            font-weight: 500;
+            @include desktop {
+                position: relative;
+                color: $color_text-main;
+                top: 7rem;
+                right: 10rem;
+                font-family: 'Merriweather', sans-serif;
+            }
+        }
+    }
+    .apply-now-button {
+        text-align: center;
+    }
+    .apply-button {
+        @include button;
+        margin: 0;
+	    text-transform: uppercase;
+	    color: #FFFFFF;
+	    border: 3px solid $color_brand-tertiary;
+        background-color: $color_brand-tertiary;
+        @include desktop {
+            display: none;
         }
     }
 }
