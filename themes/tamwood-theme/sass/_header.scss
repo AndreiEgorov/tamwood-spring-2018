@@ -29,11 +29,11 @@
         border: none;
         outline: none;
         height: 30px;
-        margin-top: 3px;
         transition: 0.3s;
         &.reveal {
             width: 100%;
             opacity: 1;
+            max-width: none;
         }
     }
     .home & {
@@ -46,6 +46,7 @@
 }
 .header-container {
     border-bottom: 3px solid $color_brand-main;
+    background: white;
     z-index: 500;
     position: absolute;
     height: 100%;

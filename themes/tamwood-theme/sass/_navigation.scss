@@ -12,7 +12,7 @@
 }
 .main-navigation-mobile {
     top: 0;
-    padding-top: 85px;
+    padding-top: 110px;
     position: fixed;
     height: 100vh;
     z-index: 99;
@@ -35,17 +35,47 @@
         overflow: auto;
         .apply-now {
             visibility: initial;
-            margin-left: 36px;
+            margin-left: 52px;
         }
     }
     li {
-        padding-bottom: 30px;
+        padding: 15px 0;
     }
     .menu {
         margin: 20px 32px;
         .selected + .show{
                 height: auto;
                 transition: 0.5s ease;
+        }
+        li:nth-child(1) .sub-menu {
+            background-image: linear-gradient(to right, $color_brand-main 33%, rgba(255,255,255,0) 0%);
+            a {
+                color: $color_brand-main;
+            }
+        }
+        li:nth-child(2) .sub-menu {
+            background-image: linear-gradient(to right, $color_brand-secondary 33%, rgba(255,255,255,0) 0%);
+            a {
+                color: $color_brand-secondary;
+            }
+        }
+        li:nth-child(3) .sub-menu,
+        li:nth-child(4) .sub-menu {
+            background-image: linear-gradient(to right, $color_brand-tertiary 33%, rgba(255,255,255,0) 0%);
+            a {
+                color: $color_brand-tertiary;
+            }
+        }
+        .menu-item-type-taxonomy .sub-menu {
+            background-image: none !important;
+            li {
+                margin-left: 10px;
+                a {
+                    color: grey;
+                    font-size: 1.14rem;
+                    font-weight: 300;
+                }
+            }
         }
     }
     @include desktop { 
@@ -58,7 +88,6 @@
     .sub-menu {
         height: 0;
         overflow: hidden;
-        background-image: linear-gradient(to right, $color_brand-main 33%, rgba(255,255,255,0) 0%);
         background-size: 222px 9px;
         background-repeat: repeat-x;
         white-space: normal;
@@ -68,13 +97,6 @@
         a {
             font-size: 1.4rem;
             font-weight: normal;
-            color: $color_brand-main;
-        }
-        .sub-menu a{
-            color: grey;
-            font-size: 1.14rem;
-            margin-left: 10px;
-            font-weight: 300;
         }
     }
 }
