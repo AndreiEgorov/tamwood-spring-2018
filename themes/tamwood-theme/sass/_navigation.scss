@@ -3,18 +3,19 @@
 --------------------------------------------------------------*/
 
 /* Links */
-
+$menuColor: '';
 /* Menus */
 .menu-main-nav-container {
     @include desktop {
         position: relative;
+        width: 100%;
     }
 }
 .main-navigation-mobile {
     top: 0;
     padding-top: 110px;
     position: fixed;
-    height: 100vh;
+    height: 110vh;
     z-index: 99;
     font-size: 1.625rem;
     font-weight: bold;
@@ -48,22 +49,25 @@
                 transition: 0.5s ease;
         }
         li:nth-child(1) .sub-menu {
-            background-image: linear-gradient(to right, $color_brand-main 33%, rgba(255,255,255,0) 0%);
+            $menuColor: $color_brand-main;
+            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
             a {
-                color: $color_brand-main;
+                color: $menuColor;
             }
         }
         li:nth-child(2) .sub-menu {
-            background-image: linear-gradient(to right, $color_brand-secondary 33%, rgba(255,255,255,0) 0%);
+            $menuColor: $color_brand-secondary;
+            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
             a {
-                color: $color_brand-secondary;
+                color: $menuColor;
             }
         }
         li:nth-child(3) .sub-menu,
         li:nth-child(4) .sub-menu {
-            background-image: linear-gradient(to right, $color_brand-tertiary 33%, rgba(255,255,255,0) 0%);
+            $menuColor: $color_brand-tertiary;
+            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
             a {
-                color: $color_brand-tertiary;
+                color: $menuColor;
             }
         }
         .menu-item-type-taxonomy .sub-menu {
@@ -103,28 +107,83 @@
 .main-navigation-desktop {
     display: none;
     position: absolute;
-    font-size: 1rem;
+    font-size: .89rem;
     text-transform: uppercase; 
     font-weight: normal;
     top: 139px;
-    right: 16px;
+    right: 65px;
+    z-index: 600;
+    width: 90%;
+    // li {
+    //     width: 55px;
+    //     border-bottom: 5px solid $color_brand-main;
+    //     white-space: nowrap;
+    // }
+    a {
+        color: $color_text-main;
+        text-decoration: none;
+    }
     .sub-menu {
         display: none;
     }
     .menu {
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+
+        li:nth-child(1) .sub-menu {
+            $menuColor: $color_brand-main;
+            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%), linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
+            a:hover {
+                color: $menuColor;
+            }
+        }
+        li:nth-child(2) .sub-menu {
+            $menuColor: $color_brand-secondary;
+            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%), linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
+            a:hover {
+                color: $menuColor;
+            }
+        }
+        li:nth-child(3) .sub-menu,
+        li:nth-child(4) .sub-menu {
+            $menuColor: $color_brand-tertiary;
+            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%), linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
+            
+            a:hover {
+                color: $menuColor;
+            }
+        }
+        li:nth-child(5) a:hover {
+            color: $color_brand-main;
+        }
     }
     .menu-item-has-children {
+        margin-right: 7%;
         &:hover{
             .sub-menu {
                 display: initial;
                 position: absolute;
-                background: forestgreen;
+                background: white;
+                padding: 10px 15px 0;
+                text-transform: initial;
+                font-size: 1.11rem;
+                margin-left: -10px;
+                background-size: 222px 5px;
+                background-repeat: no-repeat;
+                background-position: left 10px top 0, left 10px bottom 0;
+                li {
+                    padding-bottom: 10px;
+                }
+
                 .menu-item-has-children {
                     &:after {
                         font-family: 'FontAwesome';
                         content: '\f107';
+                        color: $color_brand-secondary;
+                        position: absolute;
+                        right: 9px;
                     }
                     .sub-menu {
                         display: none;
@@ -132,8 +191,16 @@
                     &:hover {
                         display: block;
                         .sub-menu {
+                            padding: 10px 10px 0;
                             display: block;
-                            background: lightcyan;
+                            background: white;
+                            margin-left: -15px;
+                            font-size: .833rem;
+                            font-weight: 300;
+                            white-space: nowrap;
+                            a {
+                                color: grey;
+                            }
                         }
                     }
                 }
@@ -154,8 +221,8 @@
     &.darken {
         opacity: 1;
         width: 100%;
-        height: 100%;
-        position: absolute;
+        height: 110vh;
+        position: fixed;
         transition: 0.5s ease;
         background: rgba(0, 0, 0, .5);
         z-index: 5;

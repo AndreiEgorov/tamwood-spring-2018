@@ -49,6 +49,9 @@
         $mainNavigation.removeClass('toggled');
         $hamburgerMenu.removeClass('is-active');
     });
+    $searchBar.on('blur', function(){
+        $searchBar.removeClass('reveal');
+    });
 
     $sectionNav.on('click', function (evt) {
         evt.preventDefault();
