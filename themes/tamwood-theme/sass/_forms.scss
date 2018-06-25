@@ -33,3 +33,201 @@
 // 	padding-left: 3px;
 // 	width: 100%;
 // }
+input {
+    background: $color_secondary-background;
+    border: 1px solid #c5c5c5;
+    max-width: 500px;
+}
+.gform_heading {
+    display: none;
+}
+.gf_step {
+    height: auto !important;
+    display: flex;
+    flex-direction: row;
+    width: 75% !important;
+    margin: 10px auto 20px !important;
+
+    .gf_step_label,
+    .gf_step_number {
+        font-size: 1.86rem !important;
+        font-weight: 300 !important;
+    }
+    .gf_step_number:after {
+        content: '.';
+    }
+    &:not(.gf_step_active) {
+        display: none;
+    }
+}
+.gform_wrapper {
+    width: 85%;
+    label {
+        font-weight: normal !important;
+        font-size: 1.28rem !important;
+    }
+    .entry-content & {
+        margin: 0 auto;
+    }
+    .apply-page-three-box {
+        border: 2px solid $color_brand-secondary;
+        padding-bottom: 20px;
+        p {
+            padding: 25px 10px 0;
+        }
+        h2 {
+            color: white;
+            background: $color_brand-secondary;
+            text-align: center;
+            font-weight: 300;
+            text-transform: uppercase;
+        } 
+        &.step-one,
+        &.step-three{
+            background: $color_secondary-light;
+        }
+    }
+    .step-one {
+        border-bottom: none;
+    }
+    .step-two a {
+        color: $color_text-main;
+        text-decoration: none;
+        border-bottom: 2px solid $color_brand-secondary;
+    }
+}
+#gform_page_1_4 {
+    .gfield_radio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        li {
+            display: flex;
+            flex-direction: row;
+            // width: 45%;
+        }
+    }
+    label {
+        font-weight: bold !important;
+        padding-bottom: 20px;
+    }
+}
+#field_1_17 .gfield_description {
+    font-size: 1rem;
+    color: #9C9C9C;
+}
+#field_1_19 {
+    background: $color_secondary-light;
+    border: 2px solid $color_brand-secondary;
+    border-top: none;
+    margin-top: 0;
+    padding: 0 10px 5px;
+    div {
+        margin-top: 0;
+        ul {
+            margin: 0;
+            li {
+                margin-bottom: 0;
+                padding-bottom: 20px !important;
+            }
+        }
+    }
+}
+#field_1_20 {
+    background: $color_secondary-light;
+    border: 2px solid $color_brand-secondary;
+    border-top: none;
+    margin-top: -3px;
+    padding:  0 10px 10px;
+    div {
+        margin-top: 0;
+    }
+}
+#field_1_24 .gfield_description,
+#label_1_28_1,
+#label_1_28_2,
+#label_1_28_3 {
+    font-family: $font_text-copy;
+    font-size: 1rem !important;
+    line-height: $font__line-height-body*1.1;
+}
+#field_1_32 label,
+#field_1_33 label{
+    font-weight: normal !important;
+}
+.big-number {
+    font-size: 2.57rem;
+    font-weight: bold;
+}
+.apply-page-three-blurb {
+    h3 {
+        text-transform: initial;
+        color: $color_brand-main;
+        font-weight: 300 !important;
+    }
+}
+.gfield_required {
+    display: none;
+}
+.ginput_container_date {
+    .clear-multi {
+        display: flex;
+        justify-content: space-between;
+        .ginput_container_date {
+            width: 400px;
+            max-width: 30%;
+            input {
+                width: 100%;
+            }
+            label {
+                display: none !important;
+            }
+        }
+    }
+}
+.no-label {
+    .gfield_label_before_complex,
+    .gfield_label {
+        display: none !important;
+    }
+}
+#input_1_7_6 {
+    border-radius: 0px !important;
+    background-color: $color_secondary-background;
+}
+#input_1_13 {
+    display: flex;
+    flex-direction: row;
+    background: $color_secondary-background;
+    height: auto;
+    border-bottom: 1px solid $color_text-main;
+    li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0;
+    }
+}
+#choice_1_13_1 {
+    background: $color_brand-secondary;
+}
+.gform_page_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#gform_next_button_1_12,
+#gform_next_button_1_18,
+#gform_next_button_1_21,
+#gform_submit_button_1 {
+    @include primary-pink;
+    margin: 0;  
+}
+#gform_previous_button_1,
+#gform_previous_button_1_21,
+#gform_previous_button_1_18 {
+    @include secondary-pink;
+    margin: 0;
+    text-transform: uppercase;
+}
