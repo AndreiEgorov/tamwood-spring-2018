@@ -15,16 +15,20 @@ get_header(); ?>
 
             <h2 class='intro'><?php echo wp_kses( CFS()->get( 'article_intro' ), array('p'));?></h2>
            <p>  <?php echo wp_kses( CFS()->get( 'main_text' ), array('p'));?> </p> 
-            <div class='button-box'>
-            <a class="apply-button-green" href="#">Apply Now</a>
-            </div>
+           
         
+
+        <div class='button-box '>
+            <a class="apply-button-green desktop-shown" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
         </div>
+
+        
+
+      
 
        
         <section class='campus-features'>
 
-       
         <?php 
         
         $fields = CFS()->get( 'feature_logo_and_text' );
@@ -47,17 +51,23 @@ get_header(); ?>
         
         ?>
         </section>
-       
-       
-        <div>
-<<<<<<< HEAD
-            <?php echo esc_html( CFS()->get( 'campus_location' ), array('p'));?>
-=======
-            <?php echo CFS()->get( 'campus_location' )?>
->>>>>>> dd67e47501257d525b502890ed361bb95ea3c75f
-            <p><?php echo esc_html(CFS()->get('contact_info_title'))?></p>
-            <div><?php echo wp_kses(CFS()->get('contact_info'), array( 'p' => array( 'class' => '' ) ) );?></div>
+
         </div>
+
+         <div class='button-box'>
+            <a class="apply-button-green" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+        </div>
+
+       
+        <div class="container contact-info-box">
+           
+                <div class='map'><?php echo  CFS()->get( 'campus_location' ) ?></div>
+            <div class='contact-info'>
+                <h2 class='contact-title'><?php echo esc_html(CFS()->get('contact_info_title'))?></h2>
+                <div><?php echo wp_kses(CFS()->get('contact_info'), array( 'p' => array( 'class' => '' ) ) );?></div>
+            </div>
+        </div>
+      
         
 
      

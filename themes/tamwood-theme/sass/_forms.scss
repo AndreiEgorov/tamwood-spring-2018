@@ -137,11 +137,12 @@ textarea {
     font-size: 2.57rem;
     font-weight: bold;
 }
-.apply-page-three-blurb {
+#field_1_37 {
     h3 {
         text-transform: initial;
         color: $color_brand-main;
         font-weight: 300 !important;
+        width: 100%;
     }
 }
 .gfield_required {
@@ -201,6 +202,8 @@ textarea {
 #gform_submit_button_1 {
     @include primary-pink;
     margin: 0;  
+    padding: 0 0 48px 0;
+    font-size: 1.78rem;
 }
 #gform_previous_button_1,
 #gform_previous_button_1_21,
@@ -208,6 +211,8 @@ textarea {
     @include secondary-pink;
     margin: 0;
     text-transform: uppercase;
+    padding: 0 0 48px 0;
+    font-size: 1.78rem;
 }
 #field_2_2,
 #field_2_3 {

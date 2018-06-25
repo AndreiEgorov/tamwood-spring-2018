@@ -11,7 +11,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: 375px;
+        min-width: 356px;
         @include desktop{
             height: 493px;
             border: 7px $color__background-body solid;
@@ -129,15 +129,20 @@
         .bccareer{
             width: 81.7%;
         }
-        .apply-button{
-            @include primary-pink{
-                display: inline-block;
-                // padding: 20px 18px;
-                font-size:18px;
-            }
-            @include desktop{
-                display: none;
+        .button-box{
+            display: flex;
+            justify-content: center;
+            .apply-button{
+                @include primary-pink{
+                    display: inline-block;
+                    // padding: 20px 18px;
+                    font-size:18px;
+                }
+                @include desktop{
+                    display: none;
+                }
             }
         }
+        
     }
 }
