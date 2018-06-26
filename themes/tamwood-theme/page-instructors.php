@@ -1,4 +1,5 @@
 <?php 
+/** Template Name: Our Instructors */
 get_header();
 get_template_part( 'template-parts/content', 'banner' ); ?>
 

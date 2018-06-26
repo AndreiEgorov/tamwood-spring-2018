@@ -1,4 +1,5 @@
 <?php 
+/** Template Name: Accommodation */
 get_header();
 get_template_part( 'template-parts/content', 'banner' ); ?>
 <div class="page-copy">

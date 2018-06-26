@@ -1861,7 +1861,7 @@ object {
 
 .error404 .error-page-container {
   text-align: center;
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
   margin-top: 8rem;
   margin-bottom: 2rem;
@@ -2479,3 +2479,62 @@ object {
         -ms-flex-pack: center;
             justify-content: center;
     height: 79%; }
+
+.page-id-261 h1 {
+  display: none; }
+  @media (min-width: 768px) {
+    .page-id-261 h1 {
+      display: initial; } }
+
+.page-id-261 .thanks-for-applying {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  background-color: #EAEEF6; }
+  @media (min-width: 768px) {
+    .page-id-261 .thanks-for-applying {
+      padding: 2rem 4rem; } }
+  .page-id-261 .thanks-for-applying h2 {
+    font-weight: 300;
+    padding: 1rem 0; }
+    @media (min-width: 768px) {
+      .page-id-261 .thanks-for-applying h2 {
+        color: #003DA6;
+        font-weight: 500; } }
+  .page-id-261 .thanks-for-applying p {
+    padding-top: 2rem;
+    text-align: initial; }
+    @media (min-width: 768px) {
+      .page-id-261 .thanks-for-applying p {
+        text-align: center;
+        padding: 2rem 4rem; } }
+  @media (min-width: 768px) {
+    .page-id-261 .thanks-for-applying img {
+      height: 328px;
+      width: 350px; } }
+  .page-id-261 .thanks-for-applying .close-button {
+    margin-top: 2rem; }
+  .page-id-261 .thanks-for-applying .closing-button {
+    text-decoration: none;
+    font-family: "Fira Sans";
+    font-weight: bold;
+    text-align: center;
+    margin: 50px;
+    display: inline-block;
+    padding: 0.57rem 1.57rem;
+    font-size: 1.28rem;
+    height: 3.43rem;
+    width: 10.7rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 3px solid #B52371;
+    background-color: #B52371;
+    margin: 0;
+    margin-bottom: 2rem;
+    width: 90%; }
+    @media (min-width: 768px) {
+      .page-id-261 .thanks-for-applying .closing-button {
+        line-height: 21px;
+        padding-top: 18px; } }
+    @media (min-width: 768px) {
+      .page-id-261 .thanks-for-applying .closing-button {
+        width: 20%; } }
