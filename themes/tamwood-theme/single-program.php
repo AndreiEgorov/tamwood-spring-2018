@@ -62,11 +62,12 @@ get_header(); ?>
 				} ?>
 			</ul>
 		<!-- End Nav -------------------------- -->
-		</section>
-		
 		<div class='container button-box'>
 			<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
 		</div>
+		</section>
+		
+		
 
 		<section class="program-section details container">
 			<div class="detail">
@@ -111,34 +112,38 @@ get_header(); ?>
 			<button class="back-button">Back</button>
 			<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'courses_page_title' ))?></h1>
 			<?php $course = CFS()->get( 'course' );?>
-			<ul>
+			<ul class='courses-table'>
 				<?php 
 				foreach ( $course as $row ) {?>
-					<li>
-						<?php echo esc_html($row['course_subject']); ?>
+					<li class='course-subject'>
+						<p><?php echo esc_html($row['course_subject']); ?></p>
 					</li>
-					<li>
-						<?php echo esc_html($row['number_of_weeks']); ?>
+					<li class='number_of_weeks'>
+						<p><?php echo esc_html($row['number_of_weeks']); ?></p>
 					</li>
-					<li>
-						<?php echo esc_html($row['course_hours']); ?>	
+					<li class='course_hours' >
+						<p><?php echo esc_html($row['course_hours']); ?></p>		
 					</li>
 				<?php 
 				}?>
 			</ul>
 			<?php $courses_text_block = CFS()->get( 'text_block' );?>
-			<ul>
+			<ul class='text-chunck'>
 				<?php 
 				foreach ( $courses_text_block as $courses_element ) {?>
 					<li>
-						<div>
-							<?php echo esc_html($courses_element['text_block_title']); ?>
-							<?php echo wp_kses($courses_element['text'], array ( 'p' => array( 'class' => '' ) ) ); ?>	
-						</div>
+					
+							<h2 class='text-block-title'><?php echo esc_html($courses_element['text_block_title']); ?></h2>
+							<p class='text'>	<?php echo wp_kses($courses_element['text'], array ( 'p' => array( 'class' => '' ) ) ); ?>	</p>
+						
 					</li>
 				<?php 
 				}?>
 			</ul>
+			<div class='container button-box'>
+				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+			</div>
+			
 		</section>
 
 		<section class="program-section requirements container hidden">

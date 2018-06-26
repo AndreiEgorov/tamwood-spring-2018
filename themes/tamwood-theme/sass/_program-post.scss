@@ -59,11 +59,15 @@
                     .section-navigation-option{
                         display: flex;
                         align-items: center;
-                        margin:5px 0;
+                        background-position-y: center;
+                        background-size: contain;
+                        background-color: $color_brand-secondary;
+                        margin:3px 0;
                         height: 34px;
                         font-size: 1.28rem;
                         color: $color__background-body;
-                        padding-left: 7.5%;    
+                        padding-left: 7.5%;   
+                        min-width:400px; 
                     }
                     .option-5{
                         order:-1;
@@ -132,6 +136,92 @@
             
        
     //End of  program overview section
+
+    //program course section
+    .program-heading{
+        margin-bottom: 3.14rem;
+    }
+    .courses{
+        .courses-table{
+            display:grid;
+            grid-template-columns: 3fr 1fr;
+            @include desktop{
+                grid-template-columns: 3fr 1fr 1fr;
+            }
+            li{
+                height: 67px;
+                border: 1px $color_brand-secondary solid;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            li:nth-child(-n+3){
+                background:$color_brand-secondary;
+            }
+          
+            .course-subject:nth-child(even){
+                background:$color_secondary-light;
+            }
+            .number_of_weeks:nth-child(odd){
+                background:$color_secondary-light;
+            }
+            .course_hours:nth-child(even){
+                background:$color_secondary-light;
+            }
+            
+            .course_hours{
+                display: none;
+                @include desktop{
+                    display: inherit;
+                }
+            }
+            .course-subject:not(:nth-child(1)){
+                justify-content: flex-start;
+                padding: 0 0.5rem;
+            } 
+
+        }
+    }
+    .text-chunck{
+       
+        li{ 
+            margin-top: 2.85rem;
+            .text-block-title{
+                font-weight: 300;
+                text-transform: uppercase;
+
+            }
+            .text{
+                margin-top: 1rem;
+
+            }
+        }
+    }
+
+
+
+    .button-box{
+        display: flex;
+        justify-content: center;
+        .apply-button{
+            @include primary-pink{
+                display: inline-block;
+                // padding: 20px 18px;
+                font-size:18px;
+                @include desktop{
+                    font-size: 1.28rem;
+                }
+            }
+            
+        }
+    }
+
+
+
+
+
+
+
 
 
 
