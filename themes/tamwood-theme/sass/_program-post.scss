@@ -3,22 +3,17 @@
     .site-header{
         position: initial;
     }
-   
-    
     //program overview section
         .blurb{
             display: none;
         }
-        .overview-text{
-            
+        .overview-text{   
             p{
                 margin-top: 3.14rem;
             }
             p:nth-child(2){
-                display: none;
-                
+                display: none;       
             }
-        
         }
         ol{
             display: none;
@@ -49,8 +44,6 @@
                 }
             }
         }
-
-
             //mobile program menu
                 .section-navigation-mobile{
                     width: 100%;
@@ -78,14 +71,10 @@
                     display: inline-block;
                     // padding: 20px 18px;
                     font-size:18px;
-    
                 }
             }   
-    
         }
-
-        .details{
-            
+        .details{  
             .detail{
             margin: 0 auto;
             margin-bottom:4.07rem;
@@ -100,21 +89,16 @@
                 h3{
                     margin: 1rem;
                 }
-                ul{
-                   
+                ul{ 
                     li{
                         display: grid;
-                        grid-template-columns: 1fr 1fr 1fr;         
-                                       
-                        div{
-                            
+                        grid-template-columns: 1fr 1fr 1fr;          
+                        div{ 
                             border: 1px solid $color_brand-secondary;
-                        }
-                       
+                        }  
                     }
                     li:nth-child(1){
-                        background-color: $color_secondary-light;
-                        
+                        background-color: $color_secondary-light;    
                     }
                     li div:nth-child(1){
                         background-color: $color_secondary-light;
@@ -122,19 +106,11 @@
                     li:nth-child(1) div:nth-child(1){
                         border: none;
                         background-color: white;
-
-                    }
-
-                    
+                    }                    
                 }
             }
-        }
-            
-       
+        } 
     //End of  program overview section
-
-
-
 }
 .hidden {
     display: none;
