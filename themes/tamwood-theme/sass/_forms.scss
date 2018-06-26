@@ -215,7 +215,6 @@ textarea {
 }
 #field_2_2,
 #field_2_3 {
-    // width: 50%;
     display: inline;
     margin: 0;
     padding: 0;
@@ -229,15 +228,31 @@ textarea {
 .gform_wrapper {
     input[type=radio] {
         display: none !important;
+        &:checked {
+            &+label {
+                margin-left: 40px !important;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: $color_brand-secondary;
+                }
+            }
+        }
         &+label {
-            margin-left: 20px !important;
+            margin-left: 40px !important;
+            position: relative;
             &::before {
                 content: '';
-                background: $color_brand-secondary;
-                height: 15px;
-                width: 15px;
-                border: 1px solid $color_text-main;
+                position: absolute;
+                background: $color_secondary-background;
+                height: 20px;
+                width: 20px;
+                border: 3px solid white;
                 border-radius: 50%;
+                left: -25px;
+                top: 2px;
+                box-shadow: 0 0 0 1px$color_text-main;
             }
         }
     }
