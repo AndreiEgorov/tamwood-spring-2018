@@ -93,6 +93,9 @@
 
 /* Why Tamwood */
 .page-id-2 {
+    .hero-image {
+        background-position: top;
+    }
     .page-copy {
         width: 85%;
         margin: 0 auto;
@@ -107,6 +110,14 @@
         @include desktop {
             display: flex;
             justify-content: space-between;
+        }
+    }
+    .page-title p {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 2.28rem;
+        padding-bottom: 0;
+        @include desktop {
+            display: inline-block;
         }
     }
     p {
@@ -221,7 +232,7 @@
             color: #ffffff;
             padding: 0.5rem 0;
             @include desktop {
-                color: $color_tertiary-light;
+                color: #C6E08B;
                 background-color: #ffffff;
                 font-weight: 800;
                 padding: 1rem 0;

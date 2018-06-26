@@ -1252,6 +1252,9 @@ object {
       display: none; } }
 
 /* Why Tamwood */
+.page-id-2 .hero-image {
+  background-position: top; }
+
 .page-id-2 .page-copy {
   width: 85%;
   margin: 0 auto; }
@@ -1271,6 +1274,14 @@ object {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; } }
+
+.page-id-2 .page-title p {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 2.28rem;
+  padding-bottom: 0; }
+  @media (min-width: 768px) {
+    .page-id-2 .page-title p {
+      display: inline-block; } }
 
 .page-id-2 p {
   padding-bottom: 2rem; }
@@ -1389,7 +1400,7 @@ object {
     padding: 0.5rem 0; }
     @media (min-width: 768px) {
       .page-id-22 .option-item h2 {
-        color: #F1F7E3;
+        color: #C6E08B;
         background-color: #ffffff;
         font-weight: 800;
         padding: 1rem 0;
@@ -2010,11 +2021,7 @@ object {
     color: #fff; }
 
 .page-template-default .content-banner {
-  padding-top: 6.1rem;
   min-width: 375px; }
-  @media (min-width: 768px) {
-    .page-template-default .content-banner {
-      padding-top: 10.3rem; } }
   .page-template-default .content-banner .page-title {
     padding: 2rem 0;
     color: #003DA6; }
