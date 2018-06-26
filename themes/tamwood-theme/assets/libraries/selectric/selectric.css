@@ -1,7 +1,9 @@
-
 .selectric-wrapper {
   position: relative;
   cursor: pointer;
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .selectric-responsive {
@@ -9,9 +11,9 @@
 }
 
 .selectric {
-  border: 1px solid #DDD;
+  border: 1px solid #c5c5c5;
   border-radius: 0px;
-  background: #F8F8F8;
+  background: #F4F4F4;
   position: relative;
   overflow: hidden;
 }
@@ -21,11 +23,13 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0 38px 0 10px;
-  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0 40px 0 10px;
+  font-size: 1.285rem;
   line-height: 38px;
-  color: #444;
-  height: 38px;
+  color: #3D3D3D;
+  height: 37px;
+  max-width: 650px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -40,7 +44,7 @@
   width: 38px;
   height: 38px;
   line-height: 38px;
-  background-color: #F8f8f8;
+  background-color: #F4F4F4;
   color: #BBB;
   text-align: center;
   font: 0/0 a;
