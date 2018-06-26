@@ -19,7 +19,7 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
             <div>
                 <h4><?php echo esc_html($row['info_title']);?></h4>
                 <img src="<?php echo esc_url($row['info_image']); ?>">
-                <?php echo wp_kses( $row['info_copy'], array( 'p' => array( 'class' => '' ) ) );?>
+                <?php echo wp_kses( $row['info_copy'], array( 'p' => array( 'class' => '' ), ( 'li' ), ( 'ul' ) ) );?>
             </div><?php
     }?>
 </section>

@@ -490,7 +490,6 @@ textarea {
   display: none !important; }
 
 #input_1_7_6 {
-  border-radius: 0px !important;
   background-color: #F4F4F4; }
 
 #input_1_13 {
@@ -603,6 +602,19 @@ textarea {
   #field_2_3 .ginput_container {
     width: 50%; }
 
+/* Radio Buttons */
+.gform_wrapper input[type=radio] {
+  display: none !important; }
+  .gform_wrapper input[type=radio] + label {
+    margin-left: 20px !important; }
+    .gform_wrapper input[type=radio] + label::before {
+      content: '';
+      background: #B52371;
+      height: 15px;
+      width: 15px;
+      border: 1px solid #3D3D3D;
+      border-radius: 50%; }
+
 .desktop {
   display: none; }
   @media (min-width: 768px) {
@@ -622,7 +634,6 @@ textarea {
 .site-header {
   z-index: 100;
   width: 100%;
-  height: 85px;
   background-color: white; }
   @media (min-width: 768px) {
     .site-header {
@@ -805,19 +816,19 @@ textarea {
       -webkit-transition: 0.5s ease;
       transition: 0.5s ease; }
     .main-navigation-mobile .menu li:nth-child(1) .sub-menu {
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #003DA6), color-stop(0%, rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, #003DA6 33%, rgba(255, 255, 255, 0) 0%); }
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #003DA6), color-stop(0%, rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to right, #003DA6 100%, rgba(255, 255, 255, 0) 0%); }
       .main-navigation-mobile .menu li:nth-child(1) .sub-menu a {
         color: #003DA6; }
     .main-navigation-mobile .menu li:nth-child(2) .sub-menu {
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #B52371), color-stop(0%, rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, #B52371 33%, rgba(255, 255, 255, 0) 0%); }
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #B52371), color-stop(0%, rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to right, #B52371 100%, rgba(255, 255, 255, 0) 0%); }
       .main-navigation-mobile .menu li:nth-child(2) .sub-menu a {
         color: #B52371; }
     .main-navigation-mobile .menu li:nth-child(3) .sub-menu,
     .main-navigation-mobile .menu li:nth-child(4) .sub-menu {
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #7FBC16), color-stop(0%, rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, #7FBC16 33%, rgba(255, 255, 255, 0) 0%); }
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #7FBC16), color-stop(0%, rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to right, #7FBC16 100%, rgba(255, 255, 255, 0) 0%); }
       .main-navigation-mobile .menu li:nth-child(3) .sub-menu a,
       .main-navigation-mobile .menu li:nth-child(4) .sub-menu a {
         color: #7FBC16; }
@@ -838,8 +849,8 @@ textarea {
   .main-navigation-mobile .sub-menu {
     height: 0;
     overflow: hidden;
-    background-size: 222px 9px;
-    background-repeat: repeat-x;
+    background-size: 67px 9px;
+    background-repeat: no-repeat;
     white-space: normal; }
     @media (min-width: 768px) {
       .main-navigation-mobile .sub-menu {
@@ -876,19 +887,19 @@ textarea {
             justify-content: flex-end;
     width: 100%; }
     .main-navigation-desktop .menu li:nth-child(1) .sub-menu {
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #003DA6), color-stop(0%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, color-stop(33%, #003DA6), color-stop(0%, rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, #003DA6 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #003DA6 33%, rgba(255, 255, 255, 0) 0%); }
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #003DA6), color-stop(0%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, color-stop(100%, #003DA6), color-stop(0%, rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to right, #003DA6 100%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #003DA6 100%, rgba(255, 255, 255, 0) 0%); }
       .main-navigation-desktop .menu li:nth-child(1) .sub-menu a:hover {
         color: #003DA6; }
     .main-navigation-desktop .menu li:nth-child(2) .sub-menu {
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #B52371), color-stop(0%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, color-stop(33%, #B52371), color-stop(0%, rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, #B52371 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #B52371 33%, rgba(255, 255, 255, 0) 0%); }
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #B52371), color-stop(0%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, color-stop(100%, #B52371), color-stop(0%, rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to right, #B52371 100%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #B52371 100%, rgba(255, 255, 255, 0) 0%); }
       .main-navigation-desktop .menu li:nth-child(2) .sub-menu a:hover {
         color: #B52371; }
     .main-navigation-desktop .menu li:nth-child(3) .sub-menu,
     .main-navigation-desktop .menu li:nth-child(4) .sub-menu {
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #7FBC16), color-stop(0%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, color-stop(33%, #7FBC16), color-stop(0%, rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, #7FBC16 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #7FBC16 33%, rgba(255, 255, 255, 0) 0%); }
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #7FBC16), color-stop(0%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, color-stop(100%, #7FBC16), color-stop(0%, rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to right, #7FBC16 100%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #7FBC16 100%, rgba(255, 255, 255, 0) 0%); }
       .main-navigation-desktop .menu li:nth-child(3) .sub-menu a:hover,
       .main-navigation-desktop .menu li:nth-child(4) .sub-menu a:hover {
         color: #7FBC16; }
@@ -904,7 +915,7 @@ textarea {
       text-transform: initial;
       font-size: 1.11rem;
       margin-left: -10px;
-      background-size: 222px 5px;
+      background-size: 53px 5px;
       background-repeat: no-repeat;
       background-position: left 10px top 0, left 10px bottom 0; }
       .main-navigation-desktop .menu-item-has-children:hover .sub-menu li {
@@ -924,7 +935,7 @@ textarea {
           display: block;
           background: white;
           margin-left: -15px;
-          font-size: .833rem;
+          font-size: .8100rem;
           font-weight: 300;
           white-space: nowrap; }
           .main-navigation-desktop .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu a {
