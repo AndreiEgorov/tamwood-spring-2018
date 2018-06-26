@@ -355,3 +355,61 @@
         }
     }
 }
+
+// 
+.page-id-18 {
+    .page-title h1 {
+        color: $color_text-main;
+    }
+    .section {
+        width: 85%;
+        margin: 0 auto;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    h4 {
+        color: #C6E08B;
+    }
+    .n-1 h3, h4{
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .info-list {
+        background-color: $color_tertiary-light;
+        padding: 1rem; 
+        .fa {
+            margin-right: 1rem;
+        }
+    }
+    .footnote {
+        font-size: 0.8rem;
+        position: relative;
+        padding: 1rem 0;
+    }
+    p {
+        padding: 2rem 0;
+    }
+    .n-2 {
+        text-align: center;
+        background-color: $color_tertiary-light;
+        padding: 2rem 5rem;
+    }
+    .info-section-item {
+        text-align: initial;
+        p {
+            padding: 1rem 0;
+        }
+    }
+    .apply-now-button {
+        text-align: center;
+    }
+    .apply-button {
+        @include button;
+	    text-transform: uppercase;
+	    color: #FFFFFF;
+	    border: 3px solid $color_brand-tertiary;
+	    background-color: $color_brand-tertiary;
+    }
+}
