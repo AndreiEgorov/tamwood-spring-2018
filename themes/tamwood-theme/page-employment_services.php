@@ -21,9 +21,9 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
                 <div class="info-img">
                     <img src="<?php echo esc_url($row['info_image']); ?>">
                 </div>
-                <p><?php echo wp_kses( $row['info_copy'], array( 'p' => array( 'class' => '' ) ) );?></p>      
-            </div> <!--info-section-item-->
-        <?php }?>
+                <?php echo wp_kses( $row['info_copy'], array( 'p' => array( 'class' => '' ), ( 'li' ), ( 'ul' ) ) );?>
+            </div><?php
+    }?>
 </section>
 <div class="apply-now-button">
     <a class='apply-button' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>

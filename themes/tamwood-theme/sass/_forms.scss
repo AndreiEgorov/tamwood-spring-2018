@@ -171,7 +171,6 @@ textarea {
     }
 }
 #input_1_7_6 {
-    border-radius: 0px !important;
     background-color: $color_secondary-background;
 }
 #input_1_13 {
@@ -222,5 +221,24 @@ textarea {
     padding: 0;
     .ginput_container {
         width: 50%;
+    }
+}
+
+/* Radio Buttons */
+
+.gform_wrapper {
+    input[type=radio] {
+        display: none !important;
+        &+label {
+            margin-left: 20px !important;
+            &::before {
+                content: '';
+                background: $color_brand-secondary;
+                height: 15px;
+                width: 15px;
+                border: 1px solid $color_text-main;
+                border-radius: 50%;
+            }
+        }
     }
 }
