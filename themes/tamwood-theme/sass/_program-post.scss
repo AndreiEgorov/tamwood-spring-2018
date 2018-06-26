@@ -20,7 +20,7 @@
             }
         
         }
-        ol{
+        .hightlights{
             display: none;
         }
         .program-type{
@@ -138,88 +138,127 @@
     //End of  program overview section
 
     //program course section
-    .program-heading{
-        margin-bottom: 3.14rem;
-    }
-    .courses{
-        .courses-table{
-            display:grid;
-            grid-template-columns: 3fr 1fr;
-            @include desktop{
-                grid-template-columns: 3fr 1fr 1fr;
-            }
-            li{
-                height: 67px;
-                border: 1px $color_brand-secondary solid;
-                display:flex;
-                justify-content: center;
-                align-items: center;
-            }
-            li:nth-child(-n+3){
-                background:$color_brand-secondary;
-            }
-          
-            .course-subject:nth-child(even){
-                background:$color_secondary-light;
-            }
-            .number_of_weeks:nth-child(odd){
-                background:$color_secondary-light;
-            }
-            .course_hours:nth-child(even){
-                background:$color_secondary-light;
-            }
-            
-            .course_hours{
-                display: none;
+        .program-heading{
+            margin-bottom: 3.14rem;
+        }
+        .courses{
+            .courses-table{
+                display:grid;
+                grid-template-columns: 3fr 1fr;
                 @include desktop{
-                    display: inherit;
+                    grid-template-columns: 3fr 1fr 1fr;
+                }
+                li{
+                    height: 67px;
+                    border: 1px $color_brand-secondary solid;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                li:nth-child(-n+3){
+                    background:$color_brand-secondary;
+                }
+            
+                .course-subject:nth-child(even){
+                    background:$color_secondary-light;
+                }
+                .number_of_weeks:nth-child(odd){
+                    background:$color_secondary-light;
+                }
+                .course_hours:nth-child(even){
+                    background:$color_secondary-light;
+                }
+                
+                .course_hours{
+                    display: none;
+                    @include desktop{
+                        display: inherit;
+                    }
+                }
+                .course-subject:not(:nth-child(1)){
+                    justify-content: flex-start;
+                    padding: 0 0.5rem;
+                } 
+
+            }
+        }
+        .text-chunck{
+        
+            li{ 
+                margin-top: 2.85rem;
+                .text-block-title{
+                    font-weight: 300;
+                    text-transform: uppercase;
+
+                }
+                .text{
+                    margin-top: 1rem;
+
                 }
             }
-            .course-subject:not(:nth-child(1)){
-                justify-content: flex-start;
-                padding: 0 0.5rem;
-            } 
-
         }
-    }
-    .text-chunck{
+        .button-box{
+            display: flex;
+            justify-content: center;
+            .apply-button{
+                @include primary-pink{
+                    display: inline-block;
+                    // padding: 20px 18px;
+                    font-size:18px;
+                    @include desktop{
+                        font-size: 1.28rem;
+                    }
+                }
+                
+            }
+        }
+
+    //end program course section
+
+
+
+    // Requirements section
+
+
+    
+    .one-requirement{
+        margin-bottom: 1.35rem;
+        list-style:decimal;
+        display:list-item; 
        
-        li{ 
-            margin-top: 2.85rem;
-            .text-block-title{
-                font-weight: 300;
-                text-transform: uppercase;
-
+        .requirement-description{
+            margin: 1rem 0 1rem 3rem;
+            p{
+                list-style:disc outside none;
+                display:list-item; 
             }
-            .text{
-                margin-top: 1rem;
-
+        }
+    }
+    .one-requirement:nth-of-type(1){
+        display:flex;
+        align-items: center;
+        .requirement-description{
+            margin: 0;
+            p{
+                padding-left: 1rem;
+                color: $color_brand-secondary;
+                list-style: none;
             }
+        }
+    }
+    .requirements-notes{
+        background: $color_secondary-light;
+        p{
+            padding:1rem;
         }
     }
 
 
 
-    .button-box{
-        display: flex;
-        justify-content: center;
-        .apply-button{
-            @include primary-pink{
-                display: inline-block;
-                // padding: 20px 18px;
-                font-size:18px;
-                @include desktop{
-                    font-size: 1.28rem;
-                }
-            }
-            
-        }
-    }
 
 
 
-
-
+    // End of  Requirements section
 
 
 

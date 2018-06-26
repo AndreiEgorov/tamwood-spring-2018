@@ -1539,7 +1539,7 @@ object {
 .single-program .overview-text p:nth-child(2) {
   display: none; }
 
-.single-program ol {
+.single-program .hightlights {
   display: none; }
 
 .single-program .program-type {
@@ -1746,6 +1746,35 @@ object {
     @media (min-width: 768px) {
       .single-program .button-box .apply-button {
         font-size: 1.28rem; } }
+
+.single-program .one-requirement {
+  margin-bottom: 1.35rem;
+  list-style: decimal;
+  display: list-item; }
+  .single-program .one-requirement .requirement-description {
+    margin: 1rem 0 1rem 3rem; }
+    .single-program .one-requirement .requirement-description p {
+      list-style: disc outside none;
+      display: list-item; }
+
+.single-program .one-requirement:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .single-program .one-requirement:nth-of-type(1) .requirement-description {
+    margin: 0; }
+    .single-program .one-requirement:nth-of-type(1) .requirement-description p {
+      padding-left: 1rem;
+      color: #B52371;
+      list-style: none; }
+
+.single-program .requirements-notes {
+  background: #EED9EF; }
+  .single-program .requirements-notes p {
+    padding: 1rem; }
 
 .hidden {
   display: none; }

@@ -17,7 +17,7 @@ get_header(); ?>
 			<h4 class='blurb'><?php echo wp_kses((CFS()->get( 'blurb' )), array( 'p' => array( 'class' => '' ) ) );?></h4>
 			<div class='overview-text'><?php echo wp_kses((CFS()->get( 'program_overview' )),array( 'p' => '' ) );?></div>
 			<?php $fields = CFS()->get( 'program_highlights_table' );?>
-			<ol type="1">
+			<ol type="1" class='hightlights'>
 				<?php 
 				foreach ( $fields as $field ) {?>
 					<li><?php echo esc_html($field['highlight']); ?></li>
@@ -148,9 +148,28 @@ get_header(); ?>
 
 		<section class="program-section requirements container hidden">
 			<button class="back-button">Back</button>
+			
 			<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'requirements_page_title' ))?></h1>
-			<?php echo wp_kses(CFS()->get( 'requirements' ), array( 'p' => array( 'class' => ''), 'ol' => array( 'class' => ''), 'li' => array( 'class' => '') ) )?>
+			<?php $requirements = CFS()->get( 'requirements' );
+			foreach ( $requirements as $requirement ) {?>
+			<div class='one-requirement'>
+				<h3 class='requirement' ><?php echo wp_kses ( $requirement['requirement_type'], array('h3'))	 ;?></h3>
+				<div class='requirement-description'>	<?php echo wp_kses( $requirement['requirement_description'], array('p'=>'p','a','li') )?> </div>
+			</div>
+			<?php } ?>
+			<div class='requirements-notes'><?php echo wp_kses(CFS()->get( 'requirements_notes' ), array( 'p' => array( 'class' => '') ) )?></div>
+		
+			<div class='container button-box'>
+				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+			</div>
 		</section>
+		
+		
+
+
+
+
+
 		
 		<section class='program-section start-dates container hidden'>
 			<button class="back-button">Back</button>
