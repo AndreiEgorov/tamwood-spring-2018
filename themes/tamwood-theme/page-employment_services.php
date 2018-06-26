@@ -10,7 +10,7 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
             <li><i class="fa fa-check"></i><?php echo esc_html($row['bullet_item']);?></li> <?php
         }?>
     </ul>
-    <p class="footnote"><?php echo esc_html(CFS()->get( 'footnote' )); ?></p>
+    <p class="footnote"><?php echo wp_kses(CFS()->get( 'footnote' ), array( 'p' ) ); ?></p>
     <?php echo wp_kses( CFS()->get( 'section_copy' ), array( 'p' => array( 'class' => '' ) ) );?>
 </section>
 <section class="section n-2">
