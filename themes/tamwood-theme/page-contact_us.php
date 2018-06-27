@@ -15,17 +15,16 @@ get_header(); ?>
         $args = array( 'post_type' => 'campus', 'order' => 'DSC', 'posts_per_page' => 3 );
         $campuses = get_posts( $args ); // returns an array of posts
         ?>
-            <div class="desktop">
+            <div class=" desktop contact-loop-back"></div>
+            <div class="desktop contact-campus-loop">
             <?php foreach ( $campuses as $post ) : setup_postdata( $post ); ?>
             
-                <div>
-                    <div>
+                <div class="contact-post-container">
+                    <div class="contact-post-head">
                         <h2><?php the_title(); ?></h2>
                         <img src="<?php echo esc_url(CFS()->get( 'hero_image' )); ?>">
                     </div>
-                    <div>
-                        <p><?php echo wp_kses(CFS()->get( 'contact_info' ), array( 'p' => array( 'class' => '' ) ) ); ?></p>
-                    </div>
+                    <div class="contact-campus-info"><?php echo wp_kses(CFS()->get( 'contact_info' ), array( 'p' => array( 'class' => '' ) ) ); ?></div>
                 </div>
                 <?php endforeach; wp_reset_postdata(); ?>
             </div>

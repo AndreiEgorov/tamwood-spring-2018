@@ -1,9 +1,5 @@
 
 <section class="carousel-box">
-    
-
-   
-       
     <div class="main-carousel">
     <?php $loop = CFS()->get( 'testimonial' );
 
@@ -26,8 +22,6 @@
        
         <?php }?>
     </div>
-
-
 </section>
 
 

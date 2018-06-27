@@ -973,10 +973,14 @@ input[type=checkbox] {
     .main-navigation-mobile.toggled .apply-now {
       visibility: initial;
       margin-left: 52px; }
-  .main-navigation-mobile li {
-    padding: 15px 0; }
+    .main-navigation-mobile.toggled .menu {
+      margin: 20px 32px; }
+    .main-navigation-mobile.toggled li {
+      padding: 15px 0; }
+      .main-navigation-mobile.toggled li a {
+        display: initial; }
   .main-navigation-mobile .menu {
-    margin: 20px 32px; }
+    margin: 0; }
     .main-navigation-mobile .menu .selected + .show {
       height: auto;
       -webkit-transition: 0.5s ease;
@@ -1011,7 +1015,8 @@ input[type=checkbox] {
       display: none; } }
   .main-navigation-mobile a {
     color: #3D3D3D;
-    text-decoration: none; }
+    text-decoration: none;
+    display: none; }
   .main-navigation-mobile .sub-menu {
     height: 0;
     overflow: hidden;
@@ -1432,6 +1437,9 @@ object {
 .page-id-2 .hero-image {
   background-position: top; }
 
+.page-id-2 .container p {
+  color: #003DA6; }
+
 .page-id-2 .page-copy {
   width: 85%;
   margin: 0 auto; }
@@ -1729,9 +1737,6 @@ object {
 .page-id-18 .section {
   width: 85%;
   margin: 0 auto; }
-  .page-id-18 .section img {
-    width: 80%;
-    height: 80%; }
 
 .page-id-18 h4 {
   color: #C6E08B; }
@@ -1780,7 +1785,16 @@ object {
 
 .page-id-18 .info-list {
   background-color: #F1F7E3;
-  padding: 1rem; }
+  padding: 1rem;
+  height: 6.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 3rem; }
   @media (min-width: 768px) {
     .page-id-18 .info-list {
       width: 45%;
@@ -1792,19 +1806,33 @@ object {
   font-size: 0.8rem;
   max-width: 14rem;
   padding: 1rem 0;
+  margin: 1rem 0;
   -ms-flex-item-align: end;
       align-self: flex-end; }
   @media (min-width: 768px) {
     .page-id-18 .footnote {
       background-color: white;
-      margin: 2rem 0 0 13rem;
       -ms-flex-item-align: right;
           align-self: right;
       padding: 0;
+      margin: 2rem;
       width: 100%; } }
 
 .page-id-18 p {
   padding: 2rem 0; }
+
+.page-id-18 .info-img {
+  width: 100%;
+  height: 16rem; }
+  @media (min-width: 768px) {
+    .page-id-18 .info-img {
+      height: 14rem; } }
+  .page-id-18 .info-img img {
+    width: 100%;
+    height: 16rem; }
+    @media (min-width: 768px) {
+      .page-id-18 .info-img img {
+        height: 13rem; } }
 
 .page-id-18 .apply-now-button-1 {
   display: none; }
@@ -1854,11 +1882,24 @@ object {
 .page-id-18 .info-section-item {
   text-align: initial; }
   @media (min-width: 768px) {
+    .page-id-18 .info-section-item h4 {
+      text-align: center;
+      color: #3D3D3D;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem; } }
+  @media (min-width: 768px) {
     .page-id-18 .info-section-item {
       width: 100%;
       margin: 0 1rem; } }
   .page-id-18 .info-section-item p {
     padding: 1rem 0; }
+
+.page-id-18 .info-section-item:last-child p {
+  padding: 0.2rem; }
+
+.page-id-18 .info-section-item:last-child h4 {
+  padding-bottom: 0;
+  margin-bottom: 0; }
 
 .page-id-18 .apply-now-button-2 {
   text-align: center; }
@@ -1885,6 +1926,238 @@ object {
     .page-id-18 .apply-button-2 {
       line-height: 21px;
       padding-top: 18px; } }
+
+.term-hospitality-and-tourism .hero-image-banner {
+  width: 100%; }
+  .term-hospitality-and-tourism .hero-image-banner .hero-img {
+    width: 100%;
+    height: 300px; }
+
+.term-hospitality-and-tourism .page-header {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 2rem; }
+
+.term-hospitality-and-tourism .container-1 {
+  width: 85%;
+  margin: 0 auto; }
+  .term-hospitality-and-tourism .container-1 h2 {
+    color: #B52371;
+    font-weight: 300;
+    padding: 1rem 0; }
+  .term-hospitality-and-tourism .container-1 p {
+    padding: 1rem 0; }
+
+.term-hospitality-and-tourism .loop-header {
+  text-align: center;
+  font-weight: 300;
+  padding: 1rem 0; }
+
+.term-hospitality-and-tourism .container-2 {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 768px) {
+    .term-hospitality-and-tourism .container-2 {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+
+.term-hospitality-and-tourism .entry-title a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #3D3D3D;
+  font-weight: 300; }
+
+.term-hospitality-and-tourism .entry-title {
+  margin-bottom: 2rem;
+  border: 2px solid #B52371;
+  padding: 2rem;
+  margin: 1rem; }
+
+.term-hospitality-and-tourism .carousel-box, .term-hospitality-and-tourism .main-carousel {
+  background-color: #EED9EF; }
+  @media (min-width: 768px) {
+    .term-hospitality-and-tourism .carousel-box, .term-hospitality-and-tourism .main-carousel {
+      margin-bottom: 2rem; } }
+
+.term-hospitality-and-tourism .apply-button {
+  text-decoration: none;
+  font-family: "Fira Sans";
+  font-weight: bold;
+  text-align: center;
+  margin: 50px;
+  display: inline-block;
+  padding: 0.57rem 1.57rem;
+  font-size: 1.28rem;
+  height: 3.43rem;
+  width: 10.7rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: 3px solid #B52371;
+  background-color: #B52371; }
+  @media (min-width: 768px) {
+    .term-hospitality-and-tourism .apply-button {
+      line-height: 21px;
+      padding-top: 18px; } }
+  @media (min-width: 768px) {
+    .term-hospitality-and-tourism .apply-button {
+      display: none; } }
+
+/* Contact Us */
+.contact-campus-loop {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px; }
+  @media (min-width: 768px) {
+    .contact-campus-loop {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .contact-campus-loop .contact-post-container {
+    width: 32%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .contact-campus-loop .contact-post-container img {
+      height: 290px;
+      width: auto; }
+  .contact-campus-loop h2 {
+    height: 108px;
+    width: 265px;
+    text-align: center;
+    margin: 0 auto; }
+  .contact-campus-loop .contact-post-head {
+    height: 400px;
+    max-width: 100%;
+    overflow: hidden; }
+
+.contact-campus-info {
+  margin-top: 40px;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+  .contact-campus-info p:first-child {
+    border-top: 2px solid #003DA6;
+    font-size: 1.55rem;
+    margin-bottom: 15px;
+    height: 84px;
+    padding-right: 20px; }
+  .contact-campus-info p {
+    font-size: 1rem; }
+
+.contact-loop-back {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  background: #EAEEF6;
+  height: 420px; }
+
+/* Apply Now */
+.document-checklist.mobile {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  height: 100vh;
+  background: white; }
+  .document-checklist.mobile .document-checklist-inner {
+    width: 90%;
+    margin: 120px auto 10px;
+    padding: 30px 20px 50px;
+    background: #EAEEF6; }
+    .document-checklist.mobile .document-checklist-inner p, .document-checklist.mobile .document-checklist-inner li {
+      font-size: 1.29rem; }
+    .document-checklist.mobile .document-checklist-inner li {
+      margin-top: 30px;
+      padding: 0 20px; }
+  .document-checklist.mobile h3 {
+    font-size: 1.86rem;
+    text-align: center; }
+  .document-checklist.mobile i {
+    margin-right: 10px; }
+  .document-checklist.mobile .close-checklist {
+    text-decoration: none;
+    font-family: "Fira Sans";
+    font-weight: bold;
+    text-align: center;
+    margin: 50px;
+    display: inline-block;
+    padding: 0.57rem 1.57rem;
+    font-size: 1.28rem;
+    height: 3.43rem;
+    width: 10.7rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 3px solid #B52371;
+    background-color: #B52371;
+    margin: 20px auto;
+    margin-left: 5%; }
+    @media (min-width: 768px) {
+      .document-checklist.mobile .close-checklist {
+        line-height: 21px;
+        padding-top: 18px; } }
+
+.document-checklist.mobile.hidden {
+  display: none; }
+
+.document-checklist.desktop {
+  background: #EAEEF6;
+  height: 300px;
+  padding: 0 10%; }
+  @media (min-width: 768px) {
+    .document-checklist.desktop {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
+  .document-checklist.desktop h3.checklist-heading {
+    margin: 0;
+    font-size: 1.55rem; }
+  .document-checklist.desktop p {
+    font-size: 1rem; }
+  .document-checklist.desktop ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .document-checklist.desktop li {
+    padding: 10px; }
+  .document-checklist.desktop i {
+    margin-right: 10px; }
 
 .single-program .site-header {
   position: initial; }
