@@ -80,6 +80,9 @@
         $('.program-nav').removeClass('hidden');
         $('.details').removeClass('hidden');
     });
+    $('.close-checklist').on('click', function() {
+        $('.document-checklist').addClass('hidden');
+    });
 
     function toggleState(elem, className) {
         if (!elem.hasClass(className)) {

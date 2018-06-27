@@ -544,3 +544,68 @@
     background: $color_main-light;
     height: 420px;
 }
+
+/* Apply Now */
+
+.document-checklist {
+    &.mobile {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        max-width: 100%;
+        height: 100vh;
+        background: white;
+        .document-checklist-inner {
+            width: 90%;
+            margin: 120px auto 10px;
+            padding: 30px 20px 50px;
+            background: $color_main-light;
+            p, li{
+                font-size: 1.29rem; 
+            }
+            li {
+                margin-top: 30px;
+                padding: 0 20px;
+            }
+        }
+        h3 {
+            font-size: 1.86rem;
+            text-align: center;
+        }
+        i {
+            margin-right: 10px;
+        }
+        .close-checklist {
+            @include primary-pink;
+            margin: 20px auto;
+            margin-left: 5%;
+        }
+    }
+    &.desktop {
+        background: $color_main-light;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 0 10%;
+        h3.checklist-heading {
+            margin: 0;
+            font-size: 1.55rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+        li {
+            padding: 10px;
+        }
+        i {
+            margin-right: 10px;
+        }
+    }
+}
