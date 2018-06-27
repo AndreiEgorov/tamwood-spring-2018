@@ -1949,28 +1949,25 @@ object {
   font-size: 1.28rem;
   height: 3.43rem;
   width: 10.7rem;
-  color: #003DA6;
-  border: 3px solid #003DA6;
+  color: #B52371;
+  border: 3px solid #B52371;
   background-color: #FFFFFF;
   font-size: 18px;
-  position: relative;
-  top: 3rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  top: 3rem; }
   @media (min-width: 768px) {
     .single-program .read-more {
       line-height: 21px;
       padding-top: 18px; } }
   .single-program .read-more:hover {
-    background-color: #003DA6;
+    background-color: #B52371;
     color: #FFFFFF; }
 
 .single-program .highlightsListHidden {
   display: none; }
 
 .single-program .hightlights {
-  display: grid; }
+  display: grid;
+  margin-top: 3.2rem; }
 
 .single-program .program-type {
   display: -webkit-box;
@@ -2647,7 +2644,7 @@ object {
   top: 6.5rem;
   position: absolute;
   width: 95%;
-  height: 162px;
+  height: 79px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2660,7 +2657,7 @@ object {
   min-width: 356px; }
   @media (min-width: 768px) {
     .page-template-default .title-wrapper {
-      height: 493px;
+      height: 308px;
       border: 7px #fff solid;
       top: 11.4rem; } }
   .page-template-default .title-wrapper .hero-title {
@@ -2672,6 +2669,10 @@ object {
   .page-template-default .content-banner.page-id-2 .page-title {
     padding: 2rem 0;
     color: #003DA6; }
+
+.page-template-default .container .page-title {
+  padding: 2rem 0;
+  color: #003DA6; }
 
 .page-template-default .container .blurb {
   padding-bottom: 3.2rem;

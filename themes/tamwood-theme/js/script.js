@@ -111,21 +111,39 @@
 
     //Read more button on a program page.
     var $learnMoreButton = $('.read-more');
-    var $highlightsListHidden = $('.highlightsListHidden')
+    var $highlightsListHidden = $('.highlightsListHidden');
+    // var readLess = "<a class='read-more' >Read Less</a> ";
+    // var readMore = "<a class='read-more' >Read More</a> ";
+
 
     $learnMoreButton.on('click', function (event) {
         event.preventDefault();
-        console.log('hasdfs')
+
         showTable($highlightsListHidden, 'hightlights');
+        // changeButtonText($highlightsListHidden);
+        console.log($learnMoreButton);
     });
 
     function showTable(element, nameOfClass) {
         if (!element.hasClass(nameOfClass)) {
             element.addClass(nameOfClass);
+            // $learnMoreButton.replaceWith(readLess);
+
         } else {
             element.removeClass(nameOfClass);
+            // $learnMoreButton.replaceWith(readMore);
         }
     }
+    // function changeButtonText(element) {
+    //     if (element.hasClass('hightlights')) {
+    //         $learnMoreButton.replaceWith(readLess);
+    //     } else {
+    //         $learnMoreButton.replaceWith(readMore);
+
+    //     }
+
+
+    // }
 
 
 

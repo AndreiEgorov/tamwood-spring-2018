@@ -55,11 +55,11 @@
         }
     //Read-more button shown with a highlights class table
         .read-more{
-            @include secondary-blue;
+            @include secondary-pink;
             font-size: $font_size-main-desktop;
-            position: relative;
+           
             top: 3rem;
-            align-items: center;
+            // align-items: center;
         }
        
         .highlightsListHidden{
@@ -67,6 +67,7 @@
         }
         .hightlights{
             display: grid;
+            margin-top: 3.2rem;
         }
 
     //end of Read-more button
