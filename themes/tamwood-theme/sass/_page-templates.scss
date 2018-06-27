@@ -558,6 +558,127 @@
         background-color: $color_brand-secondary;
         @include desktop {
             display: none;
+/* Contact Us */
+
+.contact-campus-loop {
+    @include desktop {
+        display: flex;
+    }
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    .contact-post-container {
+        width: 32%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            height: 290px;
+            width: auto;
+        }
+    }
+    h2 {
+        height: 108px;
+        width: 265px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .contact-post-head {
+        height: 400px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+.contact-campus-info {
+    margin-top: 40px;
+    align-self: flex-start;
+    p:first-child {
+        border-top: 2px solid $color_brand-main;
+        font-size: 1.55rem;
+        margin-bottom: 15px;
+        height: 84px;
+        padding-right: 20px;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+.contact-loop-back {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    background: $color_main-light;
+    height: 420px;
+}
+
+/* Apply Now */
+
+.document-checklist {
+    &.mobile {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        max-width: 100%;
+        height: 100vh;
+        background: white;
+        .document-checklist-inner {
+            width: 90%;
+            margin: 120px auto 10px;
+            padding: 30px 20px 50px;
+            background: $color_main-light;
+            p, li{
+                font-size: 1.29rem; 
+            }
+            li {
+                margin-top: 30px;
+                padding: 0 20px;
+            }
+        }
+        h3 {
+            font-size: 1.86rem;
+            text-align: center;
+        }
+        i {
+            margin-right: 10px;
+        }
+        .close-checklist {
+            @include primary-pink;
+            margin: 20px auto;
+            margin-left: 5%;
+        }
+    }
+    &.mobile.hidden {
+        display: none;
+    }
+    &.desktop {
+        background: $color_main-light;
+        height: 300px;
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+        padding: 0 10%;
+        h3.checklist-heading {
+            margin: 0;
+            font-size: 1.55rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+        li {
+            padding: 10px;
+        }
+        i {
+            margin-right: 10px;
         }
     }
 }
