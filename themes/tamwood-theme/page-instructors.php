@@ -1,10 +1,8 @@
 <?php 
-/** Template Name: Our Instructors */
+
 get_header();
 get_template_part( 'template-parts/content', 'banner' ); ?>
 
-<!-- Test Area , Andrei -->
-<h1>------------------------------</h1>
 <div class="instructors-carousel">
 
 <?php $loop = CFS()->get( 'instructors' );
@@ -34,8 +32,6 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
         <?php   
     }?>
 </div>
-
-<h1>------------------------------</h1>
 
 <section>
     <?php $loop = CFS()->get( 'instructors' );

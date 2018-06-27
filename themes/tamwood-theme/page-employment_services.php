@@ -1,5 +1,5 @@
 <?php 
-/** Template Name: Employment Services */
+
 get_header();
 get_template_part( 'template-parts/content', 'banner' ); ?>
 <section class="section n-1">

@@ -15,8 +15,6 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-        // .instructor-image{
-        // }
         .instructor-bio{
             background: $color_main-light;
             position: relative;
@@ -28,8 +26,6 @@
             padding: 1rem;
             font-weight: 300;
            } 
-            //    .instructor-position{
-            //    }
             .learn-more{
             @include secondary-blue;
             font-size: $font_size-main-desktop;

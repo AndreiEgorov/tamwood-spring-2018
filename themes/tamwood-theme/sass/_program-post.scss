@@ -1,5 +1,4 @@
 .single-program{
-    // min-width: 375px;
     .site-header{
         position: initial;
     }
@@ -90,9 +89,6 @@
             }
         }
             //mobile program menu
-
-
-
                 .section-navigation-mobile{
                     width: 100%;
                     display: flex;
@@ -147,11 +143,6 @@
                     }
                 }
 
-
-
-
-
-
             //End of program menu 
         .button-box{
             display: flex;
@@ -168,7 +159,6 @@
             .detail{
             margin: 0 auto;
             margin-bottom:4.07rem;
-            // width: 68%; delete if not needed
             display: flex;
             align-items: center;
             text-align: center;
@@ -268,7 +258,6 @@
             .apply-button{
                 @include primary-pink{
                     display: inline-block;
-                    // padding: 20px 18px;
                     font-size:18px;
                     @include desktop{
                         font-size: 1.28rem;
@@ -280,11 +269,7 @@
 
     //end program course section
 
-
-    // Requirements section
-
-
-        
+    // Requirements section   
         .one-requirement{
             position: relative;
             margin-bottom: 1.35rem;
@@ -411,11 +396,6 @@
                     background: $color_secondary-light;
                 }
                 //highlight last line in a table with dark purple 
-               
-                // li:nth-last-child(2){
-                //     background:$color_brand-secondary;
-                // }
-                //------------------
             }
             #fee-empty {
               grid-column: 1 / -1;

@@ -1,5 +1,5 @@
 <?php
-/** Template Name: Thanks For Applying */
+
 get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container" role="main">

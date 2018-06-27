@@ -48,13 +48,6 @@ get_header(); ?>
 				}?>
 			</ol>
 
-
-
-
-
-
-
-
 			<?php $fields =  CFS()->get( 'program_type_section' ) ;?>
 			<ul>
 				<?php 
@@ -78,7 +71,6 @@ get_header(); ?>
 		</section>
 
 		<section class="program-section program-nav">
-		<!-- Nav -------------------------- -->
 			<ul class='section-navigation-mobile'>
 				<?php 
 				$section_option = CFS()->get( 'section_option' );
@@ -92,7 +84,6 @@ get_header(); ?>
 				<?php 
 				} ?>
 			</ul>
-		<!-- End Nav -------------------------- -->
 		<div class='container button-box'>
 			<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
 		</div>
@@ -194,13 +185,6 @@ get_header(); ?>
 				<a class='apply-button' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
 			</div>
 		</section>
-		
-		
-
-
-
-
-
 		
 		<section class='program-section start-dates container hidden'>
 			
