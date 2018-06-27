@@ -34,16 +34,4 @@ get_header();
         <?php   
     }?>
 </div>
-
-<section>
-    <?php $loop = CFS()->get( 'instructors' );
-        foreach ( $loop as $row ) {?>
-        <div>
-            <img src="<?php echo esc_url($row['instructor_image']); ?>">
-            <h3><?php echo esc_html($row['instructor_name']); ?></h3>
-            <h4><?php echo esc_html($row['instructor_position']); ?></h4>
-            <p><?php echo wp_kses( $row['instructor_info'], array( 'p' => array( 'class' => '' ) ) );?></p>
-        </div>
-       <?php }?>
-</section>
 <?php get_footer(); ?>

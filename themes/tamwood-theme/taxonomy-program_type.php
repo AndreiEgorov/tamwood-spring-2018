@@ -62,7 +62,7 @@ get_header(); ?>
     		</div> <!-- main-carousel -->
 			</section>
 			<div class="apply-now-button">
-        		<a class="apply-button" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+        		<a class="apply-button" href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
     		</div>
 	
 		</main><!-- #main -->

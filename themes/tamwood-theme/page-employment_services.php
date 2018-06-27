@@ -17,7 +17,7 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
     </div>
 </section>
 <div class="apply-now-button-1">
-    <a class='apply-button-1' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+    <a class='apply-button-1' href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
 </div>
 <section class="section n-2">
     <?php $loop = CFS()->get( 'info_section' );
@@ -32,6 +32,6 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
     }?>
 </section>
 <div class="apply-now-button-2">
-    <a class="apply-button-2" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+    <a class="apply-button-2" href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
 </div>
 <?php get_footer(); ?>
