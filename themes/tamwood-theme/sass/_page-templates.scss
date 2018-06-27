@@ -490,3 +490,57 @@
         background-color: $color_brand-tertiary;
     }
 }
+/* Contact Us */
+
+.contact-campus-loop {
+    @include desktop {
+        display: flex;
+    }
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    .contact-post-container {
+        width: 32%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            height: 290px;
+            width: auto;
+        }
+    }
+    h2 {
+        height: 108px;
+        width: 265px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .contact-post-head {
+        height: 400px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+.contact-campus-info {
+    margin-top: 40px;
+    align-self: flex-start;
+    p:first-child {
+        border-top: 2px solid $color_brand-main;
+        font-size: 1.55rem;
+        margin-bottom: 15px;
+        height: 84px;
+        padding-right: 20px;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+.contact-loop-back {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    background: $color_main-light;
+    height: 420px;
+}
