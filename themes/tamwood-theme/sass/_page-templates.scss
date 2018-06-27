@@ -558,6 +558,11 @@
         background-color: $color_brand-secondary;
         @include desktop {
             display: none;
+        }
+    }
+}
+
+
 /* Contact Us */
 
 .contact-campus-loop {
@@ -613,8 +618,8 @@
     height: 420px;
 }
 
-/* Apply Now */
 
+/* Apply Now */
 .document-checklist {
     &.mobile {
         position: fixed;
