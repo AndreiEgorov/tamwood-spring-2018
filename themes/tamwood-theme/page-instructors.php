@@ -1,8 +1,10 @@
 <?php 
 
 get_header();
-get_template_part( 'template-parts/content', 'banner' ); ?>
 
+ ?>
+
+        
 <div class="instructors-carousel">
 
 <?php $loop = CFS()->get( 'instructors' );

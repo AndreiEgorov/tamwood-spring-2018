@@ -1,19 +1,19 @@
 //THIS PARTAL IS TO BE ADDED TO "_page-template.php" into .page-template-instructors body class
 .page-template-default{
-    //overlay text "re-invent yourself with a border
+    
     .title-wrapper{
         border: 3px $color__background-body solid;
         margin: 1.5% 2.5%;
         top: 6.5rem;
         position: absolute;
         width: 95%;
-        height: 162px;
+        height: 79px;
         display: flex;
         align-items: center;
         justify-content: center;
         min-width: 356px;
         @include desktop{
-            height: 493px;
+            height: 308px;
             border: 7px $color__background-body solid;
             top: 11.4rem;
 
@@ -34,7 +34,10 @@
         }
     }
     .container{
-        //blurb class assigned through Wysiwyg
+        .page-title{
+            padding: 2rem 0;
+           color: $color_brand-main;
+        }
         .blurb{
             padding-bottom: 3.2rem;
             width: 100%;

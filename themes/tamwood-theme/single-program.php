@@ -11,7 +11,6 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 	<?php get_template_part( 'template-parts/content','banner' )?>
 	<?php while ( have_posts() ) : the_post(); ?>
-	<!-- wp_kses( $row['option_blurb'], array( 'p' => array( 'class' => '' ) ) ); -->
 		<section class='program-section program-overview container'>
 			<h1><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h1>
 			<h4 class='blurb'><?php echo wp_kses((CFS()->get( 'blurb' )), array( 'p' => array( 'class' => '' ) ) );?></h4>
@@ -68,6 +67,35 @@ get_header(); ?>
 				<?php 
 				}?>
 			</ul>
+
+				<?php 
+			$fields = CFS()->get( 'program_highlights_table' );
+			$fieldCheck = $fields[0]['highlight'];?>
+
+			<ol type="1" class='highlightsListHidden'>
+				
+				<?php 
+				foreach ( $fields as $field ) {
+					if(!empty($field['highlight_number'])):?>
+
+					
+					<li class='order-number'><?php echo esc_html($field['highlight_number']); ?></li>
+					<li class='highlight'><?php echo esc_html($field['highlight']); ?></li>
+
+					<?php endif;?>
+				<?php 
+				}?>
+			</ol>
+
+			<?php if(!empty($fieldCheck)):?>
+
+			<div class="button-box">
+				<a class="read-more" >Read More</a>
+			</div>
+
+			<?php endif;?>
+
+
 		</section>
 
 		<section class="program-section program-nav">

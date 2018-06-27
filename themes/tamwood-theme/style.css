@@ -2175,10 +2175,12 @@ object {
 .single-program .overview-text p:last-child {
   display: none; }
 
-.single-program .hightlights {
+.single-program .hightlights,
+.single-program .highlightsListShown {
   display: grid;
   grid-template-columns: 1fr 9fr; }
-  .single-program .hightlights .order-number {
+  .single-program .hightlights .order-number,
+  .single-program .highlightsListShown .order-number {
     background: #B52371;
     color: #fff;
     font-family: "Merriweather", serif;
@@ -2189,17 +2191,21 @@ object {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .single-program .hightlights .order-number::after {
+    .single-program .hightlights .order-number::after,
+    .single-program .highlightsListShown .order-number::after {
       content: '.'; }
     @media (min-width: 768px) {
-      .single-program .hightlights .order-number {
+      .single-program .hightlights .order-number,
+      .single-program .highlightsListShown .order-number {
         font-size: 2rem;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; } }
-  .single-program .hightlights .highlight {
+  .single-program .hightlights .highlight,
+  .single-program .highlightsListShown .highlight {
     padding: 0.5rem 1rem; }
-  .single-program .hightlights li:nth-child(4n-6) {
+  .single-program .hightlights li:nth-child(4n-6),
+  .single-program .highlightsListShown li:nth-child(4n-6) {
     background: #EED9EF; }
 
 .single-program .read-more {
@@ -2213,22 +2219,25 @@ object {
   font-size: 1.28rem;
   height: 3.43rem;
   width: 10.7rem;
-  color: #003DA6;
-  border: 3px solid #003DA6;
+  color: #B52371;
+  border: 3px solid #B52371;
   background-color: #FFFFFF;
   font-size: 18px;
-  position: relative;
-  top: 3rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  top: 3rem; }
   @media (min-width: 768px) {
     .single-program .read-more {
       line-height: 21px;
       padding-top: 18px; } }
   .single-program .read-more:hover {
-    background-color: #003DA6;
+    background-color: #B52371;
     color: #FFFFFF; }
+
+.single-program .highlightsListHidden {
+  display: none; }
+
+.single-program .hightlights {
+  display: grid;
+  margin-top: 3.2rem; }
 
 .single-program .program-type {
   display: -webkit-box;
@@ -2776,9 +2785,6 @@ object {
       .page-template-student-support .flickity-enabled .flickity-viewport .flickity-slider .is-selected {
         height: 230px !important; }
 
-.page-template-instructors section img {
-  width: 150px; }
-
 .page-template-instructors .instructor-area {
   width: 100%;
   display: -webkit-box;
@@ -2905,7 +2911,7 @@ object {
   top: 6.5rem;
   position: absolute;
   width: 95%;
-  height: 162px;
+  height: 79px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2918,7 +2924,7 @@ object {
   min-width: 356px; }
   @media (min-width: 768px) {
     .page-template-default .title-wrapper {
-      height: 493px;
+      height: 308px;
       border: 7px #fff solid;
       top: 11.4rem; } }
   .page-template-default .title-wrapper .hero-title {
@@ -2930,6 +2936,10 @@ object {
   .page-template-default .content-banner.page-id-2 .page-title {
     padding: 2rem 0;
     color: #003DA6; }
+
+.page-template-default .container .page-title {
+  padding: 2rem 0;
+  color: #003DA6; }
 
 .page-template-default .container .blurb {
   padding-bottom: 3.2rem;
