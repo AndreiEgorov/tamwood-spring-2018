@@ -25,20 +25,20 @@
 				<div class="header-container desktop">
 					<div class="desktop-logo-container">
 						<a href="<?php echo home_url() ?>">
-							<img class="desktop logo-desktop" src="<?php echo get_template_directory_uri() ?>/assets/logos/tamwood-logo.svg">
+							<img class="desktop logo-desktop" src="<?php echo get_template_directory_uri() ?>/assets/logos/tamwood-logo.svg" alt="Tamwood logo full">
 						</a>
 					</div>
 					<a class="desktop apply-now" href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
-					<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85">
+					<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85" alt="Search icon">
 				</div>
 				<div class="header-container mobile">
 					<button class="hamburger menu-toggle mobile" type="button"></button>
 					<div class="mobile-logo-container">
 						<a href="<?php echo home_url(); ?>">
-							<img class="mobile logo-mobile" src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55">
+							<img class="mobile logo-mobile" src="<?php echo get_template_directory_uri() ?>/assets/logos/LOGO@3x.png" width="55" height="55" alt="Tamwood logo">
 						</a>
 					</div>
-					<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85">
+					<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85" alt="Search icon">
 				</div>
 				<nav id="site-navigation-mobile" class="main-navigation main-navigation-mobile" role="navigation">
 					<a class="mobile apply-now" href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>	
