@@ -1437,6 +1437,9 @@ object {
 .page-id-2 .hero-image {
   background-position: top; }
 
+.page-id-2 .container p {
+  color: #003DA6; }
+
 .page-id-2 .page-copy {
   width: 85%;
   margin: 0 auto; }
@@ -1734,9 +1737,6 @@ object {
 .page-id-18 .section {
   width: 85%;
   margin: 0 auto; }
-  .page-id-18 .section img {
-    width: 80%;
-    height: 80%; }
 
 .page-id-18 h4 {
   color: #C6E08B; }
@@ -1785,7 +1785,16 @@ object {
 
 .page-id-18 .info-list {
   background-color: #F1F7E3;
-  padding: 1rem; }
+  padding: 1rem;
+  height: 6.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 3rem; }
   @media (min-width: 768px) {
     .page-id-18 .info-list {
       width: 45%;
@@ -1797,19 +1806,27 @@ object {
   font-size: 0.8rem;
   max-width: 14rem;
   padding: 1rem 0;
+  margin: 1rem 0;
   -ms-flex-item-align: end;
       align-self: flex-end; }
   @media (min-width: 768px) {
     .page-id-18 .footnote {
       background-color: white;
-      margin: 2rem 0 0 13rem;
       -ms-flex-item-align: right;
           align-self: right;
       padding: 0;
+      margin: 2rem;
       width: 100%; } }
 
 .page-id-18 p {
   padding: 2rem 0; }
+
+.page-id-18 .info-img {
+  width: 100%;
+  height: 12rem; }
+  .page-id-18 .info-img img {
+    width: 100%;
+    height: 10rem; }
 
 .page-id-18 .apply-now-button-1 {
   display: none; }
@@ -1854,16 +1871,30 @@ object {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding: 2rem 3rem; } }
+      padding: 2rem 3rem;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-line-pack: center;
+          align-content: center; } }
 
 .page-id-18 .info-section-item {
   text-align: initial; }
+  @media (min-width: 768px) {
+    .page-id-18 .info-section-item h4 {
+      text-align: center;
+      color: #3D3D3D;
+      font-size: 1.5rem; } }
   @media (min-width: 768px) {
     .page-id-18 .info-section-item {
       width: 100%;
       margin: 0 1rem; } }
   .page-id-18 .info-section-item p {
     padding: 1rem 0; }
+
+.page-id-18 .info-section-item:last-child {
+  font-size: 1.2rem;
+  font-family: "Merriweather", serif; }
 
 .page-id-18 .apply-now-button-2 {
   text-align: center; }
@@ -1891,7 +1922,6 @@ object {
       line-height: 21px;
       padding-top: 18px; } }
 
-<<<<<<< HEAD
 .term-hospitality-and-tourism .hero-image-banner {
   width: 100%; }
   .term-hospitality-and-tourism .hero-image-banner .hero-img {
@@ -1976,7 +2006,7 @@ object {
   @media (min-width: 768px) {
     .term-hospitality-and-tourism .apply-button {
       display: none; } }
-=======
+
 /* Contact Us */
 .contact-campus-loop {
   -webkit-box-orient: horizontal;
@@ -2123,7 +2153,6 @@ object {
     padding: 10px; }
   .document-checklist.desktop i {
     margin-right: 10px; }
->>>>>>> 233f73c6d45e473092c2aa81fb3fccc2ad21d080
 
 .single-program .site-header {
   position: initial; }
