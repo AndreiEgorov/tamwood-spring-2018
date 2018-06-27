@@ -38,12 +38,18 @@ $menuColor: '';
             visibility: initial;
             margin-left: 52px;
         }
-    }
-    li {
-        padding: 15px 0;
+        .menu {
+            margin: 20px 32px;
+        }
+        li {
+            padding: 15px 0;
+            a {
+                display: initial;
+            }
+        }
     }
     .menu {
-        margin: 20px 32px;
+        margin: 0;
         .selected + .show{
                 height: auto;
                 transition: 0.5s ease;
@@ -88,6 +94,7 @@ $menuColor: '';
     a {
         color: $color_text-main;
         text-decoration: none;
+        display: none;
     }
     .sub-menu {
         height: 0;

@@ -973,10 +973,14 @@ input[type=checkbox] {
     .main-navigation-mobile.toggled .apply-now {
       visibility: initial;
       margin-left: 52px; }
-  .main-navigation-mobile li {
-    padding: 15px 0; }
+    .main-navigation-mobile.toggled .menu {
+      margin: 20px 32px; }
+    .main-navigation-mobile.toggled li {
+      padding: 15px 0; }
+      .main-navigation-mobile.toggled li a {
+        display: initial; }
   .main-navigation-mobile .menu {
-    margin: 20px 32px; }
+    margin: 0; }
     .main-navigation-mobile .menu .selected + .show {
       height: auto;
       -webkit-transition: 0.5s ease;
@@ -1011,7 +1015,8 @@ input[type=checkbox] {
       display: none; } }
   .main-navigation-mobile a {
     color: #3D3D3D;
-    text-decoration: none; }
+    text-decoration: none;
+    display: none; }
   .main-navigation-mobile .sub-menu {
     height: 0;
     overflow: hidden;
