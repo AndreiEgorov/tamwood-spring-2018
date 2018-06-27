@@ -74,9 +74,9 @@
         $('.program-nav').removeClass('hidden');
         $('.details').removeClass('hidden');
     });
-    $('.close-checklist').on('click', function() {
-        $('.document-checklist.mobile').addClass('hidden');
-    });
+    // $('.close-checklist').on('click', function() {
+    //     $('.document-checklist.mobile').addClass('hidden');
+    // });
 
     function toggleState(elem, className) {
         if (!elem.hasClass(className)) {
