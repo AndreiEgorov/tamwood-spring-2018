@@ -16,14 +16,45 @@ get_header(); ?>
 			<h1><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h1>
 			<h4 class='blurb'><?php echo wp_kses((CFS()->get( 'blurb' )), array( 'p' => array( 'class' => '' ) ) );?></h4>
 			<div class='overview-text'><?php echo wp_kses((CFS()->get( 'program_overview' )),array( 'p' => '' ) );?></div>
-			<?php $fields = CFS()->get( 'program_highlights_table' );?>
+			
+			<?php 
+			$fields = CFS()->get( 'program_highlights_table' );
+			$fieldCheck = $fields[0]['highlight'];
+
+		
+
+
+			if(!empty($fieldCheck)):?>
+
+			<div class="button-box">
+				<a class="read-more" id="instructor-learn-more" href="#">Read More</a>
+			</div>
+
+			<?php endif;?>
+
+			
 			<ol type="1" class='hightlights'>
+			
 				<?php 
-				foreach ( $fields as $field ) {?>
-					<li><?php echo esc_html($field['highlight']); ?></li>
+				foreach ( $fields as $field ) {
+					if(!empty($field['highlight_number'])):?>
+
+					
+					<li class='order-number'><?php echo esc_html($field['highlight_number']); ?></li>
+					<li class='highlight'><?php echo esc_html($field['highlight']); ?></li>
+
+					<?php endif;?>
 				<?php 
 				}?>
 			</ol>
+
+
+
+
+
+
+
+
 			<?php $fields =  CFS()->get( 'program_type_section' ) ;?>
 			<ul>
 				<?php 
@@ -153,14 +184,14 @@ get_header(); ?>
 			<?php $requirements = CFS()->get( 'requirements' );
 			foreach ( $requirements as $requirement ) {?>
 			<div class='one-requirement'>
-				<h3 class='requirement' ><?php echo wp_kses ( $requirement['requirement_type'], array('h3'))	 ;?></h3>
-				<div class='requirement-description'>	<?php echo wp_kses( $requirement['requirement_description'], array('p'=>'p','a','li') )?> </div>
+				<h3 class='requirement' ><?php echo wp_kses( $requirement['requirement_type'], array('h3'))	 ;?></h3>
+				<div class='requirement-description'>	<?php echo wp_kses_post( $requirement['requirement_description'])?> </div>
 			</div>
 			<?php } ?>
 			<div class='requirements-notes'><?php echo wp_kses(CFS()->get( 'requirements_notes' ), array( 'p' => array( 'class' => '') ) )?></div>
 		
 			<div class='container button-box'>
-				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+				<a class='apply-button' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
 			</div>
 		</section>
 		
@@ -172,23 +203,37 @@ get_header(); ?>
 
 		
 		<section class='program-section start-dates container hidden'>
+			
 			<button class="back-button">Back</button>
-			<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'start_dates_page_title' ))?></h1>
-			<div>
-				<h3><?php echo esc_html(CFS()->get_field_info( 'summer' )['label']);?></h3>
-				<p><?php echo  wp_kses(CFS()->get( 'summer' ) , array( 'p' => array( 'class' => ''), 'ol' => array( 'class' => ''), 'li' => array( 'class' => '') ))?></p>
-			</div>
-			<div>
-				<h3><?php echo esc_html(CFS()->get_field_info( 'fall' )['label']);?></h3>
-				<p><?php echo  wp_kses(CFS()->get( 'fall' ), array( 'p' => array( 'class' => ''), 'ol' => array( 'class' => ''), 'li' => array( 'class' => '') ))?></p>
-			</div>
-			<div>
-				<h3><?php echo esc_html(CFS()->get_field_info( 'winter' )['label']);?></h3>
-				<p><?php echo  wp_kses(CFS()->get( 'winter' ), array( 'p' => array( 'class' => ''), 'ol' => array( 'class' => ''), 'li' => array( 'class' => '') ))?></p>
-			</div>
-			<div>
-				<h3><?php echo esc_html(CFS()->get_field_info( 'spring' )['label']);?></h3>
-				<p><?php echo wp_kses(CFS()->get( 'spring' ), array( 'p' => array( 'class' => ''), 'ol' => array( 'class' => ''), 'li' => array( 'class' => '') ))?></p>
+			<div class='terms'>
+				<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'start_dates_page_title' ))?></h1>
+				<div class='term'>
+					<h2><?php echo esc_html(CFS()->get_field_info( 'summer' )['label']);?></h2>
+					<div class='inner-box'>
+						<?php echo  wp_kses(CFS()->get( 'summer' ) , array( 'p' => array( 'class' => ''), 'ol' => array( 'class' => ''), 'li' => array( 'class' => '') ))?>
+					</div>
+				</div>
+				<div class='term'>
+					<h2><?php echo esc_html(CFS()->get_field_info( 'fall' )['label']);?></h2>
+					<div class='inner-box'>
+						<?php echo  wp_kses(CFS()->get( 'fall' ), array( 'p' => array( 'class' => ''), 'ol' => array( 'class' => ''), 'li' => array( 'class' => '') ))?>
+					</div>
+				</div>
+				<div class='term'>
+					<h2><?php echo esc_html(CFS()->get_field_info( 'winter' )['label']);?></h2>
+					<div class='inner-box'>
+						<?php echo  wp_kses(CFS()->get( 'winter' ), array( 'p' => array( 'class' => ''), 'ol' => array( 'class' => ''), 'li' => array( 'class' => '') ))?>
+					</div>
+				</div>
+				<div class='term'>
+					<h2><?php echo esc_html(CFS()->get_field_info( 'spring' )['label']);?></h2>
+					<div class='inner-box'>
+						<?php echo wp_kses(CFS()->get( 'spring' ), array( 'p' => array( 'class' => ''), 'ol' => array( 'class' => ''), 'li' => array( 'class' => '') ))?>
+					</div>
+				</div>
+			</div>	
+			<div class='container button-box'>
+				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
 			</div>
 		</section>
 
@@ -196,28 +241,38 @@ get_header(); ?>
 			<button class="back-button">Back</button>
 			<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'tuition_page_title' ))?></h1>
 			<?php $program_fees_box1 = CFS()->get( 'program_fees_box' );?>
-			<ul>
+			<ul class='fees-box-set'>
 				<?php 
 				foreach ( $program_fees_box1 as $element ) {?>	
-					<li>
-						<div>
+					<li class='fees-box'>
+					
 							<h2> <?php echo esc_html($element['box_title']); ?></h2>
 							<?php echo wp_kses($element['blurb'], array( 'p' => array( 'class' => '' ) ) ); ?>
-							<ul>	
+							<ul class='fees-inner-box'>	
 								<?php 		
 								$inner_loop = $element['fees_box'];	
 
-								foreach($inner_loop as $value){ ?>
-									<li> <?php echo esc_html($value['type_of_fee']); ?></li>
-									<li> <?php echo esc_html($value['fee_amount']); ?></li>
+								foreach($inner_loop as $value){ 
+									if(!empty($value['type_of_fee'])): ?>
+										<li class='fee'> <?php echo esc_html($value['type_of_fee']); ?></li>
+										<li class='amount'> <?php echo esc_html($value['fee_amount']); ?></li>
+									
+									<?php elseif(empty($value['type_of_fee']) && !empty($value['fee_amount'])): ?>
+										<li class='amount' id='fee-empty'> <?php echo esc_html($value['fee_amount']); ?></li>
+									<?php endif;?>
+									
 								<?php 
 								} ?>
 							</ul>
-						</div>
+						
 					</li>
 				<?php 
 				}?>
 			</ul>
+
+			<div class='container button-box'>
+				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+			</div>
 		</section>
 
 		<section class='program-section certificates-and-hiring-partners container hidden'>

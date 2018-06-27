@@ -3,26 +3,67 @@
     .site-header{
         position: initial;
     }
+    .hero-image{
+        height: 45vh!important;
+    }
    
     
     //program overview section
         .blurb{
             display: none;
+            @include desktop{
+                display: initial;
+            }
         }
         .overview-text{
             
             p{
                 margin-top: 3.14rem;
+                margin-bottom: 4rem;
             }
-            p:nth-child(2){
+            p:last-child{
                 display: none;
-                
+
             }
-        
         }
         .hightlights{
-            display: none;
+            display: grid;
+            grid-template-columns: 1fr 9fr;
+            .order-number{
+                background: $color_brand-secondary;
+                color: $color__background-body;
+                font-family: $font_text-copy;
+                font-size: 1.42rem;
+                display: flex;
+                justify-content: center;
+               
+
+                &::after{
+                    content:'.';
+                }
+                @include desktop{
+                    font-size: 2rem;
+                    align-items: center; 
+                }
+            }
+            .highlight{
+                padding:0.5rem 1rem;
+            }
+            li:nth-child(4n-6) {
+                background: $color_secondary-light;
+            }
         }
+
+        .read-more{
+            @include secondary-blue;
+            font-size: $font_size-main-desktop;
+            position: relative;
+            top: 3rem;
+            align-items: center;
+        }
+
+
+
         .program-type{
             display: flex;
             .box-section{
@@ -52,10 +93,19 @@
 
 
             //mobile program menu
+
+
+
                 .section-navigation-mobile{
                     width: 100%;
                     display: flex;
                     flex-direction: column;
+                    @include desktop{
+                        position: sticky;
+                        top: 300px; //edit this value
+                    }
+                    
+
                     .section-navigation-option{
                         display: flex;
                         align-items: center;
@@ -68,11 +118,43 @@
                         color: $color__background-body;
                         padding-left: 7.5%;   
                         min-width:400px; 
+                        @include desktop{
+                            margin:0;
+                            color:$color_text-main;
+                          
+                            background:url(http://tamwood.van.cp.academy.red/wp-content/uploads/2018/06/outlined.png);
+                            background-size: 233px 123px;
+                            background-position: center;
+                            height: 90px;
+                            width:200px;
+                            min-width: 200px;
+
+                            padding: 14px;
+                            p{
+                                font-size: 16px;
+                            }
+                            &:hover{
+                                background:url(http://tamwood.van.cp.academy.red/wp-content/uploads/2018/06/filled.png);
+                                background-size: 233px 123px;
+                                background-position: center;
+                                height: 90px;
+                                width:200px;
+                                min-width: 200px;
+                                color:$color__background-body;
+                            }
+                            
+                        }
                     }
                     .option-5{
                         order:-1;
                     }
                 }
+
+
+
+
+
+
             //End of program menu 
         .button-box{
             display: flex;
@@ -93,7 +175,7 @@
             .detail{
             margin: 0 auto;
             margin-bottom:4.07rem;
-            width: 68%;
+            // width: 68%; delete if not needed
             display: flex;
             align-items: center;
             text-align: center;
@@ -216,53 +298,152 @@
     //end program course section
 
 
-
     // Requirements section
 
 
-    
-    .one-requirement{
-        margin-bottom: 1.35rem;
-        list-style:decimal;
-        display:list-item; 
-       
-        .requirement-description{
-            margin: 1rem 0 1rem 3rem;
-            p{
-                list-style:disc outside none;
-                display:list-item; 
-            }
-        }
-    }
-    .one-requirement:nth-of-type(1){
-        display:flex;
-        align-items: center;
-        .requirement-description{
-            margin: 0;
-            p{
-                padding-left: 1rem;
+        
+        .one-requirement{
+            position: relative;
+            margin-bottom: 1.35rem;
+            //ol list counter
+            counter-increment: step-counter;
+            &:before {
+                content: counter(step-counter);
+                position: absolute;
+                left: -1.42rem;
                 color: $color_brand-secondary;
-                list-style: none;
+                font-size: 1.57rem;
+                font-family:$font_text-copy;
+            }
+            //end of ol list counter 
+            .requirement-description{
+                margin: 1rem 0 1rem 3rem;
+                p{
+                    list-style:disc outside none;
+                    display:list-item; 
+                }
             }
         }
-    }
-    .requirements-notes{
-        background: $color_secondary-light;
-        p{
-            padding:1rem;
+        .one-requirement:nth-of-type(1){
+            display:flex;
+            align-items: center;
+            .requirement-description{
+                margin: 0;
+                p{
+                    padding-left: 1rem;
+                    color: $color_brand-secondary;
+                    list-style: none;
+                    font-size: 1.42rem;
+                }
+            }
         }
-    }
-
-
-
-
-
+        .requirements-notes{
+            background: $color_secondary-light;
+            p{
+                padding:1rem;
+            }
+        }
 
     // End of  Requirements section
 
 
+    // Start Dates section
+        
+        .term{
+            height: 11.7rem;
+            background: $color_secondary-light;
+            margin: 0 auto 3rem auto;
+            h2{
+                background:$color_brand-secondary;
+                text-transform: uppercase;
+                color:$color__background-body;
+                text-align: center;
+                font-weight: 600;
+            }
+            .inner-box{
+                font-size: 1.14rem;
+                padding: 0.85rem 1.7rem;
+            }
+            // li{
+               
+
+            // }
+        }
 
 
+    // End of Start Dates section
+
+
+    //Tuition and Fees Section
+        .fees-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 3px $color_brand-secondary solid;
+            &:not(:last-child){
+                margin-bottom: 3.2rem;
+            }
+            @include desktop{
+                width: 403px;
+            }
+            h2{
+                height: 60px;
+                width:100%;
+                background:$color_brand-secondary;
+                text-transform: uppercase;
+                color: $color__background-body;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                
+
+            }
+
+            p{
+                padding: 0 7.5%;
+                margin-top: 1.5rem;
+                
+            }
+            
+            .fees-inner-box{
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                width: 75%;
+                margin: 1.5rem 0;
+                .fee,
+                .amount{
+                    height: 4.5rem;
+                    display:flex;
+                    align-items: center;
+                    padding-left: 0.5rem;
+                }
+                .amount{
+                    justify-content: center;
+                }
+                li:nth-child(4n-7) {
+                    background: $color_secondary-light;
+                }
+                li:nth-child(4n-6) {
+                    background: $color_secondary-light;
+                }
+                //highlight last line in a table with dark purple 
+               
+                // li:nth-last-child(2){
+                //     background:$color_brand-secondary;
+                // }
+                //------------------
+            }
+            #fee-empty {
+              grid-column: 1 / -1;
+              background:$color_brand-secondary;
+                    color:$color__background-body;
+                    font-size: 16px;
+                    font-weight: 500;
+            }
+        }   
+        
+    //End of Tuition and Fees Section
 
 }
 .hidden {
