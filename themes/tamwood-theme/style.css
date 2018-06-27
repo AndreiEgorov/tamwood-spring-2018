@@ -2515,9 +2515,6 @@ object {
       .page-template-student-support .flickity-enabled .flickity-viewport .flickity-slider .is-selected {
         height: 230px !important; }
 
-.page-template-instructors section img {
-  width: 150px; }
-
 .page-template-instructors .instructor-area {
   width: 100%;
   display: -webkit-box;
