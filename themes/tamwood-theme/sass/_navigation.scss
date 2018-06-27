@@ -50,14 +50,14 @@ $menuColor: '';
         }
         li:nth-child(1) .sub-menu {
             $menuColor: $color_brand-main;
-            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
+            background-image: linear-gradient(to right, $menuColor 100%, rgba(255,255,255,0) 0%);
             a {
                 color: $menuColor;
             }
         }
         li:nth-child(2) .sub-menu {
             $menuColor: $color_brand-secondary;
-            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
+            background-image: linear-gradient(to right, $menuColor 100%, rgba(255,255,255,0) 0%);
             a {
                 color: $menuColor;
             }
@@ -65,7 +65,7 @@ $menuColor: '';
         li:nth-child(3) .sub-menu,
         li:nth-child(4) .sub-menu {
             $menuColor: $color_brand-tertiary;
-            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
+            background-image: linear-gradient(to right, $menuColor 100%, rgba(255,255,255,0) 0%);
             a {
                 color: $menuColor;
             }
@@ -92,8 +92,8 @@ $menuColor: '';
     .sub-menu {
         height: 0;
         overflow: hidden;
-        background-size: 222px 9px;
-        background-repeat: repeat-x;
+        background-size: 67px 9px;
+        background-repeat: no-repeat;
         white-space: normal;
         @include desktop {
             width: 0;
@@ -134,14 +134,14 @@ $menuColor: '';
 
         li:nth-child(1) .sub-menu {
             $menuColor: $color_brand-main;
-            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%), linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
+            background-image: linear-gradient(to right, $menuColor 100%, rgba(255,255,255,0) 0%), linear-gradient(to right, $menuColor 100%, rgba(255,255,255,0) 0%);
             a:hover {
                 color: $menuColor;
             }
         }
         li:nth-child(2) .sub-menu {
             $menuColor: $color_brand-secondary;
-            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%), linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
+            background-image: linear-gradient(to right, $menuColor 100%, rgba(255,255,255,0) 0%), linear-gradient(to right, $menuColor 100%, rgba(255,255,255,0) 0%);
             a:hover {
                 color: $menuColor;
             }
@@ -149,7 +149,7 @@ $menuColor: '';
         li:nth-child(3) .sub-menu,
         li:nth-child(4) .sub-menu {
             $menuColor: $color_brand-tertiary;
-            background-image: linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%), linear-gradient(to right, $menuColor 33%, rgba(255,255,255,0) 0%);
+            background-image: linear-gradient(to right, $menuColor 100%, rgba(255,255,255,0) 0%), linear-gradient(to right, $menuColor 100%, rgba(255,255,255,0) 0%);
             
             a:hover {
                 color: $menuColor;
@@ -170,7 +170,7 @@ $menuColor: '';
                 text-transform: initial;
                 font-size: 1.11rem;
                 margin-left: -10px;
-                background-size: 222px 5px;
+                background-size: 53px 5px;
                 background-repeat: no-repeat;
                 background-position: left 10px top 0, left 10px bottom 0;
                 li {
@@ -191,11 +191,11 @@ $menuColor: '';
                     &:hover {
                         display: block;
                         .sub-menu {
-                            padding: 10px 10px 0;
+                            padding: 10px 15px 0 30px;
                             display: block;
                             background: white;
                             margin-left: -15px;
-                            font-size: .833rem;
+                            font-size: .8100rem;
                             font-weight: 300;
                             white-space: nowrap;
                             a {

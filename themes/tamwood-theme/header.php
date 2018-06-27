@@ -28,7 +28,7 @@
 							<img class="desktop logo-desktop" src="<?php echo get_template_directory_uri() ?>/assets/logos/tamwood-logo.svg">
 						</a>
 					</div>
-					<a class="desktop apply-now" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+					<a class="desktop apply-now" href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
 					<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85">
 				</div>
 				<div class="header-container mobile">
@@ -41,7 +41,7 @@
 					<img class="search-icon" src="<?php echo get_template_directory_uri() ?>/assets/icons/ic_search@3x.png" width="85" height="85">
 				</div>
 				<nav id="site-navigation-mobile" class="main-navigation main-navigation-mobile" role="navigation">
-					<a class="mobile apply-now" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>	
+					<a class="mobile apply-now" href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>	
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation for mobile-->
 				<nav id="site-navigation-desktop" class="main-navigation main-navigation-desktop" role="navigation">

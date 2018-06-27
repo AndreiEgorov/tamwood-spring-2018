@@ -1,4 +1,5 @@
 <?php 
+/** Template Name: Accommodation */
 get_header();
 get_template_part( 'template-parts/content', 'banner' ); ?>
 <div class="page-copy">
@@ -26,8 +27,10 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
             <div class="subsection-item">
                 <h3> <?php echo esc_html( $row[ 'location' ] ); ?> </h3>
                 <img src="<?php echo esc_url( $row[ 'location_icon' ] ); ?>">
-                <p class="price-text"> <?php echo esc_html($row['transfer_option']); ?> </p>
-                <h4> <?php echo esc_html($row['price']); ?> </h4> 
+                <div class="location-group">
+                    <p class="price-text"> <?php echo esc_html($row['transfer_option']); ?> </p>
+                    <h4> <?php echo esc_html($row['price']); ?> </h4> 
+                </div>
             </div>
         <?php   }?>
     </div> <!-- subsection-banner -->

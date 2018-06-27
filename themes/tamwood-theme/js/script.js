@@ -148,7 +148,8 @@
     }
 
 
-
+    $('select').selectric();
+    
 
 
 })(jQuery);

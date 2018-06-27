@@ -1,4 +1,5 @@
-<?php 
+<?php
+/** Template Name: Accreditations */
 get_header();
 get_template_part( 'template-parts/content', 'banner' ); ?>
 <section class="page-contents">

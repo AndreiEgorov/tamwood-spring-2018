@@ -93,6 +93,9 @@
 
 /* Why Tamwood */
 .page-id-2 {
+    .hero-image {
+        background-position: top;
+    }
     .page-copy {
         width: 85%;
         margin: 0 auto;
@@ -107,6 +110,14 @@
         @include desktop {
             display: flex;
             justify-content: space-between;
+        }
+    }
+    .page-title p {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 2.28rem;
+        padding-bottom: 0;
+        @include desktop {
+            display: inline-block;
         }
     }
     p {
@@ -221,7 +232,7 @@
             color: #ffffff;
             padding: 0.5rem 0;
             @include desktop {
-                color: $color_tertiary-light;
+                color: #C6E08B;
                 background-color: #ffffff;
                 font-weight: 800;
                 padding: 1rem 0;
@@ -262,6 +273,8 @@
         @include desktop {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
             width: 35%;
         }
     }
@@ -292,10 +305,9 @@
             padding-bottom: 2rem;
             font-weight: 200;
             @include desktop {
-                position: relative;
-                top: 11rem;
-                left: 8rem;
                 color: $color_text-main;
+                order: 3;
+                margin: 1rem 0 0 1.5rem;
             }
         }
         img {
@@ -306,23 +318,24 @@
                 padding: 0;
             }
         }
+        .location-group {
+            @include desktop {
+                margin: 1rem 0 0 1rem;
+                padding-top: 1rem;
+            }
+        }
         .price-text {
             text-align: center;
             padding: 0;
             @include desktop {
-                position: relative;
-                top: 5rem;
-                left: 1rem;
+                margin-bottom: 0;
             }
         }
         h4 {
             color: $color_brand-tertiary;
             font-weight: 500;
             @include desktop {
-                position: relative;
                 color: $color_text-main;
-                top: 7rem;
-                right: 10rem;
                 font-family: 'Merriweather', sans-serif;
             }
         }
@@ -340,5 +353,140 @@
         @include desktop {
             display: none;
         }
+    }
+}
+
+// Employment service
+.page-id-18 {
+    .page-title {
+        padding: 2rem 0;
+        @include desktop {
+            padding-bottom: 1rem;
+        }
+    }
+    .section {
+        width: 85%;
+        margin: 0 auto;
+        img {
+            width: 80%;
+            height: 80%;
+        }
+    }
+    h4 {
+        color: #C6E08B;
+    }
+    .n-1 h3, h4{
+        text-align: center;
+        padding-bottom: 1rem;
+        @include desktop {
+            text-align: initial;
+        }
+    }
+    .n-1 {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            @include desktop {
+                font-size: 3.3rem;
+                font-weight: bold;
+                color: $color_brand-tertiary;
+            }
+        }
+        h4 {
+            @include desktop {
+                font-size: 1.5rem;
+                color: $color_text-main;
+            }
+        }
+    }
+    .section-div-1 {
+        @include desktop {
+            display: flex;
+            flex-flow: row-reverse;
+            justify-content: space-between;
+        }
+    }
+    .section-div-1 p {
+        @include desktop {
+            width: 45%;
+        }
+    }
+    .info-list {
+        background-color: $color_tertiary-light;
+        padding: 1rem;
+        @include desktop {
+            width: 45%;
+            height: 7rem;
+        }
+        .fa {
+            margin-right: 1rem;
+        }
+    }
+    .footnote {
+        font-size: 0.8rem;
+        max-width: 14rem;
+        padding: 1rem 0;
+        align-self: flex-end;
+        @include desktop {
+            background-color: white;
+            margin: 2rem 0 0 13rem;
+            align-self: right;
+            padding: 0;
+            width: 100%;
+        }
+    }
+    p {
+        padding: 2rem 0;
+    }
+    .apply-now-button-1 {
+        display: none;
+        @include desktop {
+            display: inherit;
+            width: 85%;
+            margin: 0 auto;
+        }
+    }
+    .apply-button-1 {
+        @include button;
+	    text-transform: uppercase;
+	    color: #FFFFFF;
+	    border: 3px solid $color_brand-tertiary;
+        background-color: $color_brand-tertiary;
+        margin: 0;
+        margin-bottom: 4rem;
+    }
+    .n-2 {
+        text-align: center;
+        background-color: $color_tertiary-light;
+        padding: 2rem 5rem;
+        margin-bottom: 2rem;
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 3rem;
+        }
+    }
+    .info-section-item {
+        text-align: initial;
+        @include desktop {
+            width: 100%;
+            margin: 0 1rem;
+        }
+        p {
+            padding: 1rem 0;
+        }
+    }
+    .apply-now-button-2 {
+        text-align: center;
+        @include desktop {
+            display: none;
+        }
+    }
+    .apply-button-2 {
+        @include button;
+	    text-transform: uppercase;
+	    color: #FFFFFF;
+	    border: 3px solid $color_brand-tertiary;
+        background-color: $color_brand-tertiary;
     }
 }

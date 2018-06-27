@@ -1,0 +1,54 @@
+.page-id-261 {
+    h1 {
+        display: none;
+        @include desktop {
+            display: initial;
+        }
+    }
+    .thanks-for-applying {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        background-color: $color_main-light ;
+        @include desktop {
+            padding: 2rem 4rem;
+        }
+        h2 {
+            font-weight: 300;
+            padding: 1rem 0;
+            @include desktop {
+                color: $color_brand-main;
+                font-weight: 500;
+            }
+        }
+        p {
+            padding-top: 2rem;
+            text-align: initial;
+            @include desktop{
+                text-align: center;
+                padding: 2rem 4rem;
+            }
+        }
+        img {
+            @include desktop {
+                height: 328px;
+                width: 350px;
+            }
+        }
+        .close-button {
+            margin-top: 2rem;
+        }
+        .closing-button {
+            @include button;
+	        text-transform: uppercase;
+	        color: #FFFFFF;
+	        border: 3px solid $color_brand-secondary;
+            background-color: $color_brand-secondary;
+            margin: 0;
+            margin-bottom: 2rem;
+            width: 90%;
+            @include desktop {
+                width: 20%;
+            }
+        }
+    }
+}
