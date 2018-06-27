@@ -15,45 +15,7 @@ get_header(); ?>
 		<section class='program-section program-overview container'>
 			<h1><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h1>
 			<h4 class='blurb'><?php echo wp_kses((CFS()->get( 'blurb' )), array( 'p' => array( 'class' => '' ) ) );?></h4>
-			<div class='overview-text'><?php echo wp_kses((CFS()->get( 'program_overview' )),array( 'p' => '' ) );?></div>
-			
-			<?php 
-			$fields = CFS()->get( 'program_highlights_table' );
-			$fieldCheck = $fields[0]['highlight'];
-
-		
-
-
-			if(!empty($fieldCheck)):?>
-
-			<div class="button-box">
-				<a class="read-more" id="instructor-learn-more" href="#">Read More</a>
-			</div>
-
-			<?php endif;?>
-
-			
-			<ol type="1" class='hightlights'>
-			
-				<?php 
-				foreach ( $fields as $field ) {
-					if(!empty($field['highlight_number'])):?>
-
-					
-					<li class='order-number'><?php echo esc_html($field['highlight_number']); ?></li>
-					<li class='highlight'><?php echo esc_html($field['highlight']); ?></li>
-
-					<?php endif;?>
-				<?php 
-				}?>
-			</ol>
-
-
-
-
-
-
-
+			<div class='overview-text'><?php echo wp_kses((CFS()->get( 'program_overview' )),array( 'p' => '' ) );?></div>	
 
 			<?php $fields =  CFS()->get( 'program_type_section' ) ;?>
 			<ul>
@@ -75,6 +37,35 @@ get_header(); ?>
 				<?php 
 				}?>
 			</ul>
+
+				<?php 
+			$fields = CFS()->get( 'program_highlights_table' );
+			$fieldCheck = $fields[0]['highlight'];?>
+
+			<ol type="1" class='highlightsListHidden'>
+				
+				<?php 
+				foreach ( $fields as $field ) {
+					if(!empty($field['highlight_number'])):?>
+
+					
+					<li class='order-number'><?php echo esc_html($field['highlight_number']); ?></li>
+					<li class='highlight'><?php echo esc_html($field['highlight']); ?></li>
+
+					<?php endif;?>
+				<?php 
+				}?>
+			</ol>
+
+			<?php if(!empty($fieldCheck)):?>
+
+			<div class="button-box">
+				<a class="read-more" >Read More</a>
+			</div>
+
+			<?php endif;?>
+
+
 		</section>
 
 		<section class="program-section program-nav">

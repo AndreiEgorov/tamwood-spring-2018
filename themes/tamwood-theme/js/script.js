@@ -49,7 +49,7 @@
         $mainNavigation.removeClass('toggled');
         $hamburgerMenu.removeClass('is-active');
     });
-    $searchBar.on('blur', function(){
+    $searchBar.on('blur', function () {
         $searchBar.removeClass('reveal');
     });
 
@@ -107,6 +107,29 @@
             element.removeClass(nameOfClass);
         }
     }
+    //_____End of instructor-info button
+
+    //Read more button on a program page.
+    var $learnMoreButton = $('.read-more');
+    var $highlightsListHidden = $('.highlightsListHidden')
+
+    $learnMoreButton.on('click', function (event) {
+        event.preventDefault();
+        console.log('hasdfs')
+        showTable($highlightsListHidden, 'hightlights');
+    });
+
+    function showTable(element, nameOfClass) {
+        if (!element.hasClass(nameOfClass)) {
+            element.addClass(nameOfClass);
+        } else {
+            element.removeClass(nameOfClass);
+        }
+    }
+
+
+
+    //end of button on a program page
 
     // flickity carousel  front page
 
@@ -149,7 +172,7 @@
 
 
     $('select').selectric();
-    
+
 
 
 })(jQuery);

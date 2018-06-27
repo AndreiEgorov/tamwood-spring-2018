@@ -25,7 +25,8 @@
 
             }
         }
-        .hightlights{
+        .hightlights,
+        .highlightsListShown{
             display: grid;
             grid-template-columns: 1fr 9fr;
             .order-number{
@@ -52,7 +53,7 @@
                 background: $color_secondary-light;
             }
         }
-
+    //Read-more button shown with a highlights class table
         .read-more{
             @include secondary-blue;
             font-size: $font_size-main-desktop;
@@ -60,7 +61,15 @@
             top: 3rem;
             align-items: center;
         }
+       
+        .highlightsListHidden{
+            display: none;
+        }
+        .hightlights{
+            display: grid;
+        }
 
+    //end of Read-more button
 
 
         .program-type{
