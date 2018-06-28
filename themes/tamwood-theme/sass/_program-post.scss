@@ -1,20 +1,50 @@
 .single-program{
     // min-width: 375px;
+    .entry-title{
+        margin-top: 2rem;
+    }
     .site-header{
         position: initial;
     }
     .hero-image{
         height: 45vh!important;
+        
     }
-   
+   .container{
+       @include desktop{
+        width: 58%;
+      
+       
+    }
+    .back-button{
+        color:white;
+        border: 1px solid $color_brand-secondary;
+        background:$color_brand-secondary;
+        padding: 0.5rem 1rem;
+        // font-family: $font_text-copy;
+        font-weight: bold;
+        margin-top: 1rem;
+        padding-bottom: 8px;
+        line-height: 1rem;
+        
+    }
+      
+
+   }
     
     //program overview section
         .blurb{
             display: none;
             @include desktop{
                 display: initial;
+                font-size: 1rem;
+                padding: 2rem;
+               
+                
+              
             }
         }
+
         .overview-text{   
             p{
                 margin-top: 3.14rem;
@@ -22,6 +52,9 @@
             }
             p:last-child{
                 display: none;
+                @include desktop{
+                    display: initial;
+                }
 
             }
         }
@@ -57,13 +90,46 @@
         .read-more{
             @include secondary-pink;
             font-size: $font_size-main-desktop;
-           
             top: 3rem;
+            @include desktop{
+                display: none;
+            }
             // align-items: center;
         }
        
         .highlightsListHidden{
             display: none;
+            @include desktop{
+                display: grid;
+                grid-template-columns: 1fr 9fr;
+                margin-top: 3.2rem;
+                margin-bottom: 3.2rem;
+                
+                .order-number{
+                    background: $color_brand-secondary;
+                    color: $color__background-body;
+                    font-family: $font_text-copy;
+                    font-size: 1.42rem;
+                    display: flex;
+                    justify-content: center;
+                   
+    
+                    &::after{
+                        content:'.';
+                    }
+                    @include desktop{
+                        font-size: 2rem;
+                        align-items: center; 
+                    }
+                }
+                .highlight{
+                    padding:0.5rem 1rem;
+                }
+                li:nth-child(4n-6) {
+                    background: $color_secondary-light;
+                }
+            }
+            
         }
         .hightlights{
             display: grid;
@@ -77,8 +143,10 @@
             display: flex;
             .box-section{
                 margin-bottom:1rem;
+                margin-top: 1rem;
                 width: 100%;
                 text-align: center;
+
                 .box-title{
                     margin-bottom: 1rem;
                 }
@@ -87,6 +155,7 @@
                     justify-content: space-between;
                     .box{ 
                         flex-basis: 48%;
+                        
                         h4{
                             border:3px solid $color_brand-secondary;
                             height: 115px; 
@@ -94,6 +163,10 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            @include desktop{
+                                height: 296px;
+                                font-size: 2rem;
+                            }
                         }
                     }
                 }
@@ -101,80 +174,110 @@
         }
             //mobile program menu
 
-
-
-                .section-navigation-mobile{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
+                .program-nav{
                     @include desktop{
-                        position: sticky;
-                        top: 300px; //edit this value
+                        position: absolute;
+                        top: 604px;
                     }
-                    
-
-                    .section-navigation-option{
+                    .section-navigation-mobile{
+                        width: 100%;
                         display: flex;
-                        align-items: center;
-                        background-position-y: center;
-                        background-size: contain;
-                        background-color: $color_brand-secondary;
-                        margin:3px 0;
-                        height: 34px;
-                        font-size: 1.28rem;
-                        color: $color__background-body;
-                        padding-left: 7.5%;   
-                        min-width:400px; 
+                        flex-direction: column;
                         @include desktop{
-                            margin:0;
-                            color:$color_text-main;
-                          
-                            background:url(http://tamwood.van.cp.academy.red/wp-content/uploads/2018/06/outlined.png);
-                            background-size: 233px 123px;
-                            background-position: center;
-                            height: 90px;
-                            width:200px;
-                            min-width: 200px;
-
-                            padding: 14px;
-                            p{
-                                font-size: 16px;
-                            }
-                            &:hover{
-                                background:url(http://tamwood.van.cp.academy.red/wp-content/uploads/2018/06/filled.png);
+                            // position: sticky;
+                            // top: 50px; //edit this value
+                        }
+                        .section-navigation-option{
+                            display: flex;
+                            align-items: center;
+                            background-position-y: center;
+                            background-size: contain;
+                            background-color: $color_brand-secondary;
+                            margin:3px 0;
+                            height: 34px;
+                            font-size: 1.28rem;
+                            color: $color__background-body;
+                            padding-left: 7.5%;   
+                            // min-width:400px; 
+                            @include desktop{
+                                margin:0;
+                                color:$color_text-main;
+                              
+                                background:url(http://tamwood.van.cp.academy.red/wp-content/uploads/2018/06/outlined.png);
                                 background-size: 233px 123px;
                                 background-position: center;
                                 height: 90px;
                                 width:200px;
                                 min-width: 200px;
-                                color:$color__background-body;
+    
+                                padding: 14px;
+                                p{
+                                    font-size: 16px;
+                                }
+                                &:hover{
+                                    background:url(http://tamwood.van.cp.academy.red/wp-content/uploads/2018/06/filled.png);
+                                    background-size: 233px 123px;
+                                    background-position: center;
+                                    height: 90px;
+                                    width:200px;
+                                    min-width: 200px;
+                                    color:$color__background-body;
+                                }
+                                
                             }
-                            
+                        }
+                        .option-5{
+                            order:-1;
                         }
                     }
-                    .option-5{
-                        order:-1;
-                    }
+    
+    
                 }
-
-
-
-
 
 
             //End of program menu 
         .button-box{
             display: flex;
             justify-content: center;
-            .apply-button{
+            
+
+            .apply-button.button1{
                 @include primary-pink{
                     display: inline-block;
                     // padding: 20px 18px;
                     font-size:18px;
                 }
-            }   
+                @include desktop{
+                    display: none;
+                }
+            }  
+            .apply-button.button2{
+                @include primary-pink{
+                    display: none;
+
+                    
+                    // padding: 20px 18px;
+                    font-size:18px;
+                }
+                @include desktop{
+                    display: inline-block;
+                    // &.hidden{
+                    //     display: none;
+                    // }
+                    
+                }
+            }  
+            &.hidden{
+                display: none;
+            } 
         }
         .details{  
+            @include desktop{
+                display: flex;
+                &.hidden{
+                    display: none;
+                }
+            }
             .detail{
             margin: 0 auto;
             margin-bottom:4.07rem;
@@ -183,6 +286,9 @@
             align-items: center;
             text-align: center;
             flex-direction: column;
+            @include desktop{
+                width: 33%;
+            }
                 .icon{
                     height: 55px;
                 }
@@ -232,6 +338,8 @@
                 }
                 li:nth-child(-n+3){
                     background:$color_brand-secondary;
+                    color: $color__background-body;
+                    font-size: 1.42rem
                 }
             
                 .course-subject:nth-child(even){
@@ -264,6 +372,7 @@
                 .text-block-title{
                     font-weight: 300;
                     text-transform: uppercase;
+                    
 
                 }
                 .text{
@@ -341,39 +450,77 @@
 
 
     // Start Dates section
-        
-        .term{
-            height: 11.7rem;
-            background: $color_secondary-light;
-            margin: 0 auto 3rem auto;
-            h2{
-                background:$color_brand-secondary;
-                text-transform: uppercase;
-                color:$color__background-body;
-                text-align: center;
-                font-weight: 600;
+        .terms{
+            @media screen and (min-width: 525px){
+                display: flex;
+                flex-wrap: wrap;
             }
-            .inner-box{
-                font-size: 1.14rem;
-                padding: 0.85rem 1.7rem;
+            @include desktop{
+                display: flex;
+                flex-wrap: wrap;
             }
-            // li{
-               
-
-            // }
+           h1{
+            @media screen and (min-width: 525px){
+                flex-basis: 100%;
+            }   
+            @include desktop{
+                flex-basis: 100%
+            }
+           }
+            .term{
+                height: 11.7rem;
+                background: $color_secondary-light;
+                margin: 0 auto 3rem auto;
+                @media screen and (min-width: 525px){
+                    flex-basis: 48%;
+                }
+                @include desktop{
+                    flex-basis: 48%;
+    
+                }
+                h2{
+                    background:$color_brand-secondary;
+                    text-transform: uppercase;
+                    color:$color__background-body;
+                    text-align: center;
+                    font-weight: 600;
+                    
+                }
+                .inner-box{
+                    font-size: 1.14rem;
+                    padding: 0.85rem 1.7rem;
+                }
+                // li{
+                   
+    
+                // }
+            }
         }
+        
 
 
     // End of Start Dates section
 
 
     //Tuition and Fees Section
+       .fees-box-set{
+           @include desktop{
+               display: flex;
+               flex-wrap: wrap;
+                justify-content: space-around;
+           }
         .fees-box{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             border: 3px $color_brand-secondary solid;
+            @include desktop{
+                flex-basis: 48%;
+                justify-content: flex-start;
+                
+                
+            }
             &:not(:last-child){
                 margin-bottom: 3.2rem;
             }
@@ -434,9 +581,85 @@
                     font-size: 16px;
                     font-weight: 500;
             }
-        }   
+        } 
+       }
+          
         
     //End of Tuition and Fees Section
+
+
+    //Certificates and hiring partners section:
+    .certificates-and-hiring-partners{
+        @include desktop{
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        &.hidden{
+            @include desktop{
+                display: none;
+            }
+        }
+        
+        .certificates-and-partners{
+            margin-top:1.5rem;
+            text-transform: uppercase;
+            font-size: 2.28rem;
+            font-weight: 700;
+
+        }
+        .logo-box{
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border: 3px solid $color_brand-secondary;
+            margin: 1.64rem auto;
+            padding: 1.85rem;
+            width: 327px;
+           @include desktop{
+               flex-basis: 48%;
+               justify-content: space-between;
+               display: initial;
+           } 
+            .program-heading{
+                display:flex;
+                flex-basis: 100%;
+                justify-content: center;
+                padding: 1rem 0;
+                margin-bottom:0;
+                font-weight: 300;
+                @include desktop {
+                    font-size: 2rem;
+                    justify-content: space-around;
+                }
+               
+                
+            }
+            .logos{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+               
+                // max-width: 327spx;
+                img{
+                    height: 60px;
+                    margin: 0.25rem;
+                    @include desktop{
+                        height: 65px;
+                    }
+                }
+            }
+            .box-text{
+                padding-top: 1rem;
+            }
+            
+        }
+    }  
+    
+
+    //End of Certificates and hiring partners section
+
 
 }
 .hidden {

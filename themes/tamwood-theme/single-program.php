@@ -60,7 +60,7 @@ get_header(); ?>
 			<?php if(!empty($fieldCheck)):?>
 
 			<div class="button-box">
-				<a class="read-more" >Read More</a>
+				<a class="read-more" >Learn More</a>
 			</div>
 
 			<?php endif;?>
@@ -68,7 +68,7 @@ get_header(); ?>
 
 		</section>
 
-		<section class="program-section program-nav">
+		<section class="program-section program-nav program-nav-desktop ">
 		<!-- Nav -------------------------- -->
 			<ul class='section-navigation-mobile'>
 				<?php 
@@ -85,7 +85,7 @@ get_header(); ?>
 			</ul>
 		<!-- End Nav -------------------------- -->
 		<div class='container button-box'>
-			<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+			<a class='apply-button button1' href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
 		</div>
 		</section>
 		
@@ -128,10 +128,21 @@ get_header(); ?>
 					}?>
 			</div>
 			</ul>
+
+
+		
 		</section>
 
+		<div class='container button-box program-section'>
+			<a class='apply-button button2' href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
+		</div>
+
+
 		<section class="program-section courses container hidden">
-			<button class="back-button">Back</button>
+		
+		
+		<i class="fa fa-chevron-left back-button" aria-hidden="true"> Back </i>
+			
 			<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'courses_page_title' ))?></h1>
 			<?php $course = CFS()->get( 'course' );?>
 			<ul class='courses-table'>
@@ -163,13 +174,13 @@ get_header(); ?>
 				}?>
 			</ul>
 			<div class='container button-box'>
-				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
 			</div>
 			
 		</section>
 
 		<section class="program-section requirements container hidden">
-			<button class="back-button">Back</button>
+		<i class="fa fa-chevron-left back-button" aria-hidden="true"> Back </i>
 			
 			<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'requirements_page_title' ))?></h1>
 			<?php $requirements = CFS()->get( 'requirements' );
@@ -182,7 +193,7 @@ get_header(); ?>
 			<div class='requirements-notes'><?php echo wp_kses(CFS()->get( 'requirements_notes' ), array( 'p' => array( 'class' => '') ) )?></div>
 		
 			<div class='container button-box'>
-				<a class='apply-button' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+				<a class='apply-button' href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
 			</div>
 		</section>
 		
@@ -195,7 +206,7 @@ get_header(); ?>
 		
 		<section class='program-section start-dates container hidden'>
 			
-			<button class="back-button">Back</button>
+		<i class="fa fa-chevron-left back-button" aria-hidden="true"> Back </i>
 			<div class='terms'>
 				<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'start_dates_page_title' ))?></h1>
 				<div class='term'>
@@ -224,12 +235,12 @@ get_header(); ?>
 				</div>
 			</div>	
 			<div class='container button-box'>
-				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
 			</div>
 		</section>
 
 		<section class='program-section program-fees container hidden'>
-			<button class="back-button">Back</button>
+		<i class="fa fa-chevron-left back-button" aria-hidden="true"> Back </i>
 			<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'tuition_page_title' ))?></h1>
 			<?php $program_fees_box1 = CFS()->get( 'program_fees_box' );?>
 			<ul class='fees-box-set'>
@@ -262,30 +273,51 @@ get_header(); ?>
 			</ul>
 
 			<div class='container button-box'>
-				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
 			</div>
 		</section>
 
 		<section class='program-section certificates-and-hiring-partners container hidden'>
-			<button class="back-button">Back</button>
-			<div class="certificates-box">
+		<i class="fa fa-chevron-left back-button" aria-hidden="true"> Back </i>
+		<?php 
+				$props = CFS()-> get_field_info( 'certificates_and_hiring_partners' );?>
+			<h2 class='certificates-and-partners'><?php echo $props['label'];?></h2>
+		<div class="logo-box">
+				
 				<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'certificates_box_title' )) ?></h1>
-				<?php 
-				$c_logos = CFS()->get( 'certificates_logos' );
+				<div class='logos'>
+					<?php 
+					$c_logos = CFS()->get( 'certificates_logos' );
 
-				foreach ( $c_logos as $c_logo ) {
-					echo '<img src=" ' . esc_url($c_logo['logo']) . '" alt="" />';
-				}?>
+					foreach ( $c_logos as $c_logo ) {
+						echo '<img src=" ' . esc_url($c_logo['logo']) . '" alt="" />';
+						
+					}?>
+				</div>
+				<p class='box-text'><?php echo wp_kses( CFS()->get('certificate_box_text'),array('p'));?></p>
+
 			</div>
 			
-			<div class="partners-box">
+			<div class="logo-box">
 				<h1 class="program-heading"><?php echo esc_html(CFS()->get( 'hiring_partners_title' )) ?></h1>
-				<?php 
-				$p_logos = CFS()->get( 'partners_logos' );
+				
+				<div class='logos'>
+				
+					<?php 
 
-				foreach ( $p_logos as $p_logo ) {
-					echo '<img src=" ' . esc_url($p_logo['logo']) . '" alt="" />';
-				}?>
+					$p_logos = CFS()->get( 'partners_logos' );
+
+					foreach ( $p_logos as $p_logo ) {
+						echo '<img src=" ' . esc_url($p_logo['logo']) . '" alt="" />';
+					}?>
+
+				</div>
+				<p class='box-text'><?php echo wp_kses( CFS()->get('hiring_partners_text'),array('p'));?></p>
+
+			</div>
+
+			<div class='container button-box'>
+				<a class='apply-button ' href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
 			</div>
 
 		</section>
@@ -294,3 +326,7 @@ get_header(); ?>
 </div><!-- #primary -->
 
 <?php get_footer(); ?>
+
+
+ $transfer_props = CFS()->get_field_info(  );
+        echo esc_html($transfer_props['label']);

@@ -80,7 +80,7 @@
         $('.program-nav').removeClass('hidden');
         $('.details').removeClass('hidden');
     });
-    $('.close-checklist').on('click', function() {
+    $('.close-checklist').on('click', function () {
         $('.document-checklist.mobile').addClass('hidden');
     });
 
@@ -123,8 +123,7 @@
         event.preventDefault();
 
         showTable($highlightsListHidden, 'hightlights');
-        // changeButtonText($highlightsListHidden);
-        console.log($learnMoreButton);
+
     });
 
     function showTable(element, nameOfClass) {
@@ -194,6 +193,38 @@
 
     $('select').selectric();
 
+
+    var windowsize = $(window).width();
+    function device() {
+
+        if (windowsize >= 768) {
+
+            $(window).scroll(function () {
+                var yPos = $(window).scrollTop();
+                if (yPos > 604) {
+
+                    $('.program-nav').css({
+                        'position': 'fixed',
+                        'top': '0'
+                    });
+
+                }
+                else {
+
+                    $('.program-nav').css({
+                        'position': 'absolute',
+                        'top': 604
+                    });
+                }
+            });
+        } else {
+            $('.program-nav').css({
+                'position': 'initial',
+                'top': 'inherit'
+            });
+        }
+    }
+    device();
 
 
 })(jQuery);
