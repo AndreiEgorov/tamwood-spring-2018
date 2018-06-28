@@ -27,11 +27,8 @@
      * Accordion Menus
      */
     $subMenuToggle.on('click', function () {
-        //evt.preventDefault();
-        // $subMenuToggle.removeClass('selected');
         toggleState($(this), 'selected');
         toggleState($(this).next($subMenu), 'show');
-        // $subMenuToggle.toggleClass('test');
     });
     $('.toggle-menu').on('click', function () {
         toggleState($(this).prevAll('a'), 'selected');
@@ -49,13 +46,12 @@
         $mainNavigation.removeClass('toggled');
         $hamburgerMenu.removeClass('is-active');
     });
-    $searchBar.on('blur', function(){
+    $searchBar.on('blur', function () {
         $searchBar.removeClass('reveal');
     });
 
     $sectionNav.on('click', function (evt) {
         evt.preventDefault();
-        // $('.program-heading').prepend('<button class="back-button">Back</button>');
         if ($(this).hasClass('option-1')) {
             $('.program-section').addClass('hidden');
             toggleState($('.courses'), 'hidden');
@@ -74,15 +70,13 @@
         }
     });
     $backButton.on('click', function () {
-        // evt.preventDefault();
-        // $backButton.addClass('hidden');
         $('.program-overview').removeClass('hidden');
         $('.program-nav').removeClass('hidden');
         $('.details').removeClass('hidden');
     });
-    $('.close-checklist').on('click', function() {
-        $('.document-checklist.mobile').addClass('hidden');
-    });
+    // $('.close-checklist').on('click', function() {
+    //     $('.document-checklist.mobile').addClass('hidden');
+    // });
 
     function toggleState(elem, className) {
         if (!elem.hasClass(className)) {
@@ -110,6 +104,29 @@
             element.removeClass(nameOfClass);
         }
     }
+    //_____End of instructor-info button
+
+    //Read more button on a program page.
+    var $learnMoreButton = $('.read-more');
+    var $highlightsListHidden = $('.highlightsListHidden');
+
+
+    $learnMoreButton.on('click', function (event) {
+        event.preventDefault();
+
+        showTable($highlightsListHidden, 'hightlights');
+    });
+
+    function showTable(element, nameOfClass) {
+        if (!element.hasClass(nameOfClass)) {
+            element.addClass(nameOfClass);
+
+        } else {
+            element.removeClass(nameOfClass);
+        }
+    }
+
+    //end of button on a program page
 
     // flickity carousel  front page
 
@@ -131,7 +148,6 @@
             contain: true,
             prevNextButtons: false,
             pageDots: false,
-            // cellAlign: 'left',
         });
     }
 
@@ -152,7 +168,39 @@
 
 
     $('select').selectric();
-    
+
+
+    var windowsize = $(window).width();
+    function device() {
+
+        if (windowsize >= 768) {
+
+            $(window).scroll(function () {
+                var yPos = $(window).scrollTop();
+                if (yPos > 604) {
+
+                    $('.program-nav').css({
+                        'position': 'fixed',
+                        'top': '0'
+                    });
+
+                }
+                else {
+
+                    $('.program-nav').css({
+                        'position': 'absolute',
+                        'top': 604
+                    });
+                }
+            });
+        } else {
+            $('.program-nav').css({
+                'position': 'initial',
+                'top': 'inherit'
+            });
+        }
+    }
+    device();
 
 
 })(jQuery);

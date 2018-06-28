@@ -17,22 +17,8 @@ get_header(); ?>
                     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
                 </header>
                 <div class="entry-content">
-                    <div class="document-checklist mobile">
-                        <div class="document-checklist-inner">
-                            <?php    
-                            $checklist_props = CFS()->get_field_info( 'document_checklist' ); ?>
-                            <h3><?php echo esc_html( $checklist_props['label'] ); ?> </h3>
-                            <p><?php echo esc_html( CFS()->get( 'document_checklist' )); ?></p>
-                            <ul>
-                            <?php $documents = CFS()->get( 'documents' );
-                                foreach ( $documents as $document ) { ?>
-                                <li><i class="fa fa-check"></i><?php echo esc_html($document['document']);?></li> <?php
-                                }?>
-                            </ul>
-                        </div>
-                        <button class="close-checklist">Next</button>
-                    </div>
-                    <div class="document-checklist desktop">
+
+                    <div class="document-checklist">
                         <?php    
                         $checklist_props = CFS()->get_field_info( 'document_checklist' ); ?>
                         <h3 class="checklist-heading"><?php echo esc_html( $checklist_props['label'] ); ?> </h3>

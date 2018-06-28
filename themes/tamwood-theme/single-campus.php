@@ -19,7 +19,7 @@ get_header(); ?>
         
 
         <div class='button-box '>
-            <a class="apply-button-green desktop-shown" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+            <a class="apply-button-green desktop-shown" href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
         </div>
 
         
@@ -55,7 +55,7 @@ get_header(); ?>
         </div>
 
          <div class='button-box'>
-            <a class="apply-button-green" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+            <a class="apply-button-green" href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
         </div>
 
        

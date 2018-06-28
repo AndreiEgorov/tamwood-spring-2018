@@ -1,5 +1,5 @@
 <?php
-/** Template Name: Accreditations */
+
 get_header();
 get_template_part( 'template-parts/content', 'banner' ); ?>
 <section class="page-contents">
@@ -20,7 +20,7 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
             </div>
         <?php } ?>
         <div class="apply-now-button">
-            <a href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+            <a href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
         </div>
     </section>
 <?php get_footer(); ?>

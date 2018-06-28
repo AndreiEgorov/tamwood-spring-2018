@@ -1,10 +1,10 @@
 <?php 
-/** Template Name: Our Instructors */
-get_header();
-get_template_part( 'template-parts/content', 'banner' ); ?>
 
-<!-- Test Area , Andrei -->
-<h1>------------------------------</h1>
+get_header();
+
+ ?>
+
+        
 <div class="instructors-carousel">
 
 <?php $loop = CFS()->get( 'instructors' );
@@ -34,18 +34,4 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
         <?php   
     }?>
 </div>
-
-<h1>------------------------------</h1>
-
-<section>
-    <?php $loop = CFS()->get( 'instructors' );
-        foreach ( $loop as $row ) {?>
-        <div>
-            <img src="<?php echo esc_url($row['instructor_image']); ?>">
-            <h3><?php echo esc_html($row['instructor_name']); ?></h3>
-            <h4><?php echo esc_html($row['instructor_position']); ?></h4>
-            <p><?php echo wp_kses( $row['instructor_info'], array( 'p' => array( 'class' => '' ) ) );?></p>
-        </div>
-       <?php }?>
-</section>
 <?php get_footer(); ?>

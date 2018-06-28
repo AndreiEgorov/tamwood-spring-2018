@@ -9,7 +9,6 @@ select,
 textarea {
 	color: $color_text-main;
 	font-family: $font_text-main;
-	// @include font-size(1);
 	line-height: $font__line-height-body;
 }
 html{
