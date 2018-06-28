@@ -98,12 +98,7 @@ get_header(); ?>
 
 		</section>
 
-<<<<<<< HEAD
-		<section class="program-section program-nav program-nav-desktop ">
-		<!-- Nav -------------------------- -->
-=======
 		<section class="program-section program-nav">
->>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
 			<ul class='section-navigation-mobile'>
 				<?php 
 				$section_option = CFS()->get( 'section_option' );

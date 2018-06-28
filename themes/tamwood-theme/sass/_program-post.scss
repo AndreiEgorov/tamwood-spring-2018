@@ -1,11 +1,8 @@
 .single-program{
-<<<<<<< HEAD
     // min-width: 375px;
     .entry-title{
         margin-top: 2rem;
     }
-=======
->>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
     .site-header{
         position: initial;
     }
@@ -176,15 +173,10 @@
             }
         }
             //mobile program menu
-<<<<<<< HEAD
-
-                .program-nav{
-=======
                 .section-navigation-mobile{
                     width: 100%;
                     display: flex;
                     flex-direction: column;
->>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
                     @include desktop{
                         position: absolute;
                         top: 604px;
@@ -244,10 +236,6 @@
     
                 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
             //End of program menu 
         .button-box{
             display: flex;

@@ -74,15 +74,9 @@
         $('.program-nav').removeClass('hidden');
         $('.details').removeClass('hidden');
     });
-<<<<<<< HEAD
-    $('.close-checklist').on('click', function () {
-        $('.document-checklist.mobile').addClass('hidden');
-    });
-=======
     // $('.close-checklist').on('click', function() {
     //     $('.document-checklist.mobile').addClass('hidden');
     // });
->>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
 
     function toggleState(elem, className) {
         if (!elem.hasClass(className)) {
@@ -121,10 +115,6 @@
         event.preventDefault();
 
         showTable($highlightsListHidden, 'hightlights');
-<<<<<<< HEAD
-
-=======
->>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
     });
 
     function showTable(element, nameOfClass) {
