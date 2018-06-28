@@ -6,6 +6,10 @@ Andrei Egorov, Adam Roerick, Effat Chaar
 
 * Tamwood Careers website is designed for use on mobile and desktop devices. As a content management system WordPress was used. The organization of the website allows users to easily navigate throught the content and find needed information. Teamwood Careers website features a simplified four-step application form that simplifies an admission process.
 
+# Demo
+
+![tamwood- -readme](https://user-images.githubusercontent.com/37827066/42062823-cefc67a2-7ae3-11e8-8944-26f8c959b3cf.gif)
+
 # Plugins Used
 
 * Custom Field Suite
