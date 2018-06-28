@@ -1816,7 +1816,8 @@ object {
           align-self: right;
       padding: 0;
       margin: 2rem;
-      width: 100%; } }
+      width: 100%;
+      font-style: italic; } }
 
 .page-id-18 p {
   padding: 2rem 0; }
