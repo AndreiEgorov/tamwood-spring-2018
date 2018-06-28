@@ -173,10 +173,8 @@
             }
         }
             //mobile program menu
-                .section-navigation-mobile{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
+
+                .program-nav{
                     @include desktop{
                         position: absolute;
                         top: 604px;
