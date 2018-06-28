@@ -1,5 +1,5 @@
 <?php 
-/** Template Name: Student Support */
+
 get_header(); 
 get_template_part( 'template-parts/content', 'banner' ); ?>
 <section>
@@ -11,14 +11,6 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
         </div> <?php
     }?>
 </section>
-
-
-
-
-
-
-<!-- Test Area , Andrei -->
-<h1>------------------------------</h1>
 
 <div class="student-support-carousel">
 
@@ -36,12 +28,6 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
         </div>
         <?php
     }?>
-
-
 </div>
-
-<h1>------------------------------</h1>
-<!-- ------------------------ -->
-
 
 <?php get_footer(); ?>

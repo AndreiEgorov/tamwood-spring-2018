@@ -27,11 +27,8 @@
      * Accordion Menus
      */
     $subMenuToggle.on('click', function () {
-        //evt.preventDefault();
-        // $subMenuToggle.removeClass('selected');
         toggleState($(this), 'selected');
         toggleState($(this).next($subMenu), 'show');
-        // $subMenuToggle.toggleClass('test');
     });
     $('.toggle-menu').on('click', function () {
         toggleState($(this).prevAll('a'), 'selected');
@@ -55,7 +52,6 @@
 
     $sectionNav.on('click', function (evt) {
         evt.preventDefault();
-        // $('.program-heading').prepend('<button class="back-button">Back</button>');
         if ($(this).hasClass('option-1')) {
             $('.program-section').addClass('hidden');
             toggleState($('.courses'), 'hidden');
@@ -74,15 +70,19 @@
         }
     });
     $backButton.on('click', function () {
-        // evt.preventDefault();
-        // $backButton.addClass('hidden');
         $('.program-overview').removeClass('hidden');
         $('.program-nav').removeClass('hidden');
         $('.details').removeClass('hidden');
     });
+<<<<<<< HEAD
     $('.close-checklist').on('click', function () {
         $('.document-checklist.mobile').addClass('hidden');
     });
+=======
+    // $('.close-checklist').on('click', function() {
+    //     $('.document-checklist.mobile').addClass('hidden');
+    // });
+>>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
 
     function toggleState(elem, className) {
         if (!elem.hasClass(className)) {
@@ -115,39 +115,26 @@
     //Read more button on a program page.
     var $learnMoreButton = $('.read-more');
     var $highlightsListHidden = $('.highlightsListHidden');
-    // var readLess = "<a class='read-more' >Read Less</a> ";
-    // var readMore = "<a class='read-more' >Read More</a> ";
 
 
     $learnMoreButton.on('click', function (event) {
         event.preventDefault();
 
         showTable($highlightsListHidden, 'hightlights');
+<<<<<<< HEAD
 
+=======
+>>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
     });
 
     function showTable(element, nameOfClass) {
         if (!element.hasClass(nameOfClass)) {
             element.addClass(nameOfClass);
-            // $learnMoreButton.replaceWith(readLess);
 
         } else {
             element.removeClass(nameOfClass);
-            // $learnMoreButton.replaceWith(readMore);
         }
     }
-    // function changeButtonText(element) {
-    //     if (element.hasClass('hightlights')) {
-    //         $learnMoreButton.replaceWith(readLess);
-    //     } else {
-    //         $learnMoreButton.replaceWith(readMore);
-
-    //     }
-
-
-    // }
-
-
 
     //end of button on a program page
 
@@ -171,7 +158,6 @@
             contain: true,
             prevNextButtons: false,
             pageDots: false,
-            // cellAlign: 'left',
         });
     }
 

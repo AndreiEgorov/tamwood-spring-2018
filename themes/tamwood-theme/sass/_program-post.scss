@@ -1,8 +1,11 @@
 .single-program{
+<<<<<<< HEAD
     // min-width: 375px;
     .entry-title{
         margin-top: 2rem;
     }
+=======
+>>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
     .site-header{
         position: initial;
     }
@@ -173,8 +176,15 @@
             }
         }
             //mobile program menu
+<<<<<<< HEAD
 
                 .program-nav{
+=======
+                .section-navigation-mobile{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+>>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
                     @include desktop{
                         position: absolute;
                         top: 604px;
@@ -234,7 +244,10 @@
     
                 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> eede170aad91f2bad82fd00ee65cfc3400365e06
             //End of program menu 
         .button-box{
             display: flex;
@@ -281,7 +294,6 @@
             .detail{
             margin: 0 auto;
             margin-bottom:4.07rem;
-            // width: 68%; delete if not needed
             display: flex;
             align-items: center;
             text-align: center;
@@ -387,7 +399,6 @@
             .apply-button{
                 @include primary-pink{
                     display: inline-block;
-                    // padding: 20px 18px;
                     font-size:18px;
                     @include desktop{
                         font-size: 1.28rem;
@@ -399,11 +410,7 @@
 
     //end program course section
 
-
-    // Requirements section
-
-
-        
+    // Requirements section   
         .one-requirement{
             position: relative;
             margin-bottom: 1.35rem;
@@ -568,11 +575,6 @@
                     background: $color_secondary-light;
                 }
                 //highlight last line in a table with dark purple 
-               
-                // li:nth-last-child(2){
-                //     background:$color_brand-secondary;
-                // }
-                //------------------
             }
             #fee-empty {
               grid-column: 1 / -1;

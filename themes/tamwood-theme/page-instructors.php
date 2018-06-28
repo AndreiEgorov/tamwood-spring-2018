@@ -1,5 +1,5 @@
 <?php 
-/** Template Name: Our Instructors */
+
 get_header();
 
  ?>
@@ -34,5 +34,4 @@ get_header();
         <?php   
     }?>
 </div>
-
 <?php get_footer(); ?>

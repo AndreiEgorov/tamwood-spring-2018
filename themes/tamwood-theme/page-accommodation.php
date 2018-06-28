@@ -1,5 +1,5 @@
 <?php 
-/** Template Name: Accommodation */
+
 get_header();
 get_template_part( 'template-parts/content', 'banner' ); ?>
 <div class="page-copy">
@@ -35,7 +35,7 @@ get_template_part( 'template-parts/content', 'banner' ); ?>
         <?php   }?>
     </div> <!-- subsection-banner -->
         <div class="apply-now-button">
-            <a class="apply-button" href="<?php echo get_page_link( get_page_by_title( 'Apply Now' )->ID );?>">Apply Now</a>
+            <a class="apply-button" href="<?php echo get_page_link( get_page_by_title( 'Application Form' )->ID );?>">Apply Now</a>
         </div>
 </section>
 <?php get_footer(); ?>

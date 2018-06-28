@@ -26,12 +26,7 @@
     }
     //-----------
     .content-banner{
-        // padding-top: 6.1rem;
         min-width: 375px;
-        @include desktop{
-            // padding-top: 10.3rem;
-
-        }
         &.home .page-title,
         &.page-id-2 .page-title {
             padding: 2rem 0;
@@ -57,16 +52,13 @@
 
         }
         .departments-section{
-            // margin-top: 3.9rem; 
-
             @include desktop{
                 display: flex;
                 justify-content: space-between;
                 .department{
                     text-align: left;
                     width: 32.25%;
-                    
-
+                
                     .department-image{
                         width: 100%;
                     }
@@ -76,10 +68,7 @@
                         text-align: initial;
                         font-weight: 500;
                         overflow: scroll;
-                         
-
                     }
-                    
                     .learn-button{
                         margin-left: 0;
                         margin-top: 0.5rem;
@@ -122,10 +111,6 @@
         .learn-button{
             @include secondary-pink;
             line-height: unset;
-            // display: inline-block;
-            // padding: 1.2rem;
-            // margin-top: 0.8rem;
-            // margin-bottom: 1.4rem;
         }
         .designated{
             width:34%;
@@ -139,7 +124,6 @@
             .apply-button{
                 @include primary-pink{
                     display: inline-block;
-                    // padding: 20px 18px;
                     font-size:18px;
                 }
                 @include desktop{
